@@ -2803,7 +2803,7 @@ These are the steps to create a Windows 10 (20H2 as of November 2020) Installati
 
 [^1]: Wikipedia, OSINT <https://en.wikipedia.org/wiki/Open-source_intelligence>
 
-[^2]: Youtube Internet Historian Playlist, HWNDU <https://www.youtube.com/playlist?list=PLna1KTNJu3y09Tu70U6yPn28sekaNhOMY>
+[^2]: Youtube Internet Historian Playlist, HWNDU <https://www.youtube.com/watch?v=_p4h3jwJob0&list=PLHTeAiqTTlUgv17EkpWRX9vHIelEvOJVm>
 
 [^3]: Wikipedia, 4chan <https://en.wikipedia.org/wiki/4chan>
 
