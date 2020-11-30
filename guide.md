@@ -729,7 +729,7 @@ There are some forums and subreddits (like r/phoneverification/) where users wil
 
 In the end, it's probably just more convenient, cheaper and less risky to just get a pre-paid SIM card from one of the places who still sell them for cash without requiring ID registration. So here is a list of places where you can still get them at the moment: <https://prepaid-data-sim-card.fandom.com/wiki/Registration_Policies_Per_Country>
 
-You should be able to find a place that is "not too far" and just go there physically to buy some pre-paid cards and top-up vouchers with cash. Do verify that no law was passed before going that would make registration mendatory (in case the above wiki was not updated). Don't forget to not have your smartphone with you or if really have to powered off before going at the point of sale. Try to avoid CCTV and cameras and don't forget to buy a Top Up voucher with the SIM card (if it's not a package) as most pre-paid cards will require a top-up before use.
+You should be able to find a place that is "not too far" and just go there physically to buy some pre-paid cards and top-up vouchers with cash. Do verify that no law was passed before going that would make registration mandatory (in case the above wiki was not updated). Don't forget to not have your smartphone with you or if really have to powered off before going at the point of sale. Try to avoid CCTV and cameras and don't forget to buy a Top Up voucher with the SIM card (if it's not a package) as most pre-paid cards will require a top-up before use.
 
 Double-check that the mobile operators selling the pre-paid SIM cards will accept the SIM activation and top-up without any ID registration of any kind before going there. Ideally they should accept SIM activation and top-up from the country you reside in.
 
@@ -1410,7 +1410,7 @@ This other illustration shows the other possibility without a cash-paid VPN. It'
 
 ![][9]
 
-In addition, using Tor will raise the suspicion of many platforms. You will face many hurdles (captchas, errors, difficulties signing-up) if you use Tor direcltly.
+In addition, using Tor will raise the suspicion of many platforms. You will face many hurdles (captchas, errors, difficulties signing-up) if you use Tor directly.
 
 For these reasons, I strongly recommend the VPN over Tor solution.
 
@@ -2153,7 +2153,7 @@ Instagram:
 
 -   Can you create accounts through Tor? Yes but expect some captchas and your phone number will definitely be required
 
-It's no secret that Intagram is part of Facebook however it's more lenient than Facebook when it comes to user verification. It's quite unlikely you'll get suspended or banned after signing-up. But it could help.
+It's no secret that Instagram is part of Facebook however it's more lenient than Facebook when it comes to user verification. It's quite unlikely you'll get suspended or banned after signing-up. But it could help.
 
 For instance I noticed that you'll have less issues creating a Facebook account if you already have a valid Instagram account. You should always create an Instagram account before attempting Facebook.
 
@@ -2449,7 +2449,7 @@ Then we will download a convenient utility called PrivaZer that will allow you d
 
         -   Yes remote autocomplete history
 
-        -   Yes delete thumnails for websites
+        -   Yes delete thumbnails for websites
 
         -   Yes delete the open pages from my last session
 
@@ -2479,7 +2479,7 @@ Then we will download a convenient utility called PrivaZer that will allow you d
 
 ### Shellbags:
 
-As explained earlier, Shelbags are basically histories of accessed volumes/files on your computer. Remember that shellbags are very good sources of informations for forensics[^137] and you need to clean those. Especially if you mounted any "hidden volume" anywhere. Again you shouldn't do this on the Decoy OS.
+As explained earlier, Shellbags are basically histories of accessed volumes/files on your computer. Remember that shellbags are very good sources of informations for forensics[^137] and you need to clean those. Especially if you mounted any "hidden volume" anywhere. Again you shouldn't do this on the Decoy OS.
 
 -   Download Shellbag Analayzer & Cleaner from <https://privazer.com/en/download-shellbag-analyzer-shellbag-cleaner.php>
 
@@ -2713,7 +2713,7 @@ Privacy Settings:
 
     -   Background Apps: Disable it (change button)
 
-    -   App Diagnostcis: Disable it (change button)
+    -   App Diagnostics: Disable it (change button)
 
     -   Documents: Disable it (change button)
 
