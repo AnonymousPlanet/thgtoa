@@ -220,7 +220,7 @@ Usually the DNS service is provided by your ISP and automatically configured by 
 
 Using a private DNS service or your own DNS service would mitigate these issues but the other problem is that most of those DNS requests are by default still sent in clear text (unencrypted) over the network. Even if you browse Pornhub in an incognito Window, using HTTPS and using a private DNS service, chances are very high that your browser will send a clear text unencrypted DNS request to some DNS servers asking basically "So what's the IP address of [www.pornhub.com]?".
 
-Because it's not encrypted, your ISP and/or any other adversary could still intercept (using a Man-in-the-middle attack^4545^) your request will know and possibly log what your IP was looking for. The same ISP can also tamper with the DNS responses even if you're using a private DNS. Rendering the use of a private DNS service useless.
+Because it's not encrypted, your ISP and/or any other adversary could still intercept (using a Man-in-the-middle attack[^45]) your request will know and possibly log what your IP was looking for. The same ISP can also tamper with the DNS responses even if you're using a private DNS. Rendering the use of a private DNS service useless.
 
 A solution to this is to use encrypted DNS using DNS over HTTPS[^24] or DNS over TLS[^25] with a private DNS server (this can be self-hosted locally with a solution like pi-hole[^26], remotely hosted with a solution like nextdns.io or using the solutions provider by your VPN provider or the Tor network). This should prevent your ISP or some middle-man from snooping on your requests ... except it might not.
 
@@ -512,7 +512,7 @@ The digital fingerprint is the way you write, the way you behave. The way you cl
 
 Social Media platforms such as Facebook/Google can go a step further and can register your behavior in the browser itself. For instance they can register everything you type even if you don't send it / save it. Think of when you write an e-mail in Gmail. It's saved automatically as you type. They can register your clicks and cursor movements as well.
 
-This technology is also widely used used in CAPTCHAS^153^ services to verify that you are "human" and can be used to fingerprint a user.
+This technology is also widely used used in CAPTCHAS[^153] services to verify that you are "human" and can be used to fingerprint a user.
 
 Analysis algorithms could then be used to match these patterns with other users and match you to a different known user. It's unclear if such data is used or not by Governments and Law Enforcements agencies but it might be in the future. And while this might only be used for advertising/marketing purposes now. It could and probably will be used for investigations in the short or mid-term future.
 
@@ -530,7 +530,7 @@ You should never ever share real personal experiences/details that could later l
 Your Browser and Device Fingerprints:
 -------------------------------------
 
-Your Browser and Device Fingerprints^162^ are set of properties/capabilities of your System/Browser. These are used on most websites for invisible user tracking but also to adapt the website user experience depending on their browser. For instance websites will be able to provide a "mobile experience" if you're using a mobile browser or propose a specific language/geographic version depending on your fingerprint. Most of those techniques work with recent Browsers like Chromium[^97] based browsers (such as Chrome) or Firefox[^98] unless taking special measures.
+Your Browser and Device Fingerprints[^162] are set of properties/capabilities of your System/Browser. These are used on most websites for invisible user tracking but also to adapt the website user experience depending on their browser. For instance websites will be able to provide a "mobile experience" if you're using a mobile browser or propose a specific language/geographic version depending on your fingerprint. Most of those techniques work with recent Browsers like Chromium[^97] based browsers (such as Chrome) or Firefox[^98] unless taking special measures.
 
 You can find a lot of detailed information and publications about this here: <https://amiunique.org/links>
 
@@ -584,7 +584,7 @@ Phishing:
 
 Phishing[^116] is a type of attack where an adversary could try to extract information from you by pretending to be something/someone else.
 
-A typical case is an adversary using a man-in-the-middle^45^ attack or a falsified e-mail/call to ask your credential for a service. This can be your e-mail or your financial services for example.
+A typical case is an adversary using a man-in-the-middle[^45] attack or a falsified e-mail/call to ask your credential for a service. This can be your e-mail or your financial services for example.
 
 Such attacks can also be used to de-anonymize someone by tricking them into downloading malware.
 
@@ -847,7 +847,7 @@ Only enable those on a "need to use" basis and disable then again after use. Thi
 
 ### Tamper protect your laptop:
 
-At some point you'll inevitable leave this laptop alone somewhere. You won't sleep with it and take it everywhere every single day. You should make it has hard as possible for anyone to tamper with it without you noticing it. This is mostly useful against some limited adversaries that won't use a 5\$ wrench against you^5^.
+At some point you'll inevitable leave this laptop alone somewhere. You won't sleep with it and take it everywhere every single day. You should make it has hard as possible for anyone to tamper with it without you noticing it. This is mostly useful against some limited adversaries that won't use a 5\$ wrench against you[^5].
 
 It's important to know that it's trivially easy for some specialists to install a keylogger in your laptop, or to just make a clone copy of your hard drive that could later allow them to detect the presence of encrypted data in it using forensic techniques (more on that later).
 
@@ -982,7 +982,7 @@ Well, all those Apps and your Operating System will keep logs and traces of that
 
 A very good example of this are the Windows "ShellBags" that are stored within the Windows Registry storing various histories of accessed files/folders[^137].
 
-Forensics can and will^135137^ use all those leaks^133^ to prove the existence of hidden data and defeat your attempts at using plausible deniability.
+Forensics can and will[^135][^137] use all those leaks[^133] to prove the existence of hidden data and defeat your attempts at using plausible deniability.
 
 It will be therefore important to apply various steps to prevent forensics from doing this by preventing and cleaning these leaks/traces. This will be covered in the "Cover your Tracks" part of this guide at the very end.
 
@@ -996,7 +996,7 @@ In the case of Windows, this data could easily be used to prove the existence of
 
 #### Deciding which sub-route you'll take:
 
-Remember that plausible deniability is not a silver bullet and will be of little use in case of torture^5^. As a matter a fact, depending on who your adversary would be (your threat model), It might be wise not to use Veracrypt at all as shown in this demonstration: <https://defuse.ca/truecrypt-plausible-deniability-useless-by-game-theory.htm>
+Remember that plausible deniability is not a silver bullet and will be of little use in case of torture[^5]. As a matter a fact, depending on who your adversary would be (your threat model), It might be wise not to use Veracrypt at all as shown in this demonstration: <https://defuse.ca/truecrypt-plausible-deniability-useless-by-game-theory.htm>
 
 Now you'll have to pick your next step between two options:
 
@@ -1092,7 +1092,7 @@ This route is rather straightforward and will just encrypt your current Operatin
 
 -   Select SHA-512 as hash Algorithm (because why not)
 
--   Enter a strong passphrase (longer the better)^120^
+-   Enter a strong passphrase (longer the better)[^120]
 
 -   Collect some entropy by randomly moving your cursor around until the bar is full
 
@@ -1194,7 +1194,7 @@ Do not connect this OS to your known Wi-FI. You should download Veracrypt instal
 
 -   Use all the space available on the second partition for the Outer Volume
 
--   Use a strong passphrase^120^
+-   Use a strong passphrase[^120]
 
 -   Select yes to Large Files
 
@@ -1208,7 +1208,7 @@ Do not connect this OS to your known Wi-FI. You should download Veracrypt instal
 
     -   I recommend you don't fill the outer volume too much or too little (about 40%). Remember you have to leave enough space for the Hidden OS (which will be same size as the first partition you created during installation).
 
--   Use a strong passphrase^120^ for the Hidden Volume (obviously a different one than the one for the Outer Volume).
+-   Use a strong passphrase[^120] for the Hidden Volume (obviously a different one than the one for the Outer Volume).
 
 -   Now you will create the Hidden Volume, select AES and SHA-512
 
@@ -1947,7 +1947,7 @@ I will help you bit by listing a few tips I learned while doing research over th
 
 -   Origin IP geolocation (your IP/location when you go to "whatsmyipaddress.com") should match your identity location as much as possible (You can pick this in the VPN client if you use the 3 layers approach or just create a new identity in Tor Browser or Brave Tor Tab until you get the appropriate Exit node). You should exclude any exit IP that is not located in Western Europe/North America/Japan/South Korea/Australia (excluding Mexico) as you will have less issues with those. Ideally, you should get an European Union IP to get additional GDPR protection and if possible a German exit IP due to their legal stance on using anonymous accounts on online platforms.
 
--   Brave Browser (Chromium based) with a Private Tor Tab has (IMHO) a better acceptance level than Tor Browser (Firefox based). You will have less issues with captchas and online platforms^163^ if you use Brave than if you use Tor Browser (feel free to try this yourself).
+-   Brave Browser (Chromium based) with a Private Tor Tab has (IMHO) a better acceptance level than Tor Browser (Firefox based). You will have less issues with captchas and online platforms[^163] if you use Brave than if you use Tor Browser (feel free to try this yourself).
 
 -   Every identity you should have a matching profile picture associated to it. For this purpose I recommend you just go to <https://thispersondoesnotexist.com/> and generate a computer generated profile picture. Just refresh the page until you find a picture that matches your identity in all aspects (age, sex, ethnicity) and save that picture. It would be even better to have several pictures associated to that identity but I don't have an "easy way" of doing that yet.
 
@@ -2387,7 +2387,7 @@ Then let's re-randomize the MAC addresses of your Virtual Machines and the Bluet
 
 ### Eventlogs:
 
-Windows Eventlogs will keep many various informations that could contain traces of your activities such as the devices that were mounted (including Veracrytpt NTFS volumes for instance^133^), your network connections, app crash informations and various errors. It's always best to clean those up regularly. Do not do this on the Decoy OS.
+Windows Eventlogs will keep many various informations that could contain traces of your activities such as the devices that were mounted (including Veracrytpt NTFS volumes for instance[^133]), your network connections, app crash informations and various errors. It's always best to clean those up regularly. Do not do this on the Decoy OS.
 
 -   Start , search for Event Viewer and launch Event Viewer:
 
@@ -2473,13 +2473,13 @@ Then we will download a convenient utility called PrivaZer that will allow you d
 
         -   Select Clean Options **(Be careful with this option as it will erase all the free space on the selected partition, especially if you are running the decoy OS. Do not erase the free space or anything else on the second partition as you risk destroying your Hidden OS)**
 
-            -   If you have an SSD drive, Select SSD with Trim^138^ + 1 pass zero (just to be sure as mentioned earlier, Trim itself should be enough^141^)
+            -   If you have an SSD drive, Select SSD with Trim[^138] + 1 pass zero (just to be sure as mentioned earlier, Trim itself should be enough[^141])
 
             -   If you have an HDD drive, Select HDD with at least 1 pass.
 
 ### Shellbags:
 
-As explained earlier, Shelbags are basically histories of accessed volumes/files on your computer. Remember that shellbags are very good sources of informations for forensics^137^ and you need to clean those. Especially if you mounted any "hidden volume" anywhere. Again you shouldn't do this on the Decoy OS.
+As explained earlier, Shelbags are basically histories of accessed volumes/files on your computer. Remember that shellbags are very good sources of informations for forensics[^137] and you need to clean those. Especially if you mounted any "hidden volume" anywhere. Again you shouldn't do this on the Decoy OS.
 
 -   Download Shellbag Analayzer & Cleaner from <https://privazer.com/en/download-shellbag-analyzer-shellbag-cleaner.php>
 
@@ -2580,9 +2580,9 @@ Some last OPSEC thoughts:
 
 -   Keep a normal life and don't be weird. If you spend all your online time using Tor to access the internet and have no social network accounts at all ... You're already suspicious and attracting unnecessary attention.
 
--   Encrypt everything but don't take it as granted. Remember the 5\$ wrench^5^ .
+-   Encrypt everything but don't take it as granted. Remember the 5\$ wrench[^5] .
 
--   Keep plausible deniability as an option but remember it won't help against the 5\$ wrench either^5^.
+-   Keep plausible deniability as an option but remember it won't help against the 5\$ wrench either[^5].
 
 -   Never ever leave your laptop unattended/on/unlocked anywhere. Remember the story of Ross Ulbricht and his arrest <https://en.wikipedia.org/wiki/Ross_Ulbricht#Silk_Road,_arrest_and_trial>
 
