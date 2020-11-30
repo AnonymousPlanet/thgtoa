@@ -788,7 +788,7 @@ It does however have some drawbacks:
 
 -   Tails uses Tor Browser which while it's very secure will be detected as well by most platforms and will hinder you in creating anonymous identities on many platforms.
 
--   Tails won't protect you more from the 5\$ wrench^5^.
+-   Tails won't protect you more from the 5\$ wrench[^5].
 
 -   Tor in itself might not be enough to protect you from an adversary with enough resources as explained earlier.
 
