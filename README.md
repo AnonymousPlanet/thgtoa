@@ -4,7 +4,7 @@ This is a maintained technical guide that aims to provide introduction to variou
 
 This guide is open-source, licensed under CC0-1.0 (Creative Commons Zero v1.0 Universal).
 
-You should probably view the guide here https://anonymousplanet.github.io/thgtoa/guide.html (github markdown doesn't support the many foonotes/endnotes provided).
+You should probably view the guide here https://anonymousplanet.github.io/thgtoa/guide.html (github markdown doesn't support the many footnotes/endnotes provided).
 
 Feel free to submit issues/recommendations/ideas using Github Issues.
 
