@@ -2182,9 +2182,7 @@ When people stand behind their opinions and actions, our community is safer and 
 
 -   Provide accurate information about yourself."
 
-```{=html}
-<!-- -->
-```
+
 -   Will they require a phone number? Yes and probably more later
 
 -   Can you create accounts through Tor? Yes but it's very difficult and their onion address[^173] won't help. In most cases you'll just have a random error at sign-up and your account suspended after sign-in.
