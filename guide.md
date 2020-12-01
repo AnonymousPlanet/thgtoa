@@ -134,6 +134,10 @@ Will this guide help you protect yourself from the NSA, the FSB, Mark Zuckerberg
 
 You have to consider your threat model[^6] before going further.
 
+![][2]
+
+(Illustration xkcd.com)
+
 Will this guide help you protect your privacy from OSINT researchers like Belingcat[^7] , Doxing[^8] trolls on 4chan[^9] and others that have no access to the NSA toolbox? More likely. Tho I wouldn't be so sure about 4chan.
 
 It's also important to understand this guide is the humble result of years of experience and testing from a single individual (myself) and that many of those systems that aim to prevent anonymity are opaque closed-source systems. Most of those guidelines are guessed based on experience. These experiences take a lot of time and resources and are unfortunately far from being scientific. **Your mileage may vary.**
@@ -232,7 +236,7 @@ Finally, even if you use a custom encrypted DNS server (DoS or DoT) with eSNI su
 
 Here is an illustration showing the current state of DNS privacy:
 
-![][2]
+![][3]
 
 Therefore to mitigate all this issue (as much as possible), this guide we will later recommend a multi-layered solution of VPN over Tor (or even Tor over VPN over Tor).
 
@@ -444,7 +448,7 @@ This can be obvious to many but not to all. Most files have metadata attached to
 
 Here is an example of EXIF data that could be on a picture:
 
-![][3]
+![][4]
 
 For this reason you'll always have to be very careful when uploading files using your anonymous identities and check the metadata of those files.
 
@@ -461,15 +465,15 @@ Tor and VPNs are not silver bullets. Many advanced techniques have been develope
 
 -   Correlation Fingerprinting Attack: As illustrated (simplified) below, this attack will fingerprint[^85] your encrypted traffic (like the websites you visited) just based on the analysis of your encrypted traffic (without decrypting it). It's able to do so with a whopping 96% success rate. Such fingerprinting can be used by an adversary that has access to your source network to figure out some of your encrypted activity (such as which websites you visited).
 
-![][4]
+![][5]
 
 -   Correlation Timing Attacks: As illustrated (simplified) below, an adversary that has access to network connection logs (IP or DNS for instance, remember that most VPN servers and most Tor nodes are known and publicly listed) at the source and at the destination could correlate the timings to de-anonymize you without requiring any access to the Tor or VPN network in between. A real use case of this technique was done by the FBI in 2013 to de-anonymize[^86] a bomb threat hoax at Harvard University. It was also used to de-anonymize
 
-![][5]
+![][6]
 
 -   Correlation Counting Attacks: As illustrated (simplified) below, an adversary that has no access to detailed connection logs (can't see that you used Tor or Netflix) but has access to data counting logs could see that you have downloaded 600MB on a specific time/date that matches the 600MB upload at the destination. This correlation can then be used to de-anonymize you over time.
 
-![][6]
+![][7]
 
 There are ways to mitigate these such as:
 
@@ -547,7 +551,7 @@ The digital fingerprint is the way you write, the way you behave. The way you cl
 
 Social Media platforms such as Facebook/Google can go a step further and can register your behavior in the browser itself. For instance they can register everything you type even if you don't send it / save it. Think of when you write an e-mail in Gmail. It's saved automatically as you type. They can register your clicks and cursor movements as well.
 
-This technology is also widely used used in CAPTCHAS[^162] services to verify that you are "human" and can be used to fingerprint a user.
+This technology is also widely used used in CAPTCHAS[^163] services to verify that you are "human" and can be used to fingerprint a user.
 
 Analysis algorithms could then be used to match these patterns with other users and match you to a different known user. It's unclear if such data is used or not by Governments and Law Enforcements agencies but it might be in the future. And while this might only be used for advertising/marketing purposes now. It could and probably will be used for investigations in the short or mid-term future.
 
@@ -565,7 +569,7 @@ You should never ever share real personal experiences/details that could later l
 Your Browser and Device Fingerprints:
 -------------------------------------
 
-Your Browser and Device Fingerprints[^171] are set of properties/capabilities of your System/Browser. These are used on most websites for invisible user tracking but also to adapt the website user experience depending on their browser. For instance websites will be able to provide a "mobile experience" if you're using a mobile browser or propose a specific language/geographic version depending on your fingerprint. Most of those techniques work with recent Browsers like Chromium[^105] based browsers (such as Chrome) or Firefox[^106] unless taking special measures.
+Your Browser and Device Fingerprints[^172] are set of properties/capabilities of your System/Browser. These are used on most websites for invisible user tracking but also to adapt the website user experience depending on their browser. For instance websites will be able to provide a "mobile experience" if you're using a mobile browser or propose a specific language/geographic version depending on your fingerprint. Most of those techniques work with recent Browsers like Chromium[^105] based browsers (such as Chrome) or Firefox[^106] unless taking special measures.
 
 You can find a lot of detailed information and publications about this here: <https://amiunique.org/links>
 
@@ -1024,7 +1028,7 @@ Well, all those Apps and your Operating System will keep logs and traces of that
 
 A very good example of this are the Windows "ShellBags" that are stored within the Windows Registry storing various histories of accessed files/folders[^147].
 
-Forensics can [^144] and will[^146] use all those leaks[^142] to prove the existence of hidden data and defeat your attempts at using plausible deniability.
+Forensics can [^145] and will[^147] use all those leaks[^143] to prove the existence of hidden data and defeat your attempts at using plausible deniability.
 
 It will be therefore important to apply various steps to prevent forensics from doing this by preventing and cleaning these leaks/traces. This will be covered in the "Cover your Tracks" part of this guide at the very end.
 
@@ -1134,7 +1138,7 @@ This route is rather straightforward and will just encrypt your current Operatin
 
 -   Select SHA-512 as hash Algorithm (because why not)
 
--   Enter a strong passphrase (longer the better)[^129]
+-   Enter a strong passphrase (longer the better)[^130]
 
 -   Collect some entropy by randomly moving your cursor around until the bar is full
 
@@ -1172,7 +1176,7 @@ Read the Veracrypt Documentation <https://www.veracrypt.fr/en/VeraCrypt%20Hidden
 
 This is how your system will look after this process is done:
 
-![][7]
+![][8]
 
 As you can see this process requires you to have two partitions on your hard drive from the start.
 
@@ -1236,7 +1240,7 @@ Do not connect this OS to your known Wi-FI. You should download Veracrypt instal
 
 -   Use all the space available on the second partition for the Outer Volume
 
--   Use a strong passphrase[^129]
+-   Use a strong passphrase[^130]
 
 -   Select yes to Large Files
 
@@ -1250,7 +1254,7 @@ Do not connect this OS to your known Wi-FI. You should download Veracrypt instal
 
     -   I recommend you don't fill the outer volume too much or too little (about 40%). Remember you have to leave enough space for the Hidden OS (which will be same size as the first partition you created during installation).
 
--   Use a strong passphrase[^129] for the Hidden Volume (obviously a different one than the one for the Outer Volume).
+-   Use a strong passphrase[^130] for the Hidden Volume (obviously a different one than the one for the Outer Volume).
 
 -   Now you will create the Hidden Volume, select AES and SHA-512
 
@@ -1442,7 +1446,7 @@ There will be two possibilities here, one without a cash-paid VPN and one with a
 
 As you can see in this illustration, if your cash-paid VPN is compromised by an adversary (despite their privacy statement and no-logging policies), they will only find an anonymous cash-paid account connecting to their services from a Tor Exit node.
 
-![][8]
+![][9]
 
 If they somehow also manage to compromise the Tor network, they will still be faced with the internal IPs of a random public Wi-FI that is not tied to your identity.
 
@@ -1450,7 +1454,7 @@ If they somehow compromise your VM OS (with a malware), they will be faced with 
 
 This other illustration shows the other possibility without a cash-paid VPN. It's very similar but has one less defense layer. If the Tor network is compromised by a Global/State actor, then you will be likely de-anonymized quickly.
 
-![][9]
+![][10]
 
 In addition, using Tor will raise the suspicion of many platforms. You will face many hurdles (captchas, errors, difficulties signing-up) if you use Tor directly.
 
@@ -1474,11 +1478,11 @@ This guide will therefore propose 2 flavors of this route:
 
 -   The Whonix only route where all traffic is routed through the Tor Network
 
-![][10]
+![][11]
 
 -   A Whonix hybrid route where all traffic is routed through a cash-paid VPN over the Tor Network
 
-![][11]
+![][12]
 
 You will be able to decide which flavor to use based on my recommendations. I strongly recommend the second one.
 
@@ -1717,7 +1721,7 @@ Understanding the methods used to prevent anonymity and verify identity:
 
 Captcha[^163] stands for "Completely Automated Public Turing test to tell Computers and Humans Apart" are Turing tests[^164] puzzles you need to complete before accessing a form/website. You'll mostly encounter those provided by Google (reCaptcha service[^165]) and Cloudflare (hCaptcha[^166]). hCaptcha is used on 15% of the internet by their own metrics[^167].
 
-![][12]
+![][13]
 
 They're designed to separate bots from humans but in reality are also used to deter anonymous and private users.
 
@@ -1899,7 +1903,7 @@ This is a common method used on some Crypto trading platforms and some dating Ap
 
 Some platforms/apps will require you to take a live picture of yourself either doing something (a wink, holding an arm up, ...) or showing a custom piece of information (a hand written text, a passport or ID) within the picture. Sometimes the platform/app will require several pictures to increase their certainty.
 
-![][13]
+![][14]
 
 This guide won't cover this one (yet) as it's mainly used on financial platforms (that will be able to identify you with other means anyway) and some dating apps like Tinder[^175].
 
@@ -1942,7 +1946,7 @@ Now that you have an understanding of all the ways you can be de-anonymized, tra
 
 -   You can't trust your Smart devices
 
--   You can't trust people.
+-   You cannot trust people.
 
 Basically trust no one and nothing (oh yeah that's easy).
 
@@ -1962,7 +1966,7 @@ Basically trust no one and nothing (oh yeah that's easy).
 
     -   **You are running a VM within Qubes.**
 
-**[Again it's crucially important to understand that you will be unable to create most accounts without a valid phone number. And therefore most of your anonymity depends on the anonymity of your phone number and the burner phone. If your phone number is not anonymous and your burner phone can be traced back to you, you can be de-anonymized.]{.ul}**
+**[Again, it is crucially important to understand that you will be unable to create most accounts without a valid phone number. Therefore, most of your anonymity depends on the anonymity of your phone number and the burner phone. If your phone number is not anonymous and your burner phone can be traced back to you, you can be de-anonymized.]{.ul}**
 
 Creating new identities:
 ------------------------
@@ -1975,21 +1979,21 @@ I will help you bit by listing a few tips I learned while doing research over th
 
     -   Ethnicity is important and you will have less issues and attract less attention to verification algorithms if you're Caucasian/East-Asian than if you're Arabic/Black.
 
-    -   Age is important and you'll have less issues if you're young (18-22) than if you're middle-aged or old.
+    -   Age is important and you will have less issues if you're young (18-22) than if you're middle-aged or old.
 
-    -   Sex/Gender is important and you'll have less issues if you're a female than if you're a male.
+    -   Sex/Gender is important and you'll have fewer issues if you're a female than if you're a male.
 
-    -   Country of origin is important and you'll have less issues if your identity is Norwegian than if it's Ukrainian or Mexican.
+    -   Country of origin is important and you'll have fewer issues if your identity is Norwegian than if it's Ukrainian or Mexican.
 
-    -   Country of residence is important and you'll have less issues if your identity has its residence in Oslo or Paris than if you decide to reside in Kiev or Cairo.
+    -   Country of residence is important and you'll have fewer issues if your identity has its residence in Oslo or Paris than if you decide to reside in Kiev or Cairo.
 
-    -   Language is important and you'll have less issues if you speak proper English or the language of your Identity than if you use a non-related language. Don't make a Norwegian born Caucasian 20 year old female that speaks Ukrainian or Arabic.
+    -   Language is important and you'll have fewer issues if you speak proper English or the language of your Identity than if you use a non-related language. Don't make a Norwegian born Caucasian 20 year old female that speaks Ukrainian or Arabic.
 
 -   Similarly, Identities that are "EU residents" with an "EU IP" (VPN/Tor) will benefit from GDPR protections on many platforms. Others will not. GDPR is your friend.
 
 -   Origin IP geolocation (your IP/location when you go to "whatsmyipaddress.com") should match your identity location as much as possible (You can pick this in the VPN client if you use the 3 layers approach or just create a new identity in Tor Browser or Brave Tor Tab until you get the appropriate Exit node). You should exclude any exit IP that is not located in Western Europe/North America/Japan/South Korea/Australia (excluding Mexico) as you will have less issues with those. Ideally, you should get an European Union IP to get additional GDPR protection and if possible a German exit IP due to their legal stance on using anonymous accounts on online platforms.
 
--   Brave Browser (Chromium based) with a Private Tor Tab has (IMHO) a better acceptance level than Tor Browser (Firefox based). You will have less issues with captchas and online platforms[^172] if you use Brave than if you use Tor Browser (feel free to try this yourself).
+-   Brave Browser (Chromium based) with a Private Tor Tab has (IMHO) a better acceptance level than Tor Browser (Firefox based). You will have less issues with captchas and online platforms[^173] if you use Brave than if you use Tor Browser (feel free to try this yourself).
 
 -   Every identity you should have a matching profile picture associated to it. For this purpose I recommend you just go to <https://thispersondoesnotexist.com/> and generate a computer generated profile picture. Just refresh the page until you find a picture that matches your identity in all aspects (age, sex, ethnicity) and save that picture. It would be even better to have several pictures associated to that identity but I don't have an "easy way" of doing that yet.
 
@@ -2429,7 +2433,7 @@ Then let's re-randomize the MAC addresses of your Virtual Machines and the Bluet
 
 ### Eventlogs:
 
-Windows Eventlogs will keep many various informations that could contain traces of your activities such as the devices that were mounted (including Veracrytpt NTFS volumes for instance[^142]), your network connections, app crash informations and various errors. It's always best to clean those up regularly. Do not do this on the Decoy OS.
+Windows Eventlogs will keep many various informations that could contain traces of your activities such as the devices that were mounted (including Veracrytpt NTFS volumes for instance[^143]), your network connections, app crash informations and various errors. It's always best to clean those up regularly. Do not do this on the Decoy OS.
 
 -   Start , search for Event Viewer and launch Event Viewer:
 
@@ -2515,13 +2519,13 @@ Then we will download a convenient utility called PrivaZer that will allow you d
 
         -   Select Clean Options **(Be careful with this option as it will erase all the free space on the selected partition, especially if you are running the decoy OS. Do not erase the free space or anything else on the second partition as you risk destroying your Hidden OS)**
 
-            -   If you have an SSD drive, Select SSD with Trim[^147] + 1 pass zero (just to be sure as mentioned earlier, Trim itself should be enough[^150])
+            -   If you have an SSD drive, Select SSD with Trim[^148] + 1 pass zero (just to be sure as mentioned earlier, Trim itself should be enough[^151])
 
             -   If you have an HDD drive, Select HDD with at least 1 pass.
 
 ### Shellbags:
 
-As explained earlier, Shellbags are basically histories of accessed volumes/files on your computer. Remember that shellbags are very good sources of informations for forensics[^146] and you need to clean those. Especially if you mounted any "hidden volume" anywhere. Again you shouldn't do this on the Decoy OS.
+As explained earlier, Shellbags are basically histories of accessed volumes/files on your computer. Remember that shellbags are very good sources of informations for forensics[^147] and you need to clean those. Especially if you mounted any "hidden volume" anywhere. Again you shouldn't do this on the Decoy OS.
 
 -   Download Shellbag Analayzer & Cleaner from <https://privazer.com/en/download-shellbag-analyzer-shellbag-cleaner.php>
 
@@ -3347,8 +3351,8 @@ These are the steps to create a Windows 10 (20H2) Installation Media using this 
   [Privacy Settings:]: #privacy-settings
   [Appendix B: (Windows Additional Privacy Settings)]: #appendix-b-windows-additional-privacy-settings
   [Appendix C: (Windows Installation Media Creation)]: #appendix-c-windows-installation-media-creation
-  [www.pornhub.com]: http://www.pornhub.com
   [2]: media/image1.jpeg
+  [www.pornhub.com]: http://www.pornhub.com
   [3]: media/image2.jpeg
   [4]: media/image3.jpeg
   [5]: media/image4.jpeg
@@ -3360,3 +3364,4 @@ These are the steps to create a Windows 10 (20H2) Installation Media using this 
   [11]: media/image10.jpeg
   [12]: media/image11.jpeg
   [13]: media/image12.jpeg
+  [14]: media/image13.jpeg
