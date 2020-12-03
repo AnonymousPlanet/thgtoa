@@ -55,7 +55,7 @@
         -   [Whonix Virtual Machines:]
         -   [Windows 10 Virtual Machine:]
         -   [VPN client installation (cash-paid):]
-        -   [KeepassXC:]
+        -   [KeePassXC:]
     -   [The Qubes Route:]
 -   [Creating your anonymous online identities:]
     -   [Understanding the methods used to prevent anonymity and verify identity:]
@@ -75,7 +75,7 @@
         -   [Manual reviews:]
     -   [Getting Online:]
     -   [Creating new identities:]
-    -   [Protonmail:]
+    -   [ProtonMail:]
     -   [Google:]
     -   [Twitter:]
     -   [Linkedin:]
@@ -551,7 +551,7 @@ The digital fingerprint is the way you write, the way you behave. The way you cl
 
 Social Media platforms such as Facebook/Google can go a step further and can register your behavior in the browser itself. For instance they can register everything you type even if you don't send it / save it. Think of when you write an e-mail in Gmail. It's saved automatically as you type. They can register your clicks and cursor movements as well.
 
-This technology is also widely used used in CAPTCHAS[^163] services to verify that you are "human" and can be used to fingerprint a user.
+This technology is also widely used used in CAPTCHAS[^165] services to verify that you are "human" and can be used to fingerprint a user.
 
 Analysis algorithms could then be used to match these patterns with other users and match you to a different known user. It's unclear if such data is used or not by Governments and Law Enforcements agencies but it might be in the future. And while this might only be used for advertising/marketing purposes now. It could and probably will be used for investigations in the short or mid-term future.
 
@@ -569,7 +569,7 @@ You should never ever share real personal experiences/details that could later l
 Your Browser and Device Fingerprints:
 -------------------------------------
 
-Your Browser and Device Fingerprints[^172] are set of properties/capabilities of your System/Browser. These are used on most websites for invisible user tracking but also to adapt the website user experience depending on their browser. For instance websites will be able to provide a "mobile experience" if you're using a mobile browser or propose a specific language/geographic version depending on your fingerprint. Most of those techniques work with recent Browsers like Chromium[^105] based browsers (such as Chrome) or Firefox[^106] unless taking special measures.
+Your Browser and Device Fingerprints[^174] are set of properties/capabilities of your System/Browser. These are used on most websites for invisible user tracking but also to adapt the website user experience depending on their browser. For instance websites will be able to provide a "mobile experience" if you're using a mobile browser or propose a specific language/geographic version depending on your fingerprint. Most of those techniques work with recent Browsers like Chromium[^105] based browsers (such as Chrome) or Firefox[^106] unless taking special measures.
 
 You can find a lot of detailed information and publications about this here: <https://amiunique.org/links>
 
@@ -626,7 +626,7 @@ At this time, there are a few steps[^125] you can use to mitigate (and only miti
 
 -   Wear sunglasses in addition to the facemask and baseball cap to mitigate identification from your eyes features.
 
-(Note that if you intend to use these where advanced facial recognition systems have been installed, these measures could also flag as you as suspicious by themselves and trigger a human check)
+(Note that if you intend to use these where advancfed facial recognition systems have been installed, these measures could also flag as you as suspicious by themselves and trigger a human check)
 
 Phishing:
 ---------
@@ -635,7 +635,7 @@ Phishing[^127] is a type of attack where an adversary could try to extract infor
 
 A typical case is an adversary using a man-in-the-middle[^45] attack or a falsified e-mail/call to ask your credential for a service. This can be your e-mail or your financial services for example.
 
-Such attacks can also be used to de-anonymize someone by tricking them into downloading malware.
+Such attacks can also be used to de-anonymize someone by tricking them into downloading malware or revealing personal information.
 
 Forensics:
 ----------
@@ -1038,7 +1038,7 @@ Well, all those Apps and your Operating System will keep logs and traces of that
 
 A very good example of this are the Windows "ShellBags" that are stored within the Windows Registry storing various histories of accessed files/folders[^149].
 
-Forensics can [^145] and will[^147] use all those leaks[^143] to prove the existence of hidden data and defeat your attempts at using plausible deniability.
+Forensics can [^147] and will[^149] use all those leaks[^145] to prove the existence of hidden data and defeat your attempts at using plausible deniability.
 
 It will be therefore important to apply various steps to prevent forensics from doing this by preventing and cleaning these leaks/traces. This will be covered in the "Cover your Tracks" part of this guide at the very end.
 
@@ -1148,7 +1148,7 @@ This route is rather straightforward and will just encrypt your current Operatin
 
 -   Select SHA-512 as hash Algorithm (because why not)
 
--   Enter a strong passphrase (longer the better)[^130]
+-   Enter a strong passphrase (longer the better)[^132]
 
 -   Collect some entropy by randomly moving your cursor around until the bar is full
 
@@ -1250,7 +1250,7 @@ Do not connect this OS to your known Wi-FI. You should download Veracrypt instal
 
 -   Use all the space available on the second partition for the Outer Volume
 
--   Use a strong passphrase[^130]
+-   Use a strong passphrase[^132]
 
 -   Select yes to Large Files
 
@@ -1264,7 +1264,7 @@ Do not connect this OS to your known Wi-FI. You should download Veracrypt instal
 
     -   I recommend you don't fill the outer volume too much or too little (about 40%). Remember you have to leave enough space for the Hidden OS (which will be same size as the first partition you created during installation).
 
--   Use a strong passphrase[^130] for the Hidden Volume (obviously a different one than the one for the Outer Volume).
+-   Use a strong passphrase[^132] for the Hidden Volume (obviously a different one than the one for the Outer Volume).
 
 -   Now you will create the Hidden Volume, select AES and SHA-512
 
@@ -1514,7 +1514,7 @@ Then install Virtualbox on your Host OS and go to next step.
 
 If you follow my advice, you will also need a VPN subscription but this time you will need an actually anonymous one that can't be tied to you by the financial system. Meaning you will need to buy a VPN subscription with cash. You will later use this VPN to connect to the various services anonymously but never directly from your IP.
 
-There are two VPN companies recommended by privacytools.io (<https://privacytools.io/providers/vpn/>) that accept cash payments: Mullvad and IVPN. ProtonVPN is also recommended but does not accept cash and so will not be recommended by this guide.
+There are three VPN companies recommended by privacytools.io (<https://privacytools.io/providers/vpn/>) that accept cash payments: Mullvad, IVPN and ProtonVPN.
 
 Personally I would recommend Mullvad due to personal experience.
 
@@ -1700,19 +1700,19 @@ In both cases you should set the VPN to start from boot and enable the "kill swi
 
 -   Whonix: Coming Soon, I didn't find a suitable tutorial yet.
 
-### KeepassXC:
+### KeePassXC:
 
 You will need something to store your data (logins/passwords, identities and TOTP[^163] information).
 
-For this purpose I strongly recommend KeepassXC because of their TOTP feature. This is the ability to create entries for 2FA[^164] authentication with the authenticator feature.
+For this purpose I strongly recommend KeePassXC because of their TOTP feature. This is the ability to create entries for 2FA[^164] authentication with the authenticator feature.
 
 Here are the tutorials:
 
--   Whonix: <https://www.whonix.org/wiki/Keepassxc>
+-   Whonix: [https://www.whonix.org/wiki/KeePassXC]
 
--   Windows: <https://keepassxc.org/docs/KeePassXC_GettingStarted.html#_microsoft_windows>
+-   Windows: [https://KeePassXC.org/docs/KeePassXC_GettingStarted.html\#\_microsoft_windows]
 
-Test that keepassxc is working before going to next step.
+Test that KeePassXC is working before going to next step.
 
 You are done and can now skip the rest to go to the "Creating your anonymous online identities" part.
 
@@ -1761,7 +1761,7 @@ Fortunately as far as I'm aware, these are not yet officially/publicly used to d
 
 Phone verification is advertised by most platforms as a way to verify you're human. But don't be fooled, the main reason for phone verification is not only to check if you're human but also to be able to de-anonymize you if needed.
 
-Most platforms (including the privacy oriented ones such as Signal/Telegram/Protonmail will require a phone number to register and most countries now make it mandatory to submit a proof of ID to register[^173].
+Most platforms (including the privacy oriented ones such as Signal/Telegram/ProtonMail will require a phone number to register and most countries now make it mandatory to submit a proof of ID to register[^173].
 
 ### E-Mail verification:
 
@@ -2003,11 +2003,11 @@ I will help you bit by listing a few tips I learned while doing research over th
 
 -   Origin IP geolocation (your IP/location when you go to "whatsmyipaddress.com") should match your identity location as much as possible (You can pick this in the VPN client if you use the 3 layers approach or just create a new identity in Tor Browser or Brave Tor Tab until you get the appropriate Exit node). You should exclude any exit IP that is not located in Western Europe/North America/Japan/South Korea/Australia (excluding Mexico) as you will have less issues with those. Ideally, you should get an European Union IP to get additional GDPR protection and if possible a German exit IP due to their legal stance on using anonymous accounts on online platforms.
 
--   Brave Browser (Chromium based) with a Private Tor Tab has (IMHO) a better acceptance level than Tor Browser (Firefox based). You will have less issues with captchas and online platforms[^173] if you use Brave than if you use Tor Browser (feel free to try this yourself).
+-   Brave Browser (Chromium based) with a Private Tor Tab has (IMHO) a better acceptance level than Tor Browser (Firefox based). You will have less issues with captchas and online platforms[^175] if you use Brave than if you use Tor Browser (feel free to try this yourself).
 
 -   Every identity you should have a matching profile picture associated to it. For this purpose I recommend you just go to <https://thispersondoesnotexist.com/> and generate a computer generated profile picture. Just refresh the page until you find a picture that matches your identity in all aspects (age, sex, ethnicity) and save that picture. It would be even better to have several pictures associated to that identity but I don't have an "easy way" of doing that yet.
 
--   Create in advance and store in KeepassXC each identity details that should include:
+-   Create in advance and store in KeePassXC each identity details that should include:
 
     -   Date of Birth
 
@@ -2035,10 +2035,10 @@ I will help you bit by listing a few tips I learned while doing research over th
 
 -   Adapt your language/writing to the identity to not raise suspicions and lower your chances of being fingerprinted by online platforms. Be especially careful with using pedantic words and figures of speech/quotes that could allow some people to guess your writing is very similar to that person with this Twitter handle or this Reddit user.
 
-Protonmail:
+ProtonMail:
 -----------
 
--   Is this against their TOS? No <https://protonmail.com/terms-and-conditions>
+-   Is this against their TOS? No [https://ProtonMail.com/terms-and-conditions]
 
 -   Will they require a phone number? Maybe. This depends on the IP you're coming from. If you come from Tor, it's likely. From a VPN, it's less likely.
 
@@ -2046,7 +2046,7 @@ Protonmail:
 
 You obviously need an e-mail for your online identity and disposable e-mails are pretty much banned everywhere.
 
-Protonmail is a free e-mail provider based in Switzerland that advocates security and privacy.
+ProtonMail is a free e-mail provider based in Switzerland that advocates security and privacy.
 
 They're recommended by privacytools.io[^178]. Their only apparent issue is that they do require (in most cases) a phone number or another e-mail address for registration (when you try to register from a VPN or Tor at least).
 
@@ -2054,7 +2054,7 @@ They claim they do not store/link the phone/e-mail associated with the registrat
 
 Create this e-mail account first using the burner phone as verification if necessary.
 
-When you're done creating the account, please go into the settings and enable 2FA (Two Factor Authentication) . You will use KeepassXC TOTP feature (create a new entry "Identity Protonmail TOTP" and just use the TOTP menu to set it up). Save the rescue codes within your KeepassXC entry.
+When you're done creating the account, please go into the settings and enable 2FA (Two Factor Authentication) . You will use KeePassXC TOTP feature (create a new entry "Identity ProtonMail TOTP" and just use the TOTP menu to set it up). Save the rescue codes within your KeePassXC entry.
 
 This e-mail account will be used in the next step for creating a Google/Gmail account.
 
@@ -2067,19 +2067,19 @@ Google:
 
 -   Can you create accounts through Tor? Yes but expect some captchas and your phone number will definitely be required
 
-Protonmail is good ... but to appear less suspicious, it's just better to also have a Google Mail account.
+ProtonMail is good ... but to appear less suspicious, it's just better to also have a Google Mail account.
 
-As Protonmail, Google will also most likely require a phone number during sign-up as part of their verification process. However contrary to Protonmail, Google will store that phone number during the sign-up process and will also limit the amount of accounts that can be created during the sign-up[^180],[^181].
+As ProtonMail, Google will also most likely require a phone number during sign-up as part of their verification process. However contrary to ProtonMail, Google will store that phone number during the sign-up process and will also limit the amount of accounts that can be created during the sign-up[^180],[^181].
 
 From my experience during my research, this count is limited to 3 accounts / phone number. If you are unlucky with your number (if it was previously used by another mobile user), it might be less.
 
 You should therefore use again your burner phone and pre-paid SIM card to create the account. Don't forget to use the identity details you made up earlier (birthdate). When the account is created, please do take some time to do the following:
 
--   Log into Google Mail and Go into the Gmail Settings \> Go into the mail Forwarding options \> Set up a mail forwarding to your Protonmail Address \> Verify (using Protonmail) \> Go back to Gmail and set the forwarding to forward and delete Google copy \> Save. This step will allow you to check your Google Mail using Protonmail instead and will allow you to avoid triggering Google Security checks by Logging in from various VPN/Tor exit IP addresses in the future while storing your sensitive e-mail at Protonmail instead.
+-   Log into Google Mail and Go into the Gmail Settings \> Go into the mail Forwarding options \> Set up a mail forwarding to your ProtonMail Address \> Verify (using ProtonMail) \> Go back to Gmail and set the forwarding to forward and delete Google copy \> Save. This step will allow you to check your Google Mail using ProtonMail instead and will allow you to avoid triggering Google Security checks by Logging in from various VPN/Tor exit IP addresses in the future while storing your sensitive e-mail at ProtonMail instead.
 
--   Enable 2FA within the Google account settings. Firs you'll have to enable 2FA using the Burner phone \> Then you'll see the option appear to enable 2FA using an Authenticator app. Use that option and set it up with a new KeepassXC TOTP entry. When it's done, remove the phone 2FA from the Google account. This will prevent someone from using that phone number in the future (when you don't have it anymore) to recover/gain access to that account.
+-   Enable 2FA within the Google account settings. Firs you'll have to enable 2FA using the Burner phone \> Then you'll see the option appear to enable 2FA using an Authenticator app. Use that option and set it up with a new KeePassXC TOTP entry. When it's done, remove the phone 2FA from the Google account. This will prevent someone from using that phone number in the future (when you don't have it anymore) to recover/gain access to that account.
 
--   Add Protonmail as a recovery e-mail address for the account.
+-   Add ProtonMail as a recovery e-mail address for the account.
 
 -   Remove the phone number from the account details as a recovery option.
 
@@ -2091,9 +2091,9 @@ You should therefore use again your burner phone and pre-paid SIM card to create
 
     -   Youtube
 
--   Log out and don't touch it unless needed (as mentioned, you will use Protonmail to check your Gmail).
+-   Log out and don't touch it unless needed (as mentioned, you will use ProtonMail to check your Gmail).
 
-Keep in mind that there are different algorithms in place to check for weird activity. If you receive any mail (on Protonmail) prompting about a Google Security Warning. Click it and Click the button to say "Yes it was me". It helps.
+Keep in mind that there are different algorithms in place to check for weird activity. If you receive any mail (on ProtonMail) prompting about a Google Security Warning. Click it and Click the button to say "Yes it was me". It helps.
 
 Do not use that account for "sign-up with Google" anywhere unless necessary.
 
@@ -2126,7 +2126,7 @@ Once the account is restored, you should take some time to do the following:
 
 -   Upload the identity profile picture.
 
--   Enable 2FA from the security settings using a new KeepassXC TOTP entry, save the security codes in KeepassXC as well.
+-   Enable 2FA from the security settings using a new KeePassXC TOTP entry, save the security codes in KeePassXC as well.
 
 -   Disable Photo tagging
 
@@ -2146,9 +2146,9 @@ Once the account is restored, you should take some time to do the following:
 
 After about a week, you should check the twitter again and the chances are quite high that it will be suspended again for "suspicious activity" or "violating community guidelines" despite you not using it at all (not even a single tweet/follow/like/retweet or DM) but this time by another system. I call this the "Double tap".
 
-This time you will need to submit an appeal using a form [^184] , provide a good reason and wait for the appeal to be processed by Twitter. During that process, it's possible that you will receive an e-mail (on Protonmail) asking you to reply to a customer service ticket to prove that you do have access to your e-mail and that it's you. This will be directed toward your Gmail address but will arrive on your Protonmail.
+This time you will need to submit an appeal using a form [^184] , provide a good reason and wait for the appeal to be processed by Twitter. During that process, it's possible that you will receive an e-mail (on ProtonMail) asking you to reply to a customer service ticket to prove that you do have access to your e-mail and that it's you. This will be directed toward your Gmail address but will arrive on your ProtonMail.
 
-Obviously do not reply from Protonmail as this will raise suspicions, you have to sign-in into Gmail (unfortunately) and compose a new mail from there copy pasting the E-Mail , Subject and Content from Protonmail. As well as a reply confirming you have access to that e-mail.
+Obviously do not reply from ProtonMail as this will raise suspicions, you have to sign-in into Gmail (unfortunately) and compose a new mail from there copy pasting the E-Mail , Subject and Content from ProtonMail. As well as a reply confirming you have access to that e-mail.
 
 After a few days, your account should get unsuspended "for good". I had no issues after that but keep in mind they can still ban your account for any reason if you violate the community guidelines. The phone number and e-mail will then be flagged and you will have no other option but to get a new identity with a new number to sign-up again. Don't use this account for trolling.
 
@@ -2196,7 +2196,7 @@ Microsoft:
 
 So yes it's still possible to create an MS account without a phone number and using Tor or VPN but you might have cycle through a few exit nodes to achieve this.
 
-After signing-up you should setup 2FA authentication within security and using KeepassXC TOTP.
+After signing-up you should setup 2FA authentication within security and using KeePassXC TOTP.
 
 Instagram:
 ----------
@@ -2288,7 +2288,7 @@ Github:
 
 GitHub is straightforward and requires no phone number.
 
-Just Sign-up with e-mail and password and enable two-factor authentication (TOTP in KeepassXC). By default your e-mail will be private.
+Just Sign-up with e-mail and password and enable two-factor authentication (TOTP in KeePassXC). By default your e-mail will be private.
 
 Be sure to go into Settings \> E-Mail and make your e-mail private as well as block any push that would reveal your e-mail.
 
@@ -2443,7 +2443,7 @@ Then let's re-randomize the MAC addresses of your Virtual Machines and the Bluet
 
 ### Eventlogs:
 
-Windows Eventlogs will keep many various informations that could contain traces of your activities such as the devices that were mounted (including Veracrytpt NTFS volumes for instance[^143]), your network connections, app crash informations and various errors. It's always best to clean those up regularly. Do not do this on the Decoy OS.
+Windows Eventlogs will keep many various informations that could contain traces of your activities such as the devices that were mounted (including Veracrytpt NTFS volumes for instance[^145]), your network connections, app crash informations and various errors. It's always best to clean those up regularly. Do not do this on the Decoy OS.
 
 -   Start , search for Event Viewer and launch Event Viewer:
 
@@ -2529,13 +2529,13 @@ Then we will download a convenient utility called PrivaZer that will allow you d
 
         -   Select Clean Options **(Be careful with this option as it will erase all the free space on the selected partition, especially if you are running the decoy OS. Do not erase the free space or anything else on the second partition as you risk destroying your Hidden OS)**
 
-            -   If you have an SSD drive, Select SSD with Trim[^148] + 1 pass zero (just to be sure as mentioned earlier, Trim itself should be enough[^151])
+            -   If you have an SSD drive, Select SSD with Trim[^150] + 1 pass zero (just to be sure as mentioned earlier, Trim itself should be enough[^153])
 
             -   If you have an HDD drive, Select HDD with at least 1 pass.
 
 ### Shellbags:
 
-As explained earlier, Shellbags are basically histories of accessed volumes/files on your computer. Remember that shellbags are very good sources of informations for forensics[^147] and you need to clean those. Especially if you mounted any "hidden volume" anywhere. Again you shouldn't do this on the Decoy OS.
+As explained earlier, Shellbags are basically histories of accessed volumes/files on your computer. Remember that shellbags are very good sources of informations for forensics[^149] and you need to clean those. Especially if you mounted any "hidden volume" anywhere. Again you shouldn't do this on the Decoy OS.
 
 -   Download Shellbag Analayzer & Cleaner from <https://privazer.com/en/download-shellbag-analyzer-shellbag-cleaner.php>
 
@@ -3227,7 +3227,7 @@ These are the steps to create a Windows 10 (20H2) Installation Media using this 
 
 [^178]: Privacytools.io Recommended E-mail Providers <https://privacytools.io/providers/email/>
 
-[^179]: Protonmail Human Verification System <https://protonmail.com/support/knowledge-base/human-verification/>
+[^179]: ProtonMail Human Verification System [https://ProtonMail.com/support/knowledge-base/human-verification/]
 
 [^180]: Google Help <https://support.google.com/accounts/answer/114129?hl=en>
 
@@ -3306,7 +3306,7 @@ These are the steps to create a Windows 10 (20H2) Installation Media using this 
   [Whonix Virtual Machines:]: #whonix-virtual-machines
   [Windows 10 Virtual Machine:]: #windows-10-virtual-machine
   [VPN client installation (cash-paid):]: #vpn-client-installation-cash-paid
-  [KeepassXC:]: #keepassxc
+  [KeePassXC:]: #keepassxc
   [The Qubes Route:]: #the-qubes-route
   [Creating your anonymous online identities:]: #creating-your-anonymous-online-identities
   [Understanding the methods used to prevent anonymity and verify identity:]: #understanding-the-methods-used-to-prevent-anonymity-and-verify-identity
@@ -3326,7 +3326,7 @@ These are the steps to create a Windows 10 (20H2) Installation Media using this 
   [Manual reviews:]: #manual-reviews
   [Getting Online:]: #getting-online
   [Creating new identities:]: #creating-new-identities
-  [Protonmail:]: #protonmail
+  [ProtonMail:]: #protonmail
   [Google:]: #google
   [Twitter:]: #twitter
   [Linkedin:]: #linkedin
@@ -3377,5 +3377,9 @@ These are the steps to create a Windows 10 (20H2) Installation Media using this 
   [10]: media/image9.jpeg
   [11]: media/image10.jpeg
   [12]: media/image11.jpeg
+  [https://www.whonix.org/wiki/KeePassXC]: https://www.whonix.org/wiki/Keepassxc
+  [https://KeePassXC.org/docs/KeePassXC_GettingStarted.html\#\_microsoft_windows]: https://keepassxc.org/docs/KeePassXC_GettingStarted.html#_microsoft_windows
   [13]: media/image12.jpeg
   [14]: media/image13.jpeg
+  [https://ProtonMail.com/terms-and-conditions]: https://protonmail.com/terms-and-conditions
+  [https://ProtonMail.com/support/knowledge-base/human-verification/]: https://protonmail.com/support/knowledge-base/human-verification/
