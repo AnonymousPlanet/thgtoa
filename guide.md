@@ -115,9 +115,9 @@
 -   [Appendix B: (Windows Additional Privacy Settings)]
 -   [Appendix C: (Windows Installation Media Creation)]
 
-Version 0.1 (draft), December 2020 (work in progress, some parts are incomplete) by AnonymousPlanet
+Version 0.1a (draft), December 2020 (work in progress, some parts are incomplete) by AnonymousPlanet
 
-This guide is open-source, licensed under CC0-1.0 (Creative Commons Zero v1.0 Universal).
+This guide is open-source, licensed under Creative Commons Attribution 4.0 International (cc-by-4.0).
 
 Feel free to submit issues/recommendations/ideas using Github Issues.
 
@@ -136,7 +136,7 @@ You have to consider your threat model[^6] before going further.
 
 ![][2]
 
-(Illustration xkcd.com)
+(Illustration by xkcd.com, licensed under CC BY-NC 2.5)
 
 Will this guide help you protect your privacy from OSINT researchers like Belingcat[^7] , Doxing[^8] trolls on 4chan[^9] and others that have no access to the NSA toolbox? More likely. Tho I wouldn't be so sure about 4chan.
 
