@@ -2487,6 +2487,18 @@ Now you should clean the history within any app that you used including Browser 
 
 Then we will download a convenient utility called PrivaZer that will allow you delete various traces in various places. Again you should not use this on the Decoy OS.
 
+This will be used for cleaning many things such as:
+
+-   The Windows USN journal which stores plenty of information[^191].
+
+-   The Windows System Resource Usage Monitor (SRUM)[^192].
+
+-   Various histories of various programs (such as the recent lists).
+
+-   The free (unallocated) space of your hard drive[^193].
+
+Here are the steps:
+
 -   Download and install PrivaZer from <https://privazer.com/en/download.php>
 
     -   Run Privazer after install
@@ -2588,7 +2600,7 @@ Unfortunately you won't be able to wipe your Host OS using the built-in tools wi
 
 So you'll have to wipe it using bootable USB key again. But this time not Windows.
 
-There are several utilities that are recommend (like the old unmaintained DBAN[^191]) for this but personally, I will recommend the use of ShredOS.
+There are several utilities that are recommend (like the old unmaintained DBAN[^194]) for this but personally, I will recommend the use of ShredOS.
 
 Feel free do go with DBAN instead if you want, the process is basically the same but might not work out of the box with UEFI laptops.
 
@@ -2802,7 +2814,7 @@ Privacy Settings:
 Appendix B: (Windows Additional Privacy Settings)
 =================================================
 
-As written earlier in this guide and as noted by Privacytools.io[^192], Windows 10 is a privacy nightmare. And disabling everything during and after the installation using the settings available to you is not enough. The amount of telemetry data collected by Microsoft is staggering and could defeat your attempts at keeping secrets. You will need to download and use a couple utilities to (hopefully) force Windows 10 into not sending data back to Microsoft.
+As written earlier in this guide and as noted by Privacytools.io[^195], Windows 10 is a privacy nightmare. And disabling everything during and after the installation using the settings available to you is not enough. The amount of telemetry data collected by Microsoft is staggering and could defeat your attempts at keeping secrets. You will need to download and use a couple utilities to (hopefully) force Windows 10 into not sending data back to Microsoft.
 
 Here are the steps in details:
 
@@ -3253,9 +3265,15 @@ These are the steps to create a Windows 10 (20H2) Installation Media using this 
 
 [^190]: Bluestacks, <https://www.bluestacks.com/>
 
-[^191]: DBAN, <https://dban.org/>
+[^191]: Medium.com, The Windows USN Journal <https://medium.com/velociraptor-ir/the-windows-usn-journal-f0c55c9010e>
 
-[^192]: Privacytools.io, Operating Systems <https://privacytools.io/operating-systems/>
+[^192]: Medium.com, Digging into the System Resource Usage Monitor (SRUM) <https://medium.com/velociraptor-ir/digging-into-the-system-resource-usage-monitor-srum-afbadb1a375>
+
+[^193]: SANS, Timestamped Registry & NTFS Artifacts from Unallocated Space <https://www.sans.org/blog/timestamped-registry-ntfs-artifacts-from-unallocated-space/>
+
+[^194]: DBAN, <https://dban.org/>
+
+[^195]: Privacytools.io, Operating Systems <https://privacytools.io/operating-systems/>
 
   [Introduction:]: #introduction
   [Requirements:]: #requirements
