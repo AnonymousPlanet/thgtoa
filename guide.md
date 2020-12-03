@@ -2035,6 +2035,8 @@ I will help you bit by listing a few tips I learned while doing research over th
 
 -   Adapt your language/writing to the identity to not raise suspicions and lower your chances of being fingerprinted by online platforms. Be especially careful with using pedantic words and figures of speech/quotes that could allow some people to guess your writing is very similar to that person with this Twitter handle or this Reddit user.
 
+-   Consider using the recommended tools on <https://privacytools.io/> for your various purposes.
+
 ProtonMail:
 -----------
 
