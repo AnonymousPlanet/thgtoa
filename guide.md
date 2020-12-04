@@ -232,7 +232,9 @@ A solution to this is to use encrypted DNS using DNS over HTTPS[^24] or DNS over
 
 Unfortunately the TLS protocol used in most HTTPS connections in most Browsers (Chrome/Brave among them) will leak the DNS again through SNI[^27] handshakes (this can be checked here at Cloudflare: <https://www.cloudflare.com/ssl/encrypted-sni/> ). Only Firefox as of the writing of this guide supports eSNI (encrypted SNI[^28] also called ECH) which will encrypt everything end to end (in addition to using a secure private DNS over TLS/HTTPS) and will allow you to really hide your DNS requests from a third party. Some countries like Russia[^29] and China[^30] will block eSNI handshakes at network level to allow snooping and prevent bypassing censorship. Meaning you won't be able to establish an HTTPS connection with a service if you don't allow them to see what it was.
 
-Finally, even if you use a custom encrypted DNS server (DoS or DoT) with eSNI support, it might still not be enough as traffic analysis studies[^31] have shown it's still possible to reliably fingerprint and block unwanted requests. Only DNS over Tor was able to demonstrate efficient DNS Privacy. Personally I think the best option is probably to use Cloudflare DNS Onion service (<https://blog.cloudflare.com/welcome-hidden-resolver/>).
+Finally, even if you use a custom encrypted DNS server (DoS or DoT) with eSNI support, it might still not be enough as traffic analysis studies[^31] have shown it's still possible to reliably fingerprint and block unwanted requests. Only DNS over Tor was able to demonstrate efficient DNS Privacy in recent studies.
+
+One could also decide to use a Tor Hidden DNS Service to further increase privacy/anonymity but unfortunately such services are rare and the only reliable one I know provided by Cloudflare (<https://blog.cloudflare.com/welcome-hidden-resolver/>). I **[personally]{.ul}** think this is a viable technical option due to the fact that it's a hidden service but it's also a moral choice if you want to use this.
 
 Here is an illustration showing the current state of DNS privacy:
 
@@ -461,7 +463,7 @@ Here is a tutorial to remove metadata from a Picture using OS provided tools: <h
 Your "Anonymized" Tor/VPN traffic:
 ----------------------------------
 
-Tor and VPNs are not silver bullets. Many advanced techniques have been developed and studied to de-anonymize encrypted traffic over the years[^85]. Most of those techniques are Correlation attacks that will correlate your network traffic in one way or another to logs or datasets. Here are some examples:
+Tor and VPNs are not silver bullets. Many advanced techniques have been developed and studied to de-anonymize encrypted traffic over the years[^85]. Most of those techniques are Correlation attacks that will correlate your network traffic in one way or another to logs or datasets. Here are some classic examples:
 
 -   Correlation Fingerprinting Attack: As illustrated (simplified) below, this attack will fingerprint[^86] your encrypted traffic (like the websites you visited) just based on the analysis of your encrypted traffic (without decrypting it). It's able to do so with a whopping 96% success rate. Such fingerprinting can be used by an adversary that has access to your source network to figure out some of your encrypted activity (such as which websites you visited).
 
@@ -484,6 +486,8 @@ There are ways to mitigate these such as:
 -   Use multiple layers (such as what will be recommended in this guide later: VPN over Tor) so that an adversary might be able to see that someone connected to the service through Tor but won't be able to see that it was you because you were connected to a VPN and not the Tor Network.
 
 Be aware again that this might not be enough against a motivated global adversary[^88] with wide access to global mass surveillance (remember XKEYSCORE, MUSCULAR and PRISM). Such adversary might have access to logs no matter where you are and could use those to de-anonymize you.
+
+I also strongly recommend reading this very good, complete and thorough guide on many Attack Vectors on Tor: <https://github.com/Attacks-on-Tor/Attacks-on-Tor>
 
 (In their defense, it should also be noted that Tor is not designed to protect against a Global adversary. For more information see <https://svn-archive.torproject.org/svn/projects/design-paper/tor-design.pdf> and specifically, \"Part 3. Design goals and assumptions.\".)
 
@@ -1751,7 +1755,7 @@ You will often experience several in a row and sometimes very difficult ones inv
 
 You'll also have (in my experience) more Captchas (reCaptcha) in Google if you don't use Chrome. But this can be mitigated by using Chromium based browsers such as Brave. There is also a Browser extension called Buster that could help you those <https://github.com/dessant/buster>.
 
-As for Cloudflare (hCaptcha), you could also use their Accessibility solution here (<https://www.hcaptcha.com/accessibility>) which would allow you to sign-up (with your anonymous identity created later) and set a cookie within your Browser that would allow you to bypass their captchas. Another solution to mitigate hCaptcha would be to use their own solution called "Privacy Pass" <https://privacypass.github.io/> in the form of a Browser extension you could install in your VM Browser.
+As for Cloudflare (hCaptcha), you could also use their Accessibility solution here (<https://www.hcaptcha.com/accessibility>) which would allow you to sign-up (with your anonymous identity created later) and set a cookie within your Browser that would allow you to bypass their captchas. Another solution to mitigate hCaptcha would be to use their own solution called "Privacy Pass"[^175] <https://privacypass.github.io/> in the form of a Browser extension you could install in your VM Browser.
 
 You should therefore deal with those carefully and force yourself to alter the way you're solving them (speed/movement/accuracy/...) as to prevent "Captcha Fingerprinting".
 
@@ -1761,7 +1765,7 @@ Fortunately as far as I'm aware, these are not yet officially/publicly used to d
 
 Phone verification is advertised by most platforms as a way to verify you're human. But don't be fooled, the main reason for phone verification is not only to check if you're human but also to be able to de-anonymize you if needed.
 
-Most platforms (including the privacy oriented ones such as Signal/Telegram/ProtonMail will require a phone number to register and most countries now make it mandatory to submit a proof of ID to register[^175].
+Most platforms (including the privacy oriented ones such as Signal/Telegram/ProtonMail will require a phone number to register and most countries now make it mandatory to submit a proof of ID to register[^176].
 
 ### E-Mail verification:
 
@@ -1823,9 +1827,9 @@ For this reason, this guide recommends the use of VPN over Tor (and not Tor over
 
 ### Browser and Device Fingerprinting:
 
-Browser and Device[^176] Fingerprinting are usually integrated into the Captcha services but also in other various services.
+Browser and Device[^177] Fingerprinting are usually integrated into the Captcha services but also in other various services.
 
-Many platforms (like Google[^177]) will check your browser for various capabilities and settings and block Browsers they don't like. This is one of the reasons I recommend using Brave Browser over Tor Browser within your VM.
+Many platforms (like Google[^178]) will check your browser for various capabilities and settings and block Browsers they don't like. This is one of the reasons I recommend using Brave Browser over Tor Browser within your VM.
 
 Here are some of the things they check within recent browsers:
 
@@ -1901,7 +1905,7 @@ Why do this user verification ourselves when we can just ask others to deal with
 
 You'll notice this and you probably already encountered this. Some apps/platforms will ask/require you to sign-in with a well-known and well-used reputable platform instead of their own system (Sign-in with Google/Facebook/Apple/Twitter).
 
-This option is often presented as the "default one", hiding away the "Sign-in with e-mail and password" with clever Dark Patterns[^178] and unfortunately sometimes required.
+This option is often presented as the "default one", hiding away the "Sign-in with e-mail and password" with clever Dark Patterns[^179] and unfortunately sometimes required.
 
 This method will delegate the verification process on those platforms instead assuming that you won't be able to create an anonymous Google/Facebook/Apple/Twitter account with ease.
 
@@ -1915,7 +1919,7 @@ Some platforms/apps will require you to take a live picture of yourself either d
 
 ![][14]
 
-This guide won't cover this one (yet) as it's mainly used on financial platforms (that will be able to identify you with other means anyway) and some dating apps like Tinder[^179].
+This guide won't cover this one (yet) as it's mainly used on financial platforms (that will be able to identify you with other means anyway) and some dating apps like Tinder[^180].
 
 In some cases these verifications have to be done from your Smartphone and with an "in-app" camera to prevent you from sending a previously saved (edited) image.
 
@@ -2050,9 +2054,9 @@ You obviously need an e-mail for your online identity and disposable e-mails are
 
 ProtonMail is a free e-mail provider based in Switzerland that advocates security and privacy.
 
-They're recommended by privacytools.io[^180]. Their only apparent issue is that they do require (in most cases) a phone number or another e-mail address for registration (when you try to register from a VPN or Tor at least).
+They're recommended by privacytools.io[^181]. Their only apparent issue is that they do require (in most cases) a phone number or another e-mail address for registration (when you try to register from a VPN or Tor at least).
 
-They claim they do not store/link the phone/e-mail associated with the registration but only store a hash that is not linked to the account[^181]. As long as their claim is true and the hash is not linked to your account, and that you followed my guide regarding the Burner phone and the pre-paid SIM card, you should be safe from tracking.
+They claim they do not store/link the phone/e-mail associated with the registration but only store a hash that is not linked to the account[^182]. As long as their claim is true and the hash is not linked to your account, and that you followed my guide regarding the Burner phone and the pre-paid SIM card, you should be safe from tracking.
 
 Create this e-mail account first using the burner phone as verification if necessary.
 
@@ -2071,7 +2075,7 @@ Google:
 
 ProtonMail is good ... but to appear less suspicious, it's just better to also have a Google Mail account.
 
-As ProtonMail, Google will also most likely require a phone number during sign-up as part of their verification process. However contrary to ProtonMail, Google will store that phone number during the sign-up process and will also limit the amount of accounts that can be created during the sign-up[^182],[^183].
+As ProtonMail, Google will also most likely require a phone number during sign-up as part of their verification process. However contrary to ProtonMail, Google will store that phone number during the sign-up process and will also limit the amount of accounts that can be created during the sign-up[^183],[^184].
 
 From my experience during my research, this count is limited to 3 accounts / phone number. If you are unlucky with your number (if it was previously used by another mobile user), it might be less.
 
@@ -2101,7 +2105,7 @@ Do not use that account for "sign-up with Google" anywhere unless necessary.
 
 Be extremely careful if you decide to use the account for Google activities (such as Google Maps reviews or Youtube Comments) as those can easily trigger some checks (Negative reviews, Comments breaking Community Guidelines on Youtube).
 
-If your account gets suspended [^184] (this can happen on sign-up, after signing-up or after using it in some Google services), you can still get it unsuspended by submitting[^185] an appeal/verification (which will again require your Phone number and possibly an e-mail contact with Google support with the reason). Suspension of the account does not disable the e-mail forwarding but suspended account will be deleted after a while.
+If your account gets suspended [^185] (this can happen on sign-up, after signing-up or after using it in some Google services), you can still get it unsuspended by submitting[^186] an appeal/verification (which will again require your Phone number and possibly an e-mail contact with Google support with the reason). Suspension of the account does not disable the e-mail forwarding but suspended account will be deleted after a while.
 
 After suspension, if your Google account is restored, you should be fine.
 
@@ -2148,7 +2152,7 @@ Once the account is restored, you should take some time to do the following:
 
 After about a week, you should check the twitter again and the chances are quite high that it will be suspended again for "suspicious activity" or "violating community guidelines" despite you not using it at all (not even a single tweet/follow/like/retweet or DM) but this time by another system. I call this the "Double tap".
 
-This time you will need to submit an appeal using a form [^186] , provide a good reason and wait for the appeal to be processed by Twitter. During that process, it's possible that you will receive an e-mail (on ProtonMail) asking you to reply to a customer service ticket to prove that you do have access to your e-mail and that it's you. This will be directed toward your Gmail address but will arrive on your ProtonMail.
+This time you will need to submit an appeal using a form [^187] , provide a good reason and wait for the appeal to be processed by Twitter. During that process, it's possible that you will receive an e-mail (on ProtonMail) asking you to reply to a customer service ticket to prove that you do have access to your e-mail and that it's you. This will be directed toward your Gmail address but will arrive on your ProtonMail.
 
 Obviously do not reply from ProtonMail as this will raise suspicions, you have to sign-in into Gmail (unfortunately) and compose a new mail from there copy pasting the E-Mail , Subject and Content from ProtonMail. As well as a reply confirming you have access to that e-mail.
 
@@ -2171,7 +2175,7 @@ Linkedin is far less aggressive than twitter but will nonetheless require a vali
 
 Linkedin however is relying a lot on reports and user/customer moderation. You should not create a profile with an occupation inside a private corporations or a small startup company. The company employees are monitoring Linkedin activity and receive notifications when new people join. They can then report your profile as fake and your profile will then be suspensed or banned pending appeal.
 
-Linkedin will then require you go through a verification process that will unfortunately require you to send an ID proof (identity card, passport, driver license). This ID verification is processed by a company called Jumio[^187] that specializes in ID proofind. This is most likely a dead end as this would force you to develop some strong photoshop skills.
+Linkedin will then require you go through a verification process that will unfortunately require you to send an ID proof (identity card, passport, driver license). This ID verification is processed by a company called Jumio[^188] that specializes in ID proofind. This is most likely a dead end as this would force you to develop some strong photoshop skills.
 
 Instead you are far less likely to be reported if you just stay vague (say you're a student/intern/freelance) or pretend you work for a large public institution that is too large for anyone to care of check.
 
@@ -2247,7 +2251,7 @@ When people stand behind their opinions and actions, our community is safer and 
 ```
 -   Will they require a phone number? Yes and probably more later
 
--   Can you create accounts through Tor? Yes but it's very difficult and their onion address[^188] won't help. In most cases you'll just have a random error at sign-up and your account suspended after sign-in.
+-   Can you create accounts through Tor? Yes but it's very difficult and their onion address[^189] won't help. In most cases you'll just have a random error at sign-up and your account suspended after sign-in.
 
 Facebook is one of the most aggressive platforms in identity verification and is pushing hard their "real name policy". It is why this guide is only advised to German residents.
 
@@ -2382,7 +2386,7 @@ What about those mobile only apps (Whatsapp/Signal):
 
 There are only three ways of securely using those anonymously (that I would recommend). Using a VPN on your phone is not among those ways. All of those are unfortunately "tedious" to say the least.
 
--   Use an Android Emulator (Youwave[^189], Bluestacks[^190] or if you have a powerful PC, Android Studio) within the Windows VM and run the App through your multi-layer of Tor/VPN. Drawback is that such emulators are usually quite resource hungry and will slow down your VM and use more battery. Here is also an (outdated) guide on this matter: <https://www.bellingcat.com/resources/how-tos/2018/08/23/creating-android-open-source-research-device-pc/>
+-   Use an Android Emulator (Youwave[^190], Bluestacks[^191] or if you have a powerful PC, Android Studio) within the Windows VM and run the App through your multi-layer of Tor/VPN. Drawback is that such emulators are usually quite resource hungry and will slow down your VM and use more battery. Here is also an (outdated) guide on this matter: <https://www.bellingcat.com/resources/how-tos/2018/08/23/creating-android-open-source-research-device-pc/>
 
 -   Use a non-official app (such as Wassapp for Whatsapp) to connect from the Windows VM to the app. But at your own risk as you could get banned for violating the terms of services by using a non-official App.
 
@@ -2489,13 +2493,13 @@ Then we will download a convenient utility called PrivaZer that will allow you d
 
 This will be used for cleaning many things such as:
 
--   The Windows USN journal which stores plenty of information[^191].
+-   The Windows USN journal which stores plenty of information[^192].
 
--   The Windows System Resource Usage Monitor (SRUM)[^192].
+-   The Windows System Resource Usage Monitor (SRUM)[^193].
 
 -   Various histories of various programs (such as the recent lists).
 
--   The free (unallocated) space of your hard drive[^193].
+-   The free (unallocated) space of your hard drive[^194].
 
 Here are the steps:
 
@@ -2600,7 +2604,7 @@ Unfortunately you won't be able to wipe your Host OS using the built-in tools wi
 
 So you'll have to wipe it using bootable USB key again. But this time not Windows.
 
-There are several utilities that are recommend (like the old unmaintained DBAN[^194]) for this but personally, I will recommend the use of ShredOS.
+There are several utilities that are recommend (like the old unmaintained DBAN[^195]) for this but personally, I will recommend the use of ShredOS.
 
 Feel free do go with DBAN instead if you want, the process is basically the same but might not work out of the box with UEFI laptops.
 
@@ -2814,7 +2818,7 @@ Privacy Settings:
 Appendix B: (Windows Additional Privacy Settings)
 =================================================
 
-As written earlier in this guide and as noted by Privacytools.io[^195], Windows 10 is a privacy nightmare. And disabling everything during and after the installation using the settings available to you is not enough. The amount of telemetry data collected by Microsoft is staggering and could defeat your attempts at keeping secrets. You will need to download and use a couple utilities to (hopefully) force Windows 10 into not sending data back to Microsoft.
+As written earlier in this guide and as noted by Privacytools.io[^196], Windows 10 is a privacy nightmare. And disabling everything during and after the installation using the settings available to you is not enough. The amount of telemetry data collected by Microsoft is staggering and could defeat your attempts at keeping secrets. You will need to download and use a couple utilities to (hopefully) force Windows 10 into not sending data back to Microsoft.
 
 Here are the steps in details:
 
@@ -3229,51 +3233,53 @@ These are the steps to create a Windows 10 (20H2) Installation Media using this 
 
 [^174]: Google Blog <https://security.googleblog.com/2014/12/are-you-robot-introducing-no-captcha.html>
 
-[^175]: Privacy International,
+[^175]: Cloudflare Blog, Cloudflare supports Privacy Pass <https://blog.cloudflare.com/cloudflare-supports-privacy-pass/>
+
+[^176]: Privacy International,
 
     Timeline of SIM Card Registration Laws <https://privacyinternational.org/long-read/3018/timeline-sim-card-registration-laws>
 
-[^176]: Wikipedia, Device Fingerprinting <https://en.wikipedia.org/wiki/Device_fingerprint>
+[^177]: Wikipedia, Device Fingerprinting <https://en.wikipedia.org/wiki/Device_fingerprint>
 
-[^177]: Developers Google Blog,
+[^178]: Developers Google Blog,
 
     Guidance to developers affected by our effort to block less secure browsers and applications <https://developers.googleblog.com/2020/08/guidance-for-our-effort-to-block-less-secure-browser-and-apps.html>
 
-[^178]: Wikipedia, Dark Pattern <https://en.wikipedia.org/wiki/Dark_pattern>
+[^179]: Wikipedia, Dark Pattern <https://en.wikipedia.org/wiki/Dark_pattern>
 
-[^179]: The Verge, Tinder will give you a verified blue check mark if you pass its catfishing test <https://www.theverge.com/2020/1/23/21077423/tinder-photo-verification-blue-checkmark-safety-center-launch-noonlight>
+[^180]: The Verge, Tinder will give you a verified blue check mark if you pass its catfishing test <https://www.theverge.com/2020/1/23/21077423/tinder-photo-verification-blue-checkmark-safety-center-launch-noonlight>
 
-[^180]: Privacytools.io Recommended E-mail Providers <https://privacytools.io/providers/email/>
+[^181]: Privacytools.io Recommended E-mail Providers <https://privacytools.io/providers/email/>
 
-[^181]: ProtonMail Human Verification System [https://ProtonMail.com/support/knowledge-base/human-verification/]
+[^182]: ProtonMail Human Verification System [https://ProtonMail.com/support/knowledge-base/human-verification/]
 
-[^182]: Google Help <https://support.google.com/accounts/answer/114129?hl=en>
+[^183]: Google Help <https://support.google.com/accounts/answer/114129?hl=en>
 
-[^183]: Google Help <https://support.google.com/google-ads/answer/7474263?hl=en>
+[^184]: Google Help <https://support.google.com/google-ads/answer/7474263?hl=en>
 
-[^184]: Google, Your account is disabled <https://support.google.com/accounts/answer/40695>
+[^185]: Google, Your account is disabled <https://support.google.com/accounts/answer/40695>
 
-[^185]: Google, Request to restore the account <https://support.google.com/accounts/contact/disabled2>
+[^186]: Google, Request to restore the account <https://support.google.com/accounts/contact/disabled2>
 
-[^186]: Twitter Appeal Form <https://help.twitter.com/forms/general>
+[^187]: Twitter Appeal Form <https://help.twitter.com/forms/general>
 
-[^187]: Jumio, ID verification features <https://www.jumio.com/features/>
+[^188]: Jumio, ID verification features <https://www.jumio.com/features/>
 
-[^188]: Facebook Onion Website <http://facebookcorewwwi.onion>
+[^189]: Facebook Onion Website <http://facebookcorewwwi.onion>
 
-[^189]: Youwave, <https://youwave.com/>
+[^190]: Youwave, <https://youwave.com/>
 
-[^190]: Bluestacks, <https://www.bluestacks.com/>
+[^191]: Bluestacks, <https://www.bluestacks.com/>
 
-[^191]: Medium.com, The Windows USN Journal <https://medium.com/velociraptor-ir/the-windows-usn-journal-f0c55c9010e>
+[^192]: Medium.com, The Windows USN Journal <https://medium.com/velociraptor-ir/the-windows-usn-journal-f0c55c9010e>
 
-[^192]: Medium.com, Digging into the System Resource Usage Monitor (SRUM) <https://medium.com/velociraptor-ir/digging-into-the-system-resource-usage-monitor-srum-afbadb1a375>
+[^193]: Medium.com, Digging into the System Resource Usage Monitor (SRUM) <https://medium.com/velociraptor-ir/digging-into-the-system-resource-usage-monitor-srum-afbadb1a375>
 
-[^193]: SANS, Timestamped Registry & NTFS Artifacts from Unallocated Space <https://www.sans.org/blog/timestamped-registry-ntfs-artifacts-from-unallocated-space/>
+[^194]: SANS, Timestamped Registry & NTFS Artifacts from Unallocated Space <https://www.sans.org/blog/timestamped-registry-ntfs-artifacts-from-unallocated-space/>
 
-[^194]: DBAN, <https://dban.org/>
+[^195]: DBAN, <https://dban.org/>
 
-[^195]: Privacytools.io, Operating Systems <https://privacytools.io/operating-systems/>
+[^196]: Privacytools.io, Operating Systems <https://privacytools.io/operating-systems/>
 
   [Introduction:]: #introduction
   [Requirements:]: #requirements
