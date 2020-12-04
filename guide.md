@@ -121,8 +121,7 @@ This guide is open-source, licensed under Creative Commons Attribution 4.0 Inter
 
 Feel free to submit issues/recommendations/ideas using Github Issues.
 
-Introduction:
-=============
+# Introduction:
 
 Making a social media account with a pseudonym or artist/brand name is easy. And it's enough is most use cases to protect your identity as the next George Orwell. There are plenty of people using pseudonyms all over Facebook/Instagram/Twitter/Linkedin/TikTok/Snapchat/Reddit/... But the vast majority of those are anything but anonymous and can easily be traced to their real identity by your local cops, random people within the OSINT[^1] (Open-Source Intelligence) community and trolls[^2] on 4chan[^3].
 
@@ -172,8 +171,7 @@ Feel free to report issues or recommend improvements in this repository if you h
 
 **Use at your own risk. Anything in here is not legal advice and you should verify compliance with your local law before use (IANAL**[^12]**).**
 
-Requirements:
-=============
+# Requirements:
 
 -   **Be a permanent Adult resident in Germany where the courts have upheld up the legality of not using real names on online platforms (§13 VI of the German Telemedia Act of 2007** [^13]**). Alternatively be resident of any other country where you can validate and verify this is legal yourself.**
 
@@ -191,15 +189,13 @@ Requirements:
 
 **This guide will (for the moment) not recommend using MacOS due to the latest Big Sur update which forces "unblockable" telemetry**[^15][^16] **and because MacOS doesn't offer MAC address randomization.**
 
-Understanding some basics of how some information can lead back to you and how to mitigate those:
-=================================================================================================
+# Understanding some basics of how some information can lead back to you and how to mitigate those:
 
 There are many ways you can be tracked besides browser cookies and ads, your e-mail and your phone number. And if you think only the Mossad or the NSA/FSB can find you, you would be terribly wrong.
 
 Here is a non-exhaustive list of some of the many ways you can be de-anonymized:
 
-Your IP address:
-----------------
+## Your IP address:
 
 Your IP address[^17] is the most known and obvious way you can be tracked. That IP is the IP you're using at the source. This is where you connect to the internet. That IP is usually provided by your ISP (Internet Service Provider) (xDSL, Mobile, Cable, Fiber, Cafe, Bar, Friend, Neighbor). Most countries have data retention regulations[^18] which mandates keeping logs of who is using what IP at a certain time/date for up to several years or indefinitely. Your ISP can tell a third party that you were using a specific IP at a specific date and time, years after the fact. If that IP (the origin one) leaks at any point for any reason, it can be used to track down you directly. In many countries, you won't be able to have internet access without providing some form of identification to the provider (address, ID, real name, e-mail ...).
 
@@ -215,8 +211,7 @@ For those reasons, we'll need to not use that origin IP (the one tied to your id
 
 All those will be explained later in this guide.
 
-Your DNS requests:
-------------------
+## Your DNS requests:
 
 DNS stands for "Domain Name System"[^21] and is a service used by your browser (and other apps) to find the IP addresses of a service. It's pretty much a huge "contact list" (phone book for older people) that works like asking it a name and it returns the number to call. Except it returns an IP instead.
 
@@ -242,8 +237,7 @@ Here is an illustration showing the current state of DNS privacy:
 
 Therefore to mitigate all this issue (as much as possible), this guide we will later recommend a multi-layered solution of VPN over Tor (or even Tor over VPN over Tor).
 
-Your IMEI and IMSI (and by extension, your phone number):
----------------------------------------------------------
+## Your IMEI and IMSI (and by extension, your phone number):
 
 The IMEI (International Mobile Equipment Identity[^33]) and the IMSI (International Mobile Subscriber Identity[^34]) are unique numbers created by mobile phone manufacturers and mobile phone operators.
 
@@ -277,8 +271,7 @@ For these reasons, it's crucial to get a dedicated burner phone with an IMEI tha
 
 For additional safety (if you absolutely have to take your smartphone along with you or if you want to store your Burner phone), you could consider the use of a faraday cage[^47] bag to store your devices. There are many such faraday "signal blocking" bags available for sale and some of these have been studied[^48] for their effectiveness. If you can't afford such bags, you can probably achieve a "decent result" with one or several sheets of aluminum foil (as shown in the previously linked study).
 
-Your Wi-Fi MAC address:
------------------------
+## Your Wi-Fi MAC address:
 
 The MAC address[^49] is a unique identifier tied to your physical Network Interface (Wired Ethernet or WIFI) and could of course be used to track you if it's not randomized. As it was the case with the IMEI, manufacturers of computers and network cards usually keep logs of their sales (usually including things like: Serial number, IMEI, Mac Addresses, ...) and it's possible again for them to track where and when the computer with the MAC address in question was sold and to whom. Even if you bought it with cash in a supermarket, the supermarket might still have CCTV (or a CCTV just outside that shop) and again the time/date of sale could be used to find out who was there using the Mobile Provider antenna logs at that time (IMEI/IMSI).
 
@@ -288,8 +281,7 @@ Your home router/WIFI access points keeps logs of devices that registered on the
 
 So it's important again not to bring your phone along when/where you conduct sensitive activities. If you use your own laptop, then it's crucial to hide that MAC address (and Bluetooth address) anywhere you use it and be extra careful not to leak any information. Thankfully many recent OSes now feature or allow the option to randomize MAC addresses (Android, IOS, Linux and Windows 10) with the notable exception of MacOS which doesn't support this feature even in its latest Big Sur version.
 
-Your Bluetooth MAC address:
----------------------------
+## Your Bluetooth MAC address:
 
 Your Bluetooth MAC is like a MAC address except it's for Bluetooth. Again it can be used to track you as manufacturers and operating system makers keep logs of such information. It could be tied to a sale place/time/date or accounts and then could be used to track you with such information, the shop billing information, the CCTV or the mobile antenna logs in correlation.
 
@@ -299,8 +291,7 @@ For this reason, and unless you really need those, you should just disable Bluet
 
 On Windows, you will need to disable the Bluetooth device in the device manager itself to force a randomization of the address for next use and prevent tracking.
 
-Your Operating Systems and Apps telemetry services:
----------------------------------------------------
+## Your Operating Systems and Apps telemetry services:
 
 Whether it's Android, IOS, Windows, MacOS or even Ubuntu. Most popular Operating Systems now collect telemetry information by default. This information collection can be extensive and include a staggering amount of details (metadata and data) on your devices and their usage.
 
@@ -336,8 +327,7 @@ It's important to understand that this telemetry data can be tied to your device
 
 Later in this guide, we will use all the means at our disposal to disable and block as much telemetry as possible to mitigate this attack vector in the Operating Systems supported in this guide.
 
-The WIFIs and Bluetooth devices around you:
--------------------------------------------
+## The WIFIs and Bluetooth devices around you:
 
 Geolocation is not only done by using mobile antennas triangulation. It's also done using the WIFIs and Bluetooth devices around you. Operating systems makers like Google (Android[^53]) and Apple (IOS[^54]) maintain a convenient database of most WIFI access points, Bluetooth devices and their location. When your Android smartphone or IPhone is on (and not in Plane mode), it will scan passively (unless you specifically disable this feature in the settings) WIFI access points and Bluetooth devices around you and will be able to geolocate you with more precision than when using a GPS.
 
@@ -347,8 +337,7 @@ Note: If you have an Android smartphone, Google probably knows where it is no ma
 
 Don't take your smartphone with you where and when you are doing sensitive activities that you want to keep secret. Just don't. Leave it at home. Or if you absolutely have to take it with you, make sure it's powered off and consider the use of a faraday bag.
 
-Your Metadata including your Geo-Location:
-------------------------------------------
+## Your Metadata including your Geo-Location:
 
 Your metadata is all the information about your activities without the actual content of those activities. For instance it's like knowing you had a call from an oncologist before then calling your family and friends successively. You don't know what was said during the conversation but you can guess what it was just from the "metadata"[^55].
 
@@ -364,8 +353,7 @@ Have you heard of Edward Snowden[^62]? Now is the time to google him and read hi
 
 "We kill people based on Metadata"[^68]
 
-Your Smart devices in general:
-------------------------------
+## Your Smart devices in general:
 
 You got it, your smartphone is an advanced spying device that:
 
@@ -397,8 +385,7 @@ But that's not all, this section is not called "Smartphones" but "Smart devices"
 
 So when you're going to conduct anonymous or sensitive activities somewhere. Do not take your smart devices with you. Just don't and if you absolutely have to, make sure they're powered off and consider the use of a faraday bag.
 
-Your Devices can be tracked even when completely powered off:
--------------------------------------------------------------
+## Your Devices can be tracked even when completely powered off:
 
 You've seen this in action/spy/scifi movies and shows, the protagonists always remove the battery of their phones to make sure it can't be used. Well this is now true at least for some devices:
 
@@ -414,8 +401,7 @@ They can now locate such devices and keep the location in some database that cou
 
 For this reason, you should not to bring your smartphone with you (even turned off) when you conduct sensitive activities. But if you absolutely have to take such devices with you, then you should again consider the use of a faraday cage around such devices in addition to turning them off.
 
-Your RFID enabled devices:
---------------------------
+## Your RFID enabled devices:
 
 RFID stands for Radio-frequency identification[^82], it's the technology used for instance for contactless payments and various identification systems. Of course your smartphone is among those devices and has RFID contactless payment capabilities through NFC[^83]. As with everything else, such capabilities can be used for tracking by various actors.
 
@@ -443,8 +429,7 @@ More information over at Wikipedia: <https://en.wikipedia.org/wiki/Radio-frequen
 
 The only way to mitigate this problem is to have no RFID tags on you or to shield them again using a type of faraday cage. You could also use specialized wallets/pouches that specifically block RFID communications. Many of those are now made by well-known brands such as Samsonite[^84].
 
-Your Files Properties/Metadata:
--------------------------------
+## Your Files Properties/Metadata:
 
 This can be obvious to many but not to all. Most files have metadata attached to them. A good example are pictures which store EXIF[^85] information which can contain a lot of information such as GPS coordinates, which camera/phone model took it and when it was taken precisely. While this information might not directly give out who you are, it could tell exactly where you were at a certain moment which could allow others to use different sources to find you (CCTV or other footage taken at the same place at the same time during a protest for instance). It's important that you verify any file you would put on those platforms for any properties that might contain any information that might lead back to you.
 
@@ -460,8 +445,7 @@ Here is a tutorial to remove metadata from Office documents: <https://support.mi
 
 Here is a tutorial to remove metadata from a Picture using OS provided tools: <https://www.purevpn.com/internet-privacy/how-to-remove-metadata-from-photos>
 
-Your "Anonymized" Tor/VPN traffic:
-----------------------------------
+## Your "Anonymized" Tor/VPN traffic:
 
 Tor and VPNs are not silver bullets. Many advanced techniques have been developed and studied to de-anonymize encrypted traffic over the years[^86]. Most of those techniques are Correlation attacks that will correlate your network traffic in one way or another to logs or datasets. Here are some classic examples:
 
@@ -495,8 +479,7 @@ Lastly, do remember that using Tor in itself can already be considered a suspici
 
 We will later propose a propose a multi-layered approach over a combination of Tor and VPN as well as using public Wi-Fi over a known internet connection.
 
-Your Crypto transactions:
--------------------------
+## Your Crypto transactions:
 
 Contrary to popular belief, Crypto transactions (such as Bitcoin and Ethereum) are not anonymous[^92]. Most crypto currencies can be tracked accurately through various methods[^93].
 
@@ -506,8 +489,7 @@ There are some crypto currencies with privacy in mind like Monero but even those
 
 Even if you use Mixers or Tumblers (services that specialize in anonymizing crypto currencies by "mixing them"), keep in mind this is only obfuscation and not actual anonymity[^97].
 
-Exploits in your apps:
-----------------------
+## Exploits in your apps:
 
 So you're using Tor Browser or Brave Browser with a Tor Tab. You could be using those over a VPN for added security. But you should keep in mind that there are exploits[^98] (hacks) that could be known by an adversary (but unknown to the App/Browser provider). Such exploits could be used to compromise your system and reveal details to de-anonymize you such as your IP address or other details.
 
@@ -523,8 +505,7 @@ Here are some steps to mitigate this type of attack:
 
 To reflect these recommendations, this guide will therefore later guide you in the use of Virtualization so that even if your Browser/Apps get compromised by a skilled adversary, that adversary will find himself stuck in a sandbox[^101] without being able to access identifying information.
 
-Your Cloud backups/sync services:
----------------------------------
+## Your Cloud backups/sync services:
 
 All companies are advertising their use of end to end encryption (E2EE). This is true for almost every messaging app and website (HTTPS). Apple and Google are advertising their use of encryption on their Android devices and their IPhones.
 
@@ -548,8 +529,7 @@ Generally speaking, you should not trust cloud providers with your sensitive dat
 
 The only way to mitigate this is to encrypt yourself your data on your side and then only upload it to such service.
 
-Your Digital Fingerprint And Footprint:
----------------------------------------
+## Your Digital Fingerprint And Footprint:
 
 The digital fingerprint is the way you write, the way you behave. The way you click. The way you browse. The fonts you use on your browser[^104]. Fingerprinting is being used to guess who someone is by the way that user is behaving. You might be using specific pedantic words or making specific spelling mistakes that could give you away using a simple Google search for similar features because you typed in a similar way on some Reddit post 5 years ago using a not so anonymous Reddit account.
 
@@ -559,8 +539,7 @@ This technology is also widely used used in CAPTCHAS[^168] services to verify th
 
 Analysis algorithms could then be used to match these patterns with other users and match you to a different known user. It's unclear if such data is used or not by Governments and Law Enforcements agencies but it might be in the future. And while this might only be used for advertising/marketing purposes now. It could and probably will be used for investigations in the short or mid-term future.
 
-Your Real Life:
----------------
+## Your Real Life:
 
 These are clues you might give over time that could point to your real identity. You might be talking to someone or posting on some board/forum/reddit. In those posts you might over time leak some information about your real life. These might be memories, experiences or clues you shared that could then allow a motivated adversary to build a profile to narrow their search.
 
@@ -570,8 +549,7 @@ There are also a few cases involving OSINT at Bellingcat[^106].
 
 You should never ever share real personal experiences/details that could later lead to you using anonymous identities.
 
-Your Browser and Device Fingerprints:
--------------------------------------
+## Your Browser and Device Fingerprints:
 
 Your Browser and Device Fingerprints[^178] are set of properties/capabilities of your System/Browser. These are used on most websites for invisible user tracking but also to adapt the website user experience depending on their browser. For instance websites will be able to provide a "mobile experience" if you're using a mobile browser or propose a specific language/geographic version depending on your fingerprint. Most of those techniques work with recent Browsers like Chromium[^107] based browsers (such as Chrome) or Firefox[^108] unless taking special measures.
 
@@ -583,8 +561,7 @@ An adversary could then use such fingerprints to track you across multiple servi
 
 This guide will mitigate these issues by obfuscating/randomizing many of those identifiers by using Virtualization and also using by fingerprinting resistant Browsers.
 
-Your Face and other Biometrics:
--------------------------------
+## Your Face and other Biometrics:
 
 Hell is other people. Even if you evade every methods listed above, you're not out of the woods yet thanks to the widespread use of advanced Face recognition by everyone.
 
@@ -632,8 +609,7 @@ At this time, there are a few steps[^127] you can use to mitigate (and only miti
 
 (Note that if you intend to use these where advancfed facial recognition systems have been installed, these measures could also flag as you as suspicious by themselves and trigger a human check)
 
-Phishing:
----------
+## Phishing:
 
 Phishing[^129] is a type of attack where an adversary could try to extract information from you by pretending to be something/someone else.
 
@@ -641,8 +617,7 @@ A typical case is an adversary using a man-in-the-middle[^46] attack or a falsif
 
 Such attacks can also be used to de-anonymize someone by tricking them into downloading malware or revealing personal information.
 
-Forensics:
-----------
+## Forensics:
 
 Most of you have probably seen enough Crime dramas on Netflix or TV to know what forensics are. These are technicians (usually working for law enforcement) that will perform various analysis of evidence. This of course could include your smartphone or laptop.
 
@@ -660,15 +635,13 @@ Here are some recent resources you should read about your smartphone:
 
 When it comes to your laptop, the forensics techniques are many and widespread. Too many to be listed in this guide. But this guide will nonetheless guide you into mitigating most forensic techniques and hopefully help you protect yourself from "most" adversaries.
 
-Advanced targeted techniques:
------------------------------
+## Advanced targeted techniques:
 
 There are many advanced techniques that can be used by skilled adversaries[^131] to bypass your security measures provided they already know where your devices are. Many of those techniques are detailed here <https://cyber.bgu.ac.il/advanced-cyber/airgap> (Air-Gap Research Page, Cyber-Security Research Center, Ben-Gurion University of the Negev, Israel). I recommend having a look if you're curious.
 
 This guide will be of little help against such adversaries.
 
-Notes:
-------
+## Notes:
 
 If you still don't think these informations are being used by various actors to track you, you can see some statistics for yourself for some platforms and keep in mind those are only accounting for the "lawful" data requests and won't count things like PRISM, MUSCULAR or XKEYSCORE explained earlier:
 
@@ -702,11 +675,9 @@ If you still don't think these informations are being used by various actors to 
 
 -   Twitter Transparency Report <https://transparency.twitter.com/>
 
-General Preparations:
-=====================
+# General Preparations:
 
-Picking your route:
--------------------
+## Picking your route:
 
 ### Budget/Material limitations:
 
@@ -762,8 +733,7 @@ In all cases, you should read these two pages from the Whonix documentation that
 
 -   <https://www.whonix.org/wiki/Comparison_with_Others>
 
-Steps for all routes:
----------------------
+## Steps for all routes:
 
 ### Get a burner phone:
 
@@ -819,8 +789,7 @@ While this won't be available yet to your local cops, it could be in the near fu
 
 You will ideally need a set of 3-5 different places such as this to avoid using the same place twice. Several trips will be required over the weeks for the various steps in this guide.
 
-The TAILS route:
-----------------
+## The TAILS route:
 
 This part of the guide will help you in setting up TAILS if one of the following is true:
 
@@ -860,8 +829,7 @@ Taking all this into account and the fact that their documentation is great, I'l
 
 When you're done and have a working Tails on your laptop, go to the "Creating your anonymous online identities" Step much further in this guide.
 
-Steps for all other routes:
----------------------------
+## Steps for all other routes:
 
 ### Get a laptop for your anonymous activities:
 
@@ -915,8 +883,7 @@ Here is a good cheap method to make your laptop tamper proof using Nail Polish (
 
 Check the laptop for tampering before using on a regular basis.
 
-The Whonix route:
------------------
+## The Whonix route:
 
 ### Picking your Host OS (the OS installed on your laptop):
 
@@ -1720,16 +1687,13 @@ Test that KeePassXC is working before going to next step.
 
 You are done and can now skip the rest to go to the "Creating your anonymous online identities" part.
 
-The Qubes Route:
-----------------
+## The Qubes Route:
 
 Coming Soon.
 
-Creating your anonymous online identities:
-==========================================
+# Creating your anonymous online identities:
 
-Understanding the methods used to prevent anonymity and verify identity:
-------------------------------------------------------------------------
+## Understanding the methods used to prevent anonymity and verify identity:
 
 ### Captchas:
 
@@ -1933,8 +1897,7 @@ Pros: Usually that verdict is "final" and you'll probably avoid further issues i
 
 Cons: Usually that verdict is "final" and you'll probably be banned without any appeal possibility if you're not good.
 
-Getting Online:
----------------
+## Getting Online:
 
 Now that you have an understanding of all the ways you can be de-anonymized, tracked and verified. Let's get started at evading these while remaining anonymous. Remember:
 
@@ -1982,8 +1945,7 @@ Basically trust no one and nothing (oh yeah that's easy).
 
 **[Again, it is crucially important to understand that you will be unable to create most accounts without a valid phone number. Therefore, most of your anonymity depends on the anonymity of your phone number and the burner phone. If your phone number is not anonymous and your burner phone can be traced back to you, you can be de-anonymized.]{.ul}**
 
-Creating new identities:
-------------------------
+## Creating new identities:
 
 This is the fun part where you will now create your identities from thin air. These identities do not exist but should be plausible and look "organic".
 
@@ -2039,10 +2001,527 @@ I will help you bit by listing a few tips I learned while doing research over th
 
 -   Adapt your language/writing to the identity to not raise suspicions and lower your chances of being fingerprinted by online platforms. Be especially careful with using pedantic words and figures of speech/quotes that could allow some people to guess your writing is very similar to that person with this Twitter handle or this Reddit user.
 
--   Consider using the recommended tools on <https://privacytools.io/> for your various purposes.
+-   Consider using the recommended too
 
-ProtonMail:
------------
+-   ls on <https://privacytools.io/> for your various purposes.
+
+Note: If you're having trouble finding an Exit node in the country of your choice you can force using specific countries for Exit Nodes (and therefore exit countries) on Tor by editing the torrc file on the Whonix Gateway or even the Tor Browser:
+
+-   Whonix/Tails: Create/Edit a file /usr/local/etc/torrc.d/50_user.conf[^182].
+
+-   On Tor Browser: Edit the torrc file located at Browser/TorBrowser/Data/Tor[^183].
+
+Once you're in the file, you can do the following:
+
+-   Specify the Exit Nodes by adding those two lines (which will require an Exit Node in China/Russia/Ukraine:
+
+    -   ExitNodes {CH},{RU},{UA}
+
+    -   StrictNodes 1
+
+-   Exclude specific Exit Nodes by adding this line (which will exclude all Exit Nodes from France/Germany/USA/UK):
+
+    -   ExcludeNodes {FR},{DE},{US},{UK}
+
+Always use uppercase letter for any setting.
+
+**Please note that this is restricting Onion Routing could limit your Anonymity if you're too restrictive. You can see a visualized list of available Exit Nodes here: <https://www.bigdatacloud.com/insights/tor-exit-nodes>**
+
+Here is the list of possibilities (this is a general list and many of those countries might not have Exit nodes at all):
+
+-   ASCENSION ISLAND {ac}
+
+-   AFGHANISTAN {af}
+
+-   ALAND {ax}
+
+-   ALBANIA {al}
+
+-   ALGERIA {dz}
+
+-   ANDORRA {ad}
+
+-   ANGOLA {ao}
+
+-   ANGUILLA {ai}
+
+-   ANTARCTICA {aq}
+
+-   ANTIGUA AND BARBUDA {ag}
+
+-   ARGENTINA REPUBLIC {ar}
+
+-   ARMENIA {am}
+
+-   ARUBA {aw}
+
+-   AUSTRALIA {au}
+
+-   AUSTRIA {at}
+
+-   AZERBAIJAN {az}
+
+-   BAHAMAS {bs}
+
+-   BAHRAIN {bh}
+
+-   BANGLADESH {bd}
+
+-   BARBADOS {bb}
+
+-   BELARUS {by}
+
+-   BELGIUM {be}
+
+-   BELIZE {bz}
+
+-   BENIN {bj}
+
+-   BERMUDA {bm}
+
+-   BHUTAN {bt}
+
+-   BOLIVIA {bo}
+
+-   BOSNIA AND HERZEGOVINA {ba}
+
+-   BOTSWANA {bw}
+
+-   BOUVET ISLAND {bv}
+
+-   BRAZIL {br}
+
+-   BRITISH INDIAN OCEAN TERR {io}
+
+-   BRITISH VIRGIN ISLANDS {vg}
+
+-   BRUNEI DARUSSALAM {bn}
+
+-   BULGARIA {bg}
+
+-   BURKINA FASO {bf}
+
+-   BURUNDI {bi}
+
+-   CAMBODIA {kh}
+
+-   CAMEROON {cm}
+
+-   CANADA {ca}
+
+-   CAPE VERDE {cv}
+
+-   CAYMAN ISLANDS {ky}
+
+-   CENTRAL AFRICAN REPUBLIC {cf}
+
+-   CHAD {td}
+
+-   CHILE {cl}
+
+-   PEOPLE\'S REPUBLIC OF CHINA {cn}
+
+-   CHRISTMAS ISLANDS {cx}
+
+-   COCOS ISLANDS {cc}
+
+-   COLOMBIA {co}
+
+-   COMORAS {km}
+
+-   CONGO {cg}
+
+-   CONGO (DEMOCRATIC REPUBLIC) {cd}
+
+-   COOK ISLANDS {ck}
+
+-   COSTA RICA {cr}
+
+-   COTE D IVOIRE {ci}
+
+-   CROATIA {hr}
+
+-   CUBA {cu}
+
+-   CYPRUS {cy}
+
+-   CZECH REPUBLIC {cz}
+
+-   DENMARK {dk}
+
+-   DJIBOUTI {dj}
+
+-   DOMINICA {dm}
+
+-   DOMINICAN REPUBLIC {do}
+
+-   EAST TIMOR {tp}
+
+-   ECUADOR {ec}
+
+-   EGYPT {eg}
+
+-   EL SALVADOR {sv}
+
+-   EQUATORIAL GUINEA {gq}
+
+-   ESTONIA {ee}
+
+-   ETHIOPIA {et}
+
+-   FALKLAND ISLANDS {fk}
+
+-   FAROE ISLANDS {fo}
+
+-   FIJI {fj}
+
+-   FINLAND {fi}
+
+-   FRANCE {fr}
+
+-   FRANCE METROPOLITAN {fx}
+
+-   FRENCH GUIANA {gf}
+
+-   FRENCH POLYNESIA {pf}
+
+-   FRENCH SOUTHERN TERRITORIES {tf}
+
+-   GABON {ga}
+
+-   GAMBIA {gm}
+
+-   GEORGIA {ge}
+
+-   GERMANY {de}
+
+-   GHANA {gh}
+
+-   GIBRALTER {gi}
+
+-   GREECE {gr}
+
+-   GREENLAND {gl}
+
+-   GRENADA {gd}
+
+-   GUADELOUPE {gp}
+
+-   GUAM {gu}
+
+-   GUATEMALA {gt}
+
+-   GUINEA {gn}
+
+-   GUINEA-BISSAU {gw}
+
+-   GUYANA {gy}
+
+-   HAITI {ht}
+
+-   HEARD & MCDONALD ISLAND {hm}
+
+-   HONDURAS {hn}
+
+-   HONG KONG {hk}
+
+-   HUNGARY {hu}
+
+-   ICELAND {is}
+
+-   INDIA {in}
+
+-   INDONESIA {id}
+
+-   IRAN, ISLAMIC REPUBLIC OF {ir}
+
+-   IRAQ {iq}
+
+-   IRELAND {ie}
+
+-   ISLE OF MAN {im}
+
+-   ISRAEL {il}
+
+-   ITALY {it}
+
+-   JAMAICA {jm}
+
+-   JAPAN {jp}
+
+-   JORDAN {jo}
+
+-   KAZAKHSTAN {kz}
+
+-   KENYA {ke}
+
+-   KIRIBATI {ki}
+
+-   KOREA, DEM. PEOPLES REP OF {kp}
+
+-   KOREA, REPUBLIC OF {kr}
+
+-   KUWAIT {kw}
+
+-   KYRGYZSTAN {kg}
+
+-   LAO PEOPLE\'S DEM. REPUBLIC {la}
+
+-   LATVIA {lv}
+
+-   LEBANON {lb}
+
+-   LESOTHO {ls}
+
+-   LIBERIA {lr}
+
+-   LIBYAN ARAB JAMAHIRIYA {ly}
+
+-   LIECHTENSTEIN {li}
+
+-   LITHUANIA {lt}
+
+-   LUXEMBOURG {lu}
+
+-   MACAO {mo}
+
+-   MACEDONIA {mk}
+
+-   MADAGASCAR {mg}
+
+-   MALAWI {mw}
+
+-   MALAYSIA {my}
+
+-   MALDIVES {mv}
+
+-   MALI {ml}
+
+-   MALTA {mt}
+
+-   MARSHALL ISLANDS {mh}
+
+-   MARTINIQUE {mq}
+
+-   MAURITANIA {mr}
+
+-   MAURITIUS {mu}
+
+-   MAYOTTE {yt}
+
+-   MEXICO {mx}
+
+-   MICRONESIA {fm}
+
+-   MOLDAVA REPUBLIC OF {md}
+
+-   MONACO {mc}
+
+-   MONGOLIA {mn}
+
+-   MONTENEGRO {me}
+
+-   MONTSERRAT {ms}
+
+-   MOROCCO {ma}
+
+-   MOZAMBIQUE {mz}
+
+-   MYANMAR {mm}
+
+-   NAMIBIA {na}
+
+-   NAURU {nr}
+
+-   NEPAL {np}
+
+-   NETHERLANDS ANTILLES {an}
+
+-   NETHERLANDS, THE {nl}
+
+-   NEW CALEDONIA {nc}
+
+-   NEW ZEALAND {nz}
+
+-   NICARAGUA {ni}
+
+-   NIGER {ne}
+
+-   NIGERIA {ng}
+
+-   NIUE {nu}
+
+-   NORFOLK ISLAND {nf}
+
+-   NORTHERN MARIANA ISLANDS {mp}
+
+-   NORWAY {no}
+
+-   OMAN {om}
+
+-   PAKISTAN {pk}
+
+-   PALAU {pw}
+
+-   PALESTINE {ps}
+
+-   PANAMA {pa}
+
+-   PAPUA NEW GUINEA {pg}
+
+-   PARAGUAY {py}
+
+-   PERU {pe}
+
+-   PHILIPPINES (REPUBLIC OF THE) {ph}
+
+-   PITCAIRN {pn}
+
+-   POLAND {pl}
+
+-   PORTUGAL {pt}
+
+-   PUERTO RICO {pr}
+
+-   QATAR {qa}
+
+-   REUNION {re}
+
+-   ROMANIA {ro}
+
+-   RUSSIAN FEDERATION {ru}
+
+-   RWANDA {rw}
+
+-   SAMOA {ws}
+
+-   SAN MARINO {sm}
+
+-   SAO TOME/PRINCIPE {st}
+
+-   SAUDI ARABIA {sa}
+
+-   SCOTLAND {uk}
+
+-   SENEGAL {sn}
+
+-   SERBIA {rs}
+
+-   SEYCHELLES {sc}
+
+-   SIERRA LEONE {sl}
+
+-   SINGAPORE {sg}
+
+-   SLOVAKIA {sk}
+
+-   SLOVENIA {si}
+
+-   SOLOMON ISLANDS {sb}
+
+-   SOMALIA {so}
+
+-   SOMOA,GILBERT,ELLICE ISLANDS {as}
+
+-   SOUTH AFRICA {za}
+
+-   SOUTH GEORGIA, SOUTH SANDWICH ISLANDS {gs}
+
+-   SOVIET UNION {su}
+
+-   SPAIN {es}
+
+-   SRI LANKA {lk}
+
+-   ST. HELENA {sh}
+
+-   ST. KITTS AND NEVIS {kn}
+
+-   ST. LUCIA {lc}
+
+-   ST. PIERRE AND MIQUELON {pm}
+
+-   ST. VINCENT & THE GRENADINES {vc}
+
+-   SUDAN {sd}
+
+-   SURINAME {sr}
+
+-   SVALBARD AND JAN MAYEN {sj}
+
+-   SWAZILAND {sz}
+
+-   SWEDEN {se}
+
+-   SWITZERLAND {ch}
+
+-   SYRIAN ARAB REPUBLIC {sy}
+
+-   TAIWAN {tw}
+
+-   TAJIKISTAN {tj}
+
+-   TANZANIA, UNITED REPUBLIC OF {tz}
+
+-   THAILAND {th}
+
+-   TOGO {tg}
+
+-   TOKELAU {tk}
+
+-   TONGA {to}
+
+-   TRINIDAD AND TOBAGO {tt}
+
+-   TUNISIA {tn}
+
+-   TURKEY {tr}
+
+-   TURKMENISTAN {tm}
+
+-   TURKS AND CALCOS ISLANDS {tc}
+
+-   TUVALU {tv}
+
+-   UGANDA {ug}
+
+-   UKRAINE {ua}
+
+-   UNITED ARAB EMIRATES {ae}
+
+-   UNITED KINGDOM (no new registrations) {gb}
+
+-   UNITED KINGDOM {uk}
+
+-   UNITED STATES {us}
+
+-   UNITED STATES MINOR OUTL.IS. {um}
+
+-   URUGUAY {uy}
+
+-   UZBEKISTAN {uz}
+
+-   VANUATU {vu}
+
+-   VATICAN CITY STATE {va}
+
+-   VENEZUELA {ve}
+
+-   VIET NAM {vn}
+
+-   VIRGIN ISLANDS (USA) {vi}
+
+-   WALLIS AND FUTUNA ISLANDS {wf}
+
+-   WESTERN SAHARA {eh}
+
+-   YEMEN {ye}
+
+-   ZAMBIA {zm}
+
+-   ZIMBABWE {zw}
+
+## ProtonMail:
 
 -   Is this against their TOS? No [https://ProtonMail.com/terms-and-conditions]
 
@@ -2054,9 +2533,9 @@ You obviously need an e-mail for your online identity and disposable e-mails are
 
 ProtonMail is a free e-mail provider based in Switzerland that advocates security and privacy.
 
-They're recommended by privacytools.io[^182]. Their only apparent issue is that they do require (in most cases) a phone number or another e-mail address for registration (when you try to register from a VPN or Tor at least).
+They're recommended by privacytools.io[^184]. Their only apparent issue is that they do require (in most cases) a phone number or another e-mail address for registration (when you try to register from a VPN or Tor at least).
 
-They claim they do not store/link the phone/e-mail associated with the registration but only store a hash that is not linked to the account[^183]. As long as their claim is true and the hash is not linked to your account, and that you followed my guide regarding the Burner phone and the pre-paid SIM card, you should be safe from tracking.
+They claim they do not store/link the phone/e-mail associated with the registration but only store a hash that is not linked to the account[^185]. As long as their claim is true and the hash is not linked to your account, and that you followed my guide regarding the Burner phone and the pre-paid SIM card, you should be safe from tracking.
 
 Create this e-mail account first using the burner phone as verification if necessary.
 
@@ -2064,8 +2543,7 @@ When you're done creating the account, please go into the settings and enable 2F
 
 This e-mail account will be used in the next step for creating a Google/Gmail account.
 
-Google:
--------
+## Google:
 
 -   Is this against their TOS? No <https://policies.google.com/terms>
 
@@ -2075,7 +2553,7 @@ Google:
 
 ProtonMail is good ... but to appear less suspicious, it's just better to also have a Google Mail account.
 
-As ProtonMail, Google will also most likely require a phone number during sign-up as part of their verification process. However contrary to ProtonMail, Google will store that phone number during the sign-up process and will also limit the amount of accounts that can be created during the sign-up[^184],[^185].
+As ProtonMail, Google will also most likely require a phone number during sign-up as part of their verification process. However contrary to ProtonMail, Google will store that phone number during the sign-up process and will also limit the amount of accounts that can be created during the sign-up[^186],[^187].
 
 From my experience during my research, this count is limited to 3 accounts / phone number. If you are unlucky with your number (if it was previously used by another mobile user), it might be less.
 
@@ -2105,14 +2583,13 @@ Do not use that account for "sign-up with Google" anywhere unless necessary.
 
 Be extremely careful if you decide to use the account for Google activities (such as Google Maps reviews or Youtube Comments) as those can easily trigger some checks (Negative reviews, Comments breaking Community Guidelines on Youtube).
 
-If your account gets suspended [^186] (this can happen on sign-up, after signing-up or after using it in some Google services), you can still get it unsuspended by submitting[^187] an appeal/verification (which will again require your Phone number and possibly an e-mail contact with Google support with the reason). Suspension of the account does not disable the e-mail forwarding but suspended account will be deleted after a while.
+If your account gets suspended [^188] (this can happen on sign-up, after signing-up or after using it in some Google services), you can still get it unsuspended by submitting[^189] an appeal/verification (which will again require your Phone number and possibly an e-mail contact with Google support with the reason). Suspension of the account does not disable the e-mail forwarding but suspended account will be deleted after a while.
 
 After suspension, if your Google account is restored, you should be fine.
 
 If your account gets banned, you will have no appeal and the forwarding will be disabled. Your phone number will be flagged and you won't be able to use it to sign-up on a different account. Be careful.
 
-Twitter:
---------
+## Twitter:
 
 -   Is this against their TOS? No <https://twitter.com/en/tos>
 
@@ -2152,14 +2629,13 @@ Once the account is restored, you should take some time to do the following:
 
 After about a week, you should check the twitter again and the chances are quite high that it will be suspended again for "suspicious activity" or "violating community guidelines" despite you not using it at all (not even a single tweet/follow/like/retweet or DM) but this time by another system. I call this the "Double tap".
 
-This time you will need to submit an appeal using a form [^188] , provide a good reason and wait for the appeal to be processed by Twitter. During that process, it's possible that you will receive an e-mail (on ProtonMail) asking you to reply to a customer service ticket to prove that you do have access to your e-mail and that it's you. This will be directed toward your Gmail address but will arrive on your ProtonMail.
+This time you will need to submit an appeal using a form [^190] , provide a good reason and wait for the appeal to be processed by Twitter. During that process, it's possible that you will receive an e-mail (on ProtonMail) asking you to reply to a customer service ticket to prove that you do have access to your e-mail and that it's you. This will be directed toward your Gmail address but will arrive on your ProtonMail.
 
 Obviously do not reply from ProtonMail as this will raise suspicions, you have to sign-in into Gmail (unfortunately) and compose a new mail from there copy pasting the E-Mail , Subject and Content from ProtonMail. As well as a reply confirming you have access to that e-mail.
 
 After a few days, your account should get unsuspended "for good". I had no issues after that but keep in mind they can still ban your account for any reason if you violate the community guidelines. The phone number and e-mail will then be flagged and you will have no other option but to get a new identity with a new number to sign-up again. Don't use this account for trolling.
 
-Linkedin:
----------
+## Linkedin:
 
 -   Is this against their TOS? Yes <https://www.linkedin.com/legal/user-agreement>
 
@@ -2175,7 +2651,7 @@ Linkedin is far less aggressive than twitter but will nonetheless require a vali
 
 Linkedin however is relying a lot on reports and user/customer moderation. You should not create a profile with an occupation inside a private corporations or a small startup company. The company employees are monitoring Linkedin activity and receive notifications when new people join. They can then report your profile as fake and your profile will then be suspensed or banned pending appeal.
 
-Linkedin will then require you go through a verification process that will unfortunately require you to send an ID proof (identity card, passport, driver license). This ID verification is processed by a company called Jumio[^189] that specializes in ID proofind. This is most likely a dead end as this would force you to develop some strong photoshop skills.
+Linkedin will then require you go through a verification process that will unfortunately require you to send an ID proof (identity card, passport, driver license). This ID verification is processed by a company called Jumio[^191] that specializes in ID proofind. This is most likely a dead end as this would force you to develop some strong photoshop skills.
 
 Instead you are far less likely to be reported if you just stay vague (say you're a student/intern/freelance) or pretend you work for a large public institution that is too large for anyone to care of check.
 
@@ -2189,8 +2665,7 @@ As with Twitter and google, you should do the following after signing-up:
 
 -   Upload a picture of your identity
 
-Microsoft:
-----------
+## Microsoft:
 
 -   Is this against their TOS? Yes <https://www.microsoft.com/en/servicesagreement/>
 
@@ -2204,8 +2679,7 @@ So yes it's still possible to create an MS account without a phone number and us
 
 After signing-up you should setup 2FA authentication within security and using KeePassXC TOTP.
 
-Instagram:
-----------
+## Instagram:
 
 -   Is this against their TOS? Yes <https://help.instagram.com/581066165581870?ref=dp>
 
@@ -2233,8 +2707,7 @@ After sign-up, do the following:
 
 -   Do not allow sharing
 
-Facebook:
----------
+## Facebook:
 
 -   Is this against their TOS? Yes <https://www.facebook.com/terms.php>
 
@@ -2251,7 +2724,7 @@ When people stand behind their opinions and actions, our community is safer and 
 ```
 -   Will they require a phone number? Yes and probably more later
 
--   Can you create accounts through Tor? Yes but it's very difficult and their onion address[^190] won't help. In most cases you'll just have a random error at sign-up and your account suspended after sign-in.
+-   Can you create accounts through Tor? Yes but it's very difficult and their onion address[^192] won't help. In most cases you'll just have a random error at sign-up and your account suspended after sign-in.
 
 Facebook is one of the most aggressive platforms in identity verification and is pushing hard their "real name policy". It is why this guide is only advised to German residents.
 
@@ -2283,8 +2756,7 @@ If your account gets suspended, you will need to appeal the decision through a v
 
 If you do file an appeal, you will have to wait for Facebook to review it (I don't know if this is automatic or human) and you will have to wait and hope for them to unsuspend your account.
 
-Github:
--------
+## Github:
 
 -   Is this against their TOS? No <https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-terms-of-service>
 
@@ -2298,8 +2770,7 @@ Just Sign-up with e-mail and password and enable two-factor authentication (TOTP
 
 Be sure to go into Settings \> E-Mail and make your e-mail private as well as block any push that would reveal your e-mail.
 
-Discord:
---------
+## Discord:
 
 -   Is this against their TOS? No <https://discord.com/terms>
 
@@ -2309,8 +2780,7 @@ Discord:
 
 Steps after creating: Enable 2FA authentication with Keepass TOTP
 
-Telegram:
----------
+## Telegram:
 
 -   Is this against their TOS? No <https://telegram.org/tos>
 
@@ -2348,8 +2818,7 @@ After signing-up you should do the following:
 
 -   Set Group & Channels to Contacts
 
-Reddit:
--------
+## Reddit:
 
 -   Is this against their TOS? No <https://www.redditinc.com/policies>
 
@@ -2361,8 +2830,7 @@ Reddit is simple. All you need to register is a valid username and a password. N
 
 You should still enable 2FA in the settings after signing-up. I had no issues whatsoever signing-up over Tor or VPN besides the occasional Captchas.
 
-4chan:
-------
+## 4chan:
 
 -   Is this against their TOS? No
 
@@ -2374,19 +2842,17 @@ You should still enable 2FA in the settings after signing-up. I had no issues wh
 
 You're gonna have to find a different way to post there using proxies that are not known by 4chan blocking system.
 
-Crypto Wallets:
----------------
+## Crypto Wallets:
 
 Use any crypto wallet app within the Windows Virtual Machine. But be careful not to transfer anything toward an Exchange or a known Wallet. Crypto is in most case NOT anonymous and can be traced back to you when you buy/sell any.
 
 Ideally, you should find a way to buy/sell crypto with cash from an unknown person.
 
-What about those mobile only apps (Whatsapp/Signal):
-----------------------------------------------------
+## What about those mobile only apps (Whatsapp/Signal):
 
 There are only three ways of securely using those anonymously (that I would recommend). Using a VPN on your phone is not among those ways. All of those are unfortunately "tedious" to say the least.
 
--   Use an Android Emulator (Youwave[^191], Bluestacks[^192] or if you have a powerful PC, Android Studio) within the Windows VM and run the App through your multi-layer of Tor/VPN. Drawback is that such emulators are usually quite resource hungry and will slow down your VM and use more battery. Here is also an (outdated) guide on this matter: <https://www.bellingcat.com/resources/how-tos/2018/08/23/creating-android-open-source-research-device-pc/>
+-   Use an Android Emulator (Youwave[^193], Bluestacks[^194] or if you have a powerful PC, Android Studio) within the Windows VM and run the App through your multi-layer of Tor/VPN. Drawback is that such emulators are usually quite resource hungry and will slow down your VM and use more battery. Here is also an (outdated) guide on this matter: <https://www.bellingcat.com/resources/how-tos/2018/08/23/creating-android-open-source-research-device-pc/>
 
 -   Use a non-official app (such as Wassapp for Whatsapp) to connect from the Windows VM to the app. But at your own risk as you could get banned for violating the terms of services by using a non-official App.
 
@@ -2394,8 +2860,7 @@ There are only three ways of securely using those anonymously (that I would reco
 
 There is no way to reliably set this multi-layered connectivity approach easily on an Android phone (it's not even possible on IOS as far as I know). By reliable I mean being sure that the smartphone won't leak anything such as geolocation or anything else from booting up to shutting down.
 
-Anything else:
---------------
+## Anything else:
 
 You should use the same logic and security for any other platform that with these mentioned in this guide.
 
@@ -2403,35 +2868,29 @@ It should work in most cases with most platforms. **The hardest platform to use 
 
 This will obviously not work with Banks and most Financial platforms (such as Paypal or Crypto Exchanges) requiring actual real official and existing identification. This guide won't help you there as this would actually be illegal in most places.
 
-Maintenance tasks:
-------------------
+## Maintenance tasks:
 
 You should sign-up carefully into your accounts from time to time to keep them alive.
 
 Check your e-mail regularly for security checks and any other account notification.
 
-Backup your work (safely and anonymously):
-==========================================
+# Backup your work (safely and anonymously):
 
 **Do not ever upload encrypted file containers with plausible deniability (hidden containers within them) to most cloud services (ICloud, Google Drive, Onedrive, Dropbox). This is because most cloud services keep backups/versioning of your files and such backups/versioning of your encrypted containers can be used for differential analysis to prove the existence of a hidden container.**
 
 Instead this guide will recommend other methods of backing up your stuff safely (coming soon).
 
-Covering your tracks:
-=====================
+# Covering your tracks:
 
 Make sure you don't keep a copy of this guide anywhere unsafe after. The sole presence of this guide will most likely defeat all your plausible deniability possibilities.
 
-Protecting yourself against forensics:
---------------------------------------
+## Protecting yourself against forensics:
 
-Tails:
-------
+## Tails:
 
 Tails is great, you have nothing to worry about. Shut it down and it's all gone.
 
-Windows:
---------
+## Windows:
 
 Now that you had a bunch of activities with your VMs or Host OS , you should take a moment to "cover your tracks". Most of these steps should not be undertaken on the Decoy OS in case of use of plausible deniability. This is because you want to keep decoy/plausible traces of sensible but not secret activities available for your adversary. If everything is clean then you might raise suspicion.
 
@@ -2493,13 +2952,13 @@ Then we will download a convenient utility called PrivaZer that will allow you d
 
 This will be used for cleaning many things such as:
 
--   The Windows USN journal which stores plenty of information[^193].
+-   The Windows USN journal which stores plenty of information[^195].
 
--   The Windows System Resource Usage Monitor (SRUM)[^194].
+-   The Windows System Resource Usage Monitor (SRUM)[^196].
 
 -   Various histories of various programs (such as the recent lists).
 
--   The free (unallocated) space of your hard drive[^195].
+-   The free (unallocated) space of your hard drive[^197].
 
 Here are the steps:
 
@@ -2591,8 +3050,7 @@ Now it's turn to clear the history of the Wi-Fi you connect to. Unfortunately Wi
 
 -   Delete all those keys.
 
-How to securely wipe your whole laptop if you want to erase everything:
------------------------------------------------------------------------
+## How to securely wipe your whole laptop if you want to erase everything:
 
 ### Linux:
 
@@ -2604,7 +3062,7 @@ Unfortunately you won't be able to wipe your Host OS using the built-in tools wi
 
 So you'll have to wipe it using bootable USB key again. But this time not Windows.
 
-There are several utilities that are recommend (like the old unmaintained DBAN[^196]) for this but personally, I will recommend the use of ShredOS.
+There are several utilities that are recommend (like the old unmaintained DBAN[^198]) for this but personally, I will recommend the use of ShredOS.
 
 Feel free do go with DBAN instead if you want, the process is basically the same but might not work out of the box with UEFI laptops.
 
@@ -2624,8 +3082,7 @@ Feel free do go with DBAN instead if you want, the process is basically the same
 
 -   Follow the instructions on screen
 
-If you think you got burned:
-----------------------------
+## If you think you got burned:
 
 ### If you have some time:
 
@@ -2641,8 +3098,7 @@ If you think you got burned:
 
 -   Try to shutdown the laptop as soon as possible and hope for the best
 
-Some last OPSEC thoughts:
-=========================
+# Some last OPSEC thoughts:
 
 -   Do not ever use biometrics to safeguard your secrets.
 
@@ -2664,13 +3120,11 @@ Some last OPSEC thoughts:
 
 -   Know and always have at your disposal the details of a lawyer that could help you as a last resort in case things go wrong.
 
-Appendix A: (Windows Installation)
-==================================
+# Appendix A: (Windows Installation)
 
 This is the Windows 10 installation process that should be valid for any Windows 10 install within this guide.
 
-Installation:
--------------
+## Installation:
 
 **DO NOT CONNECT WINDOWS TO ANY NETWORK DURING THE INSTALLATION PROCESS (This will allow us to create a Local Account and not use a Microsoft account and it will also prevent any telemetry from being sent out during the install process).**
 
@@ -2740,8 +3194,7 @@ Installation:
 
 -   Select "Now Now" at the Cortana prompt
 
-Privacy Settings:
------------------
+## Privacy Settings:
 
 -   When the install is finished, get into Settings \> Privacy and do the following:
 
@@ -2815,10 +3268,9 @@ Privacy Settings:
 
 -   (Host OS Only) Go into Settings \> Network & Internet \> Wi-Fi and Enable Random Hardware Address.
 
-Appendix B: (Windows Additional Privacy Settings)
-=================================================
+# Appendix B: (Windows Additional Privacy Settings)
 
-As written earlier in this guide and as noted by Privacytools.io[^197], Windows 10 is a privacy nightmare. And disabling everything during and after the installation using the settings available to you is not enough. The amount of telemetry data collected by Microsoft is staggering and could defeat your attempts at keeping secrets. You will need to download and use a couple utilities to (hopefully) force Windows 10 into not sending data back to Microsoft.
+As written earlier in this guide and as noted by Privacytools.io[^199], Windows 10 is a privacy nightmare. And disabling everything during and after the installation using the settings available to you is not enough. The amount of telemetry data collected by Microsoft is staggering and could defeat your attempts at keeping secrets. You will need to download and use a couple utilities to (hopefully) force Windows 10 into not sending data back to Microsoft.
 
 Here are the steps in details:
 
@@ -2852,8 +3304,7 @@ These measures added to the settings during installation should be hopefully suf
 
 **You will need to update and re-run W10Privacy and WindowsSpyBlocker frequently and after any Windows update as they tend to silently re-enable telemetry using those updates.**
 
-Appendix C: (Windows Installation Media Creation)
-=================================================
+# Appendix C: (Windows Installation Media Creation)
 
 These are the steps to create a Windows 10 (20H2) Installation Media using this tool and instructions:
 
@@ -3251,37 +3702,41 @@ These are the steps to create a Windows 10 (20H2) Installation Media using this 
 
 [^181]: The Verge, Tinder will give you a verified blue check mark if you pass its catfishing test <https://www.theverge.com/2020/1/23/21077423/tinder-photo-verification-blue-checkmark-safety-center-launch-noonlight>
 
-[^182]: Privacytools.io Recommended E-mail Providers <https://privacytools.io/providers/email/>
+[^182]: Whonix Documentation, <https://www.whonix.org/wiki/Tor#Edit_Tor_Configuration>
 
-[^183]: ProtonMail Human Verification System [https://ProtonMail.com/support/knowledge-base/human-verification/]
+[^183]: Tor Browser Documentation, <https://support.torproject.org/tbb/tbb-editing-torrc/>
 
-[^184]: Google Help <https://support.google.com/accounts/answer/114129?hl=en>
+[^184]: Privacytools.io Recommended E-mail Providers <https://privacytools.io/providers/email/>
 
-[^185]: Google Help <https://support.google.com/google-ads/answer/7474263?hl=en>
+[^185]: ProtonMail Human Verification System [https://ProtonMail.com/support/knowledge-base/human-verification/]
 
-[^186]: Google, Your account is disabled <https://support.google.com/accounts/answer/40695>
+[^186]: Google Help <https://support.google.com/accounts/answer/114129?hl=en>
 
-[^187]: Google, Request to restore the account <https://support.google.com/accounts/contact/disabled2>
+[^187]: Google Help <https://support.google.com/google-ads/answer/7474263?hl=en>
 
-[^188]: Twitter Appeal Form <https://help.twitter.com/forms/general>
+[^188]: Google, Your account is disabled <https://support.google.com/accounts/answer/40695>
 
-[^189]: Jumio, ID verification features <https://www.jumio.com/features/>
+[^189]: Google, Request to restore the account <https://support.google.com/accounts/contact/disabled2>
 
-[^190]: Facebook Onion Website <http://facebookcorewwwi.onion>
+[^190]: Twitter Appeal Form <https://help.twitter.com/forms/general>
 
-[^191]: Youwave, <https://youwave.com/>
+[^191]: Jumio, ID verification features <https://www.jumio.com/features/>
 
-[^192]: Bluestacks, <https://www.bluestacks.com/>
+[^192]: Facebook Onion Website <http://facebookcorewwwi.onion>
 
-[^193]: Medium.com, The Windows USN Journal <https://medium.com/velociraptor-ir/the-windows-usn-journal-f0c55c9010e>
+[^193]: Youwave, <https://youwave.com/>
 
-[^194]: Medium.com, Digging into the System Resource Usage Monitor (SRUM) <https://medium.com/velociraptor-ir/digging-into-the-system-resource-usage-monitor-srum-afbadb1a375>
+[^194]: Bluestacks, <https://www.bluestacks.com/>
 
-[^195]: SANS, Timestamped Registry & NTFS Artifacts from Unallocated Space <https://www.sans.org/blog/timestamped-registry-ntfs-artifacts-from-unallocated-space/>
+[^195]: Medium.com, The Windows USN Journal <https://medium.com/velociraptor-ir/the-windows-usn-journal-f0c55c9010e>
 
-[^196]: DBAN, <https://dban.org/>
+[^196]: Medium.com, Digging into the System Resource Usage Monitor (SRUM) <https://medium.com/velociraptor-ir/digging-into-the-system-resource-usage-monitor-srum-afbadb1a375>
 
-[^197]: Privacytools.io, Operating Systems <https://privacytools.io/operating-systems/>
+[^197]: SANS, Timestamped Registry & NTFS Artifacts from Unallocated Space <https://www.sans.org/blog/timestamped-registry-ntfs-artifacts-from-unallocated-space/>
+
+[^198]: DBAN, <https://dban.org/>
+
+[^199]: Privacytools.io, Operating Systems <https://privacytools.io/operating-systems/>
 
   [Introduction:]: #introduction
   [Requirements:]: #requirements
