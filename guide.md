@@ -1122,7 +1122,7 @@ Deciding which route you'll take is up to you. Route A is a minimum.
 
 **Always be sure to check for new versions of Veracrypt frequently to ensure you benefit from the latest patches. Especially check this before applying large Windows updates that might break the Veracrypt bootloader and send you into a bootloop.**
 
-(By the way, your System passphrase will always be typed in QWERTY at boot time (the default layout when booting). Veracrypt itself will therefore silently switch to QWERTY when you set up a System password within the app to avoid issues. Be aware of that because you might have an AZERTY keyboard but your password will be stored in QWERTY. You can see this when you enable the "display password" checkbox when setting up or changing the system password.)
+**NOTE THAT BY DEFAULT VERACRYPT WILL ALWAYS PROPOSE A SYSTEM PASSWORD IN QWERTY (display the password as a test). This can cause issues if your boot input is actually using your laptop's keyboard (AZERTY for example) as you'll have setup your password in QWERTY and will input it at boot time in AZERTY. So make sure you check when doing the test boot what keyboard layout your BIOS is using. You could fail to log-in just because the QWERTY/AZERTY mixup. If your BIOS boots using AZERTY, you will need to type the password in QWERTY within Veracrypt.**
 
 #### Route A and B: Simple Encryption (Windows tutorial)
 
