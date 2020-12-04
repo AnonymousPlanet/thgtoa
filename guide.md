@@ -2357,7 +2357,7 @@ Reddit:
 
 -   Can you create accounts through Tor? Yes
 
-Reddit is simple. All you need to register is a valid non-disposable e-mail and a password.
+Reddit is simple. All you need to register is a valid username and a password. Normally they don't even require an e-mail (you can skip the e-mail when registering leaving it blank).
 
 You should still enable 2FA in the settings after signing-up. I had no issues whatsoever signing-up over Tor or VPN besides the occasional Captchas.
 
