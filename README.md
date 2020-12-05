@@ -6,6 +6,8 @@ This guide is open-source, licensed under cc-by-4.0 (Creative Commons Attributio
 
 You should probably view the guide here https://anonymousplanet.github.io/thgtoa/guide.html (github markdown doesn't support the many footnotes/endnotes provided).
 
+A PDF download of this guide is at https://github.com/AnonymousPlanet/thgtoa/raw/main/guide.pdf
+
 Feel free to submit issues/recommendations/ideas using Github Issues.
 
 AnonymousPlanet
