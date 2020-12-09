@@ -529,7 +529,7 @@ These have already been affected by several security vulnerabilities in the past
 
 There are some not so easy ways[^108] to disable the Intel IME on some CPUs and you should do so if you can. For some AMD laptops, you can disable it within the BIOS settings.
 
-We will try to mitigate this issue in this guide by recommending the use of a dedicated anonymous laptop for your sensitive activities that will only be used from an anonymous public network.
+We will try to mitigate this issue in this guide by recommending the use of virtual machines on a dedicated anonymous laptop for your sensitive activities that will only be used from an anonymous public network.
 
 ## Your Cloud backups/sync services:
 
