@@ -18,7 +18,7 @@
     -   [Your "Anonymized" Tor/VPN traffic:]
     -   [Your Crypto transactions:]
     -   [Exploits in your apps:]
-    -   [Your CPU: ]
+    -   [Your CPU:]
     -   [Your Cloud backups/sync services:]
     -   [Your Digital Fingerprint And Footprint:]
     -   [Your Real Life:]
@@ -509,7 +509,7 @@ Here are some steps to mitigate this type of attack:
 
 To reflect these recommendations, this guide will therefore later guide you in the use of Virtualization so that even if your Browser/Apps get compromised by a skilled adversary, that adversary will find himself stuck in a sandbox[^102] without being able to access identifying information.
 
-## Your CPU: 
+## Your CPU:
 
 All modern CPUs[^103] are now integrating hidden management platforms such as the now infamous Intel Management Engine[^104] and the AMD Platform Security Processor[^105].
 
