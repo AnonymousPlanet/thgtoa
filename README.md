@@ -9,3 +9,5 @@ The guide is available here <https://anonymousplanet.github.io/thgtoa/guide.html
 A PDF download of this guide is at <https://github.com/AnonymousPlanet/thgtoa/raw/main/guide.pdf>
 
 Feel free to submit issues using Github Issues or discuss using Github Discussions.
+
+Have a good read!
