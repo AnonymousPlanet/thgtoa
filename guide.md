@@ -1929,7 +1929,7 @@ This is a common method used on some Crypto trading platforms and some dating Ap
 
 Some platforms/apps will require you to take a live picture of yourself either doing something (a wink, holding an arm up, ...) or showing a custom piece of information (a hand written text, a passport or ID) within the picture. Sometimes the platform/app will require several pictures to increase their certainty.![][14]
 
-This guide won't cover this one (yet) as it's mainly used on financial platforms (that will be able to identify you with other means anyway) and some dating apps like Tinder[^196].
+This guide won't cover this one (yet) as it's mainly used on financial platforms (that will be able to identify you with other means anyway) and some dating apps like Tinder[^196]. Unfortunately this method is now also sometimes being used on Facebook[^197] and Instagram as part of their verification methods (tho I didn't face it yet so far).
 
 In some cases these verifications have to be done from your Smartphone and with an "in-app" camera to prevent you from sending a previously saved (edited) image.
 
@@ -2053,9 +2053,9 @@ I will help you bit by listing a few tips I learned while doing research over th
 
 Note: If you're having trouble finding an Exit node in the country of your choice you can force using specific countries for Exit Nodes (and therefore exit countries) on Tor by editing the torrc file on the Whonix Gateway or even the Tor Browser:
 
--   Whonix/Tails: Create/Edit a file /usr/local/etc/torrc.d/50_user.conf[^197].
+-   Whonix/Tails: Create/Edit a file /usr/local/etc/torrc.d/50_user.conf[^198].
 
--   On Tor Browser: Edit the torrc file located at Browser/TorBrowser/Data/Tor[^198].
+-   On Tor Browser: Edit the torrc file located at Browser/TorBrowser/Data/Tor[^199].
 
 Once you're in the file, you can do the following:
 
@@ -2579,9 +2579,9 @@ You obviously need an e-mail for your online identity and disposable e-mails are
 
 ProtonMail is a free e-mail provider based in Switzerland that advocates security and privacy.
 
-They're recommended by privacytools.io[^199]. Their only apparent issue is that they do require (in most cases) a phone number or another e-mail address for registration (when you try to register from a VPN or Tor at least).
+They're recommended by privacytools.io[^200]. Their only apparent issue is that they do require (in most cases) a phone number or another e-mail address for registration (when you try to register from a VPN or Tor at least).
 
-They claim they do not store/link the phone/e-mail associated with the registration but only store a hash that is not linked to the account[^200]. As long as their claim is true and the hash is not linked to your account, and that you followed my guide regarding the Burner phone and the pre-paid SIM card, you should be safe from tracking.
+They claim they do not store/link the phone/e-mail associated with the registration but only store a hash that is not linked to the account[^201]. As long as their claim is true and the hash is not linked to your account, and that you followed my guide regarding the Burner phone and the pre-paid SIM card, you should be safe from tracking.
 
 Create this e-mail account first using the burner phone as verification if necessary.
 
@@ -2599,7 +2599,7 @@ This e-mail account will be used in the next step for creating a Google/Gmail ac
 
 ProtonMail is good ... but to appear less suspicious, it's just better to also have a Google Mail account.
 
-As ProtonMail, Google will also most likely require a phone number during sign-up as part of their verification process. However contrary to ProtonMail, Google will store that phone number during the sign-up process and will also limit the amount of accounts that can be created during the sign-up[^201],[^202].
+As ProtonMail, Google will also most likely require a phone number during sign-up as part of their verification process. However contrary to ProtonMail, Google will store that phone number during the sign-up process and will also limit the amount of accounts that can be created during the sign-up[^202],[^203].
 
 From my experience during my research, this count is limited to 3 accounts / phone number. If you are unlucky with your number (if it was previously used by another mobile user), it might be less.
 
@@ -2629,7 +2629,7 @@ Do not use that account for "sign-up with Google" anywhere unless necessary.
 
 Be extremely careful if you decide to use the account for Google activities (such as Google Maps reviews or Youtube Comments) as those can easily trigger some checks (Negative reviews, Comments breaking Community Guidelines on Youtube).
 
-If your account gets suspended [^203] (this can happen on sign-up, after signing-up or after using it in some Google services), you can still get it unsuspended by submitting[^204] an appeal/verification (which will again require your Phone number and possibly an e-mail contact with Google support with the reason). Suspension of the account does not disable the e-mail forwarding but suspended account will be deleted after a while.
+If your account gets suspended [^204] (this can happen on sign-up, after signing-up or after using it in some Google services), you can still get it unsuspended by submitting[^205] an appeal/verification (which will again require your Phone number and possibly an e-mail contact with Google support with the reason). Suspension of the account does not disable the e-mail forwarding but suspended account will be deleted after a while.
 
 After suspension, if your Google account is restored, you should be fine.
 
@@ -2675,7 +2675,7 @@ Once the account is restored, you should take some time to do the following:
 
 After about a week, you should check the twitter again and the chances are quite high that it will be suspended again for "suspicious activity" or "violating community guidelines" despite you not using it at all (not even a single tweet/follow/like/retweet or DM) but this time by another system. I call this the "Double tap".
 
-This time you will need to submit an appeal using a form [^205] , provide a good reason and wait for the appeal to be processed by Twitter. During that process, it's possible that you will receive an e-mail (on ProtonMail) asking you to reply to a customer service ticket to prove that you do have access to your e-mail and that it's you. This will be directed toward your Gmail address but will arrive on your ProtonMail.
+This time you will need to submit an appeal using a form [^206] , provide a good reason and wait for the appeal to be processed by Twitter. During that process, it's possible that you will receive an e-mail (on ProtonMail) asking you to reply to a customer service ticket to prove that you do have access to your e-mail and that it's you. This will be directed toward your Gmail address but will arrive on your ProtonMail.
 
 Obviously do not reply from ProtonMail as this will raise suspicions, you have to sign-in into Gmail (unfortunately) and compose a new mail from there copy pasting the E-Mail , Subject and Content from ProtonMail. As well as a reply confirming you have access to that e-mail.
 
@@ -2697,7 +2697,7 @@ Linkedin is far less aggressive than twitter but will nonetheless require a vali
 
 Linkedin however is relying a lot on reports and user/customer moderation. You should not create a profile with an occupation inside a private corporations or a small startup company. The company employees are monitoring Linkedin activity and receive notifications when new people join. They can then report your profile as fake and your profile will then be suspensed or banned pending appeal.
 
-Linkedin will then require you go through a verification process that will unfortunately require you to send an ID proof (identity card, passport, driver license). This ID verification is processed by a company called Jumio[^206] that specializes in ID proofind. This is most likely a dead end as this would force you to develop some strong photoshop skills.
+Linkedin will then require you go through a verification process that will unfortunately require you to send an ID proof (identity card, passport, driver license). This ID verification is processed by a company called Jumio[^207] that specializes in ID proofind. This is most likely a dead end as this would force you to develop some strong photoshop skills.
 
 Instead you are far less likely to be reported if you just stay vague (say you're a student/intern/freelance) or pretend you work for a large public institution that is too large for anyone to care of check.
 
@@ -2737,6 +2737,8 @@ After signing-up you should setup 2FA authentication within security and using K
 
 It's no secret that Instagram is part of Facebook however it's more lenient than Facebook when it comes to user verification. It's quite unlikely you'll get suspended or banned after signing-up. But it could help.
 
+It's also possible that they ask you to take a selfie video or picture making certain gestures to prove your identity. If that's the case, I'm afraid it's a dead end for now.
+
 For instance I noticed that you'll have less issues creating a Facebook account if you already have a valid Instagram account. You should always create an Instagram account before attempting Facebook.
 
 Unfortunately there are some limitations when using the web version of Instagram. For instance you won't be able to enable Authenticator 2FA from the web for a reason I don't understand.
@@ -2770,7 +2772,7 @@ When people stand behind their opinions and actions, our community is safer and 
 ```
 -   Will they require a phone number? Yes and probably more later
 
--   Can you create accounts through Tor? Yes but it's very difficult and their onion address[^207] won't help. In most cases you'll just have a random error at sign-up and your account suspended after sign-in.
+-   Can you create accounts through Tor? Yes but it's very difficult and their onion address[^208] won't help. In most cases you'll just have a random error at sign-up and your account suspended after sign-in.
 
 Facebook is one of the most aggressive platforms in identity verification and is pushing hard their "real name policy". It is why this guide is only advised to German residents.
 
@@ -2799,6 +2801,8 @@ I also suspect strongly based on my test that the following points have an impac
 -   Restricting your profile privacy settings too soon after signing-up
 
 If your account gets suspended, you will need to appeal the decision through a very simple form that will require you to submit a "proof of ID". However that proof of ID verification system is more lenient than Linkedin and will allow you send various documents which require far less photoshop skills.
+
+It's also possible that they ask you to take a selfie video or picture making certain gestures to prove your identity. If that's the case, I'm afraid it's a dead end for now.
 
 If you do file an appeal, you will have to wait for Facebook to review it (I don't know if this is automatic or human) and you will have to wait and hope for them to unsuspend your account.
 
@@ -2898,7 +2902,7 @@ Ideally, you should find a way to buy/sell crypto with cash from an unknown pers
 
 There are only three ways of securely using those anonymously (that I would recommend). Using a VPN on your phone is not among those ways. All of those are unfortunately "tedious" to say the least.
 
--   Use an Android Emulator (Youwave[^208], Bluestacks[^209] or if you have a powerful PC, Android Studio) within the Windows VM and run the App through your multi-layer of Tor/VPN. Drawback is that such emulators are usually quite resource hungry and will slow down your VM and use more battery. Here is also an (outdated) guide on this matter: <https://www.bellingcat.com/resources/how-tos/2018/08/23/creating-android-open-source-research-device-pc/>
+-   Use an Android Emulator (Youwave[^209], Bluestacks[^210] or if you have a powerful PC, Android Studio) within the Windows VM and run the App through your multi-layer of Tor/VPN. Drawback is that such emulators are usually quite resource hungry and will slow down your VM and use more battery. Here is also an (outdated) guide on this matter: <https://www.bellingcat.com/resources/how-tos/2018/08/23/creating-android-open-source-research-device-pc/>
 
 -   Use a non-official app (such as Wassapp for Whatsapp) to connect from the Windows VM to the app. But at your own risk as you could get banned for violating the terms of services by using a non-official App.
 
@@ -2998,13 +3002,13 @@ Then we will download a convenient utility called PrivaZer that will allow you d
 
 This will be used for cleaning many things such as:
 
--   The Windows USN journal which stores plenty of information[^210].
+-   The Windows USN journal which stores plenty of information[^211].
 
--   The Windows System Resource Usage Monitor (SRUM)[^211].
+-   The Windows System Resource Usage Monitor (SRUM)[^212].
 
 -   Various histories of various programs (such as the recent lists).
 
--   The free (unallocated) space of your hard drive[^212].
+-   The free (unallocated) space of your hard drive[^213].
 
 Here are the steps:
 
@@ -3108,7 +3112,7 @@ Unfortunately you won't be able to wipe your Host OS using the built-in tools wi
 
 So you'll have to wipe it using bootable USB key again. But this time not Windows.
 
-There are several utilities that are recommend (like the old unmaintained DBAN[^213]) for this but personally, I will recommend the use of ShredOS.
+There are several utilities that are recommend (like the old unmaintained DBAN[^214]) for this but personally, I will recommend the use of ShredOS.
 
 Feel free do go with DBAN instead if you want, the process is basically the same but might not work out of the box with UEFI laptops.
 
@@ -3316,7 +3320,7 @@ This is the Windows 10 installation process that should be valid for any Windows
 
 # Appendix B: (Windows Additional Privacy Settings)
 
-As written earlier in this guide and as noted by Privacytools.io[^214], Windows 10 is a privacy nightmare. And disabling everything during and after the installation using the settings available to you is not enough. The amount of telemetry data collected by Microsoft is staggering and could defeat your attempts at keeping secrets. You will need to download and use a couple utilities to (hopefully) force Windows 10 into not sending data back to Microsoft.
+As written earlier in this guide and as noted by Privacytools.io[^215], Windows 10 is a privacy nightmare. And disabling everything during and after the installation using the settings available to you is not enough. The amount of telemetry data collected by Microsoft is staggering and could defeat your attempts at keeping secrets. You will need to download and use a couple utilities to (hopefully) force Windows 10 into not sending data back to Microsoft.
 
 Here are the steps in details:
 
@@ -3778,41 +3782,43 @@ These are the steps to create a Windows 10 (20H2) Installation Media using this 
 
 [^196]: The Verge, Tinder will give you a verified blue check mark if you pass its catfishing test <https://www.theverge.com/2020/1/23/21077423/tinder-photo-verification-blue-checkmark-safety-center-launch-noonlight>
 
-[^197]: Whonix Documentation, <https://www.whonix.org/wiki/Tor#Edit_Tor_Configuration>
+[^197]: DigitalInformationWorld, Facebook will now Require you to Create a Video Selfie for Identity Verification! <https://www.digitalinformationworld.com/2020/03/facebook-is-now-demanding-some-users-to-create-a-video-selfie-for-identity-verification.html#>
 
-[^198]: Tor Browser Documentation, <https://support.torproject.org/tbb/tbb-editing-torrc/>
+[^198]: Whonix Documentation, <https://www.whonix.org/wiki/Tor#Edit_Tor_Configuration>
 
-[^199]: Privacytools.io Recommended E-mail Providers <https://privacytools.io/providers/email/>
+[^199]: Tor Browser Documentation, <https://support.torproject.org/tbb/tbb-editing-torrc/>
 
-[^200]: ProtonMail Human Verification System [https://ProtonMail.com/support/knowledge-base/human-verification/]
+[^200]: Privacytools.io Recommended E-mail Providers <https://privacytools.io/providers/email/>
 
-[^201]: Google Help <https://support.google.com/accounts/answer/114129?hl=en>
+[^201]: ProtonMail Human Verification System [https://ProtonMail.com/support/knowledge-base/human-verification/]
 
-[^202]: Google Help <https://support.google.com/google-ads/answer/7474263?hl=en>
+[^202]: Google Help <https://support.google.com/accounts/answer/114129?hl=en>
 
-[^203]: Google, Your account is disabled <https://support.google.com/accounts/answer/40695>
+[^203]: Google Help <https://support.google.com/google-ads/answer/7474263?hl=en>
 
-[^204]: Google, Request to restore the account <https://support.google.com/accounts/contact/disabled2>
+[^204]: Google, Your account is disabled <https://support.google.com/accounts/answer/40695>
 
-[^205]: Twitter Appeal Form <https://help.twitter.com/forms/general>
+[^205]: Google, Request to restore the account <https://support.google.com/accounts/contact/disabled2>
 
-[^206]: Jumio, ID verification features <https://www.jumio.com/features/>
+[^206]: Twitter Appeal Form <https://help.twitter.com/forms/general>
 
-[^207]: Facebook Onion Website <http://facebookcorewwwi.onion>
+[^207]: Jumio, ID verification features <https://www.jumio.com/features/>
 
-[^208]: Youwave, <https://youwave.com/>
+[^208]: Facebook Onion Website <http://facebookcorewwwi.onion>
 
-[^209]: Bluestacks, <https://www.bluestacks.com/>
+[^209]: Youwave, <https://youwave.com/>
 
-[^210]: Medium.com, The Windows USN Journal <https://medium.com/velociraptor-ir/the-windows-usn-journal-f0c55c9010e>
+[^210]: Bluestacks, <https://www.bluestacks.com/>
 
-[^211]: Medium.com, Digging into the System Resource Usage Monitor (SRUM) <https://medium.com/velociraptor-ir/digging-into-the-system-resource-usage-monitor-srum-afbadb1a375>
+[^211]: Medium.com, The Windows USN Journal <https://medium.com/velociraptor-ir/the-windows-usn-journal-f0c55c9010e>
 
-[^212]: SANS, Timestamped Registry & NTFS Artifacts from Unallocated Space <https://www.sans.org/blog/timestamped-registry-ntfs-artifacts-from-unallocated-space/>
+[^212]: Medium.com, Digging into the System Resource Usage Monitor (SRUM) <https://medium.com/velociraptor-ir/digging-into-the-system-resource-usage-monitor-srum-afbadb1a375>
 
-[^213]: DBAN, <https://dban.org/>
+[^213]: SANS, Timestamped Registry & NTFS Artifacts from Unallocated Space <https://www.sans.org/blog/timestamped-registry-ntfs-artifacts-from-unallocated-space/>
 
-[^214]: Privacytools.io, Operating Systems <https://privacytools.io/operating-systems/>
+[^214]: DBAN, <https://dban.org/>
+
+[^215]: Privacytools.io, Operating Systems <https://privacytools.io/operating-systems/>
 
   [Introduction:]: #introduction
   [Requirements:]: #requirements
