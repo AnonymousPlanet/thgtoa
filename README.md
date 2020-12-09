@@ -10,4 +10,4 @@ A PDF download of this guide is available at <https://github.com/AnonymousPlanet
 
 Feel free to submit issues using Github Issues or discuss using Github Discussions.
 
-Have a good read!
+Have a good read.
