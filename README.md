@@ -8,6 +8,6 @@ You should probably view the guide here https://anonymousplanet.github.io/thgtoa
 
 A PDF download of this guide is at https://github.com/AnonymousPlanet/thgtoa/raw/main/guide.pdf
 
-Feel free to submit issues/recommendations/ideas using Github Issues.
+Feel free to submit issues using Github Issues or discuss using Github discussions.
 
 AnonymousPlanet
