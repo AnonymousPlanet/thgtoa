@@ -10,4 +10,4 @@ relative_links:
 include:
   - guide.md
 
-theme: jekyll-theme-midnight
+theme: jekyll-theme-cayman
