@@ -1,7 +1,6 @@
 markdown: kramdown
 kramdown: 
   hard_wrap: false
-  line_width: 120
 plugins:
   - jekyll-relative-links
 relative_links:
