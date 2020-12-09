@@ -25,6 +25,7 @@
     -   [Your Face and other Biometrics:]
     -   [Phishing:]
     -   [Forensics:]
+    -   [No logging but logging anyway policies:]
     -   [Advanced targeted techniques:]
     -   [Notes:]
 -   [General Preparations:]
@@ -115,7 +116,7 @@
 -   [Appendix B: (Windows Additional Privacy Settings)]
 -   [Appendix C: (Windows Installation Media Creation)]
 
-Version 0.1.4 (draft), December 2020 (work in progress, some parts are incomplete) by AnonymousPlanet
+Version 0.1.5 (draft), December 2020 (work in progress, some parts are incomplete) by AnonymousPlanet
 
 This guide is open-source, licensed under Creative Commons Attribution 4.0 International (cc-by-4.0).
 
@@ -537,7 +538,7 @@ The digital fingerprint is the way you write, the way you behave. The way you cl
 
 Social Media platforms such as Facebook/Google can go a step further and can register your behavior in the browser itself. For instance they can register everything you type even if you don't send it / save it. Think of when you write an e-mail in Gmail. It's saved automatically as you type. They can register your clicks and cursor movements as well.
 
-This technology is also widely used used in CAPTCHAS[^169] services to verify that you are "human" and can be used to fingerprint a user.
+This technology is also widely used used in CAPTCHAS[^177] services to verify that you are "human" and can be used to fingerprint a user.
 
 Analysis algorithms could then be used to match these patterns with other users and match you to a different known user. It's unclear if such data is used or not by Governments and Law Enforcements agencies but it might be in the future. And while this might only be used for advertising/marketing purposes now. It could and probably will be used for investigations in the short or mid-term future.
 
@@ -553,7 +554,7 @@ You should never ever share real personal experiences/details that could later l
 
 ## Your Browser and Device Fingerprints:
 
-Your Browser and Device Fingerprints[^179] are set of properties/capabilities of your System/Browser. These are used on most websites for invisible user tracking but also to adapt the website user experience depending on their browser. For instance websites will be able to provide a "mobile experience" if you're using a mobile browser or propose a specific language/geographic version depending on your fingerprint. Most of those techniques work with recent Browsers like Chromium[^108] based browsers (such as Chrome) or Firefox[^109] unless taking special measures.
+Your Browser and Device Fingerprints[^187] are set of properties/capabilities of your System/Browser. These are used on most websites for invisible user tracking but also to adapt the website user experience depending on their browser. For instance websites will be able to provide a "mobile experience" if you're using a mobile browser or propose a specific language/geographic version depending on your fingerprint. Most of those techniques work with recent Browsers like Chromium[^108] based browsers (such as Chrome) or Firefox[^109] unless taking special measures.
 
 You can find a lot of detailed information and publications about this here: <https://amiunique.org/links>
 
@@ -637,9 +638,31 @@ Here are some recent resources you should read about your smartphone:
 
 When it comes to your laptop, the forensics techniques are many and widespread. Too many to be listed in this guide. But this guide will nonetheless guide you into mitigating most forensic techniques and hopefully help you protect yourself from "most" adversaries.
 
+## No logging but logging anyway policies:
+
+Many people have the idea that privacy oriented services such as VPN or E-Mail providers are safe due to their no logging policies or their encryption schemes. Unfortunately many of those same people forget that all those providers are legal commercial entities subject to the laws of the countries in which they operate.
+
+Any of those providers can be forced to silently(without your knowing (using for example a court order with a gag order[^132] or a national security letter[^133]) log your activity to de-anonymize you. There have been several recent examples of those:
+
+-   2020, The Germany based mail provider Tutanota was forced to implement a backdoor to save unencrypted copies of the e-mails of one user[^134].
+
+-   2017, PureVPN was forced to disclose information of one user to the FBI[^135].
+
+-   2014, EarthVPN user was arrested based on logs provider to the Dutch Police[^136].
+
+-   2014, HideMyAss user was de-anonymized and logs were provider to the FBI[^137].
+
+-   2013, Secure E-Mail provider Lavabit shuts down after fighting a secret gag order[^138].
+
+Some providers have implemented the use of a Warrant Canary[^139] that would allow their users to find out if they have been compromised by such orders but this has not been tested yet as far as I know.
+
+For these reasons, it's important that you don't trust such providers for your privacy despite all their claims. In most cases, you will be the last person to know if any of your account was targeted by such orders and you might never know at all.
+
+To mitigate this I will recommend the use of a cash-paid VPN provider over Tor to prevent the VPN service from knowing any identifiable information about you. I will also recommend the creation of anonymous e-mail accounts from this VPN over Tor connection to also prevent them from having any information despite their no logging policies.
+
 ## Advanced targeted techniques:
 
-There are many advanced techniques that can be used by skilled adversaries[^132] to bypass your security measures provided they already know where your devices are. Many of those techniques are detailed here <https://cyber.bgu.ac.il/advanced-cyber/airgap> (Air-Gap Research Page, Cyber-Security Research Center, Ben-Gurion University of the Negev, Israel). I recommend having a look if you're curious.
+There are many advanced techniques that can be used by skilled adversaries[^140] to bypass your security measures provided they already know where your devices are. Many of those techniques are detailed here <https://cyber.bgu.ac.il/advanced-cyber/airgap> (Air-Gap Research Page, Cyber-Security Research Center, Ben-Gurion University of the Negev, Israel). I recommend having a look if you're curious.
 
 This guide will be of little help against such adversaries.
 
@@ -753,7 +776,7 @@ When you are certain the phone is in working order, disable Bluetooth then power
 
 **Skip this step if you have no intention of creating anonymous accounts on most platforms but just want anonymous browsing or if the platforms you will use allow registration without a phone number.**
 
-This is the hardest part of the whole guide and also its biggest weakness. It's a SPOF (Single Point of Failure). The places where you can still buy prepaid SIM cards without ID registration are getting more and more limited due to various KYC type regulations[^133]. But this is unfortunately a required step as you will NEED a reliable phone number to sign-up for many accounts.
+This is the hardest part of the whole guide and also its biggest weakness. It's a SPOF (Single Point of Failure). The places where you can still buy prepaid SIM cards without ID registration are getting more and more limited due to various KYC type regulations[^141]. But this is unfortunately a required step as you will NEED a reliable phone number to sign-up for many accounts.
 
 There are many commercial services offering numbers to receive SMS messages online but those have basically no anonymity and can be of no help as most Social Media platforms place a limit on how many times a phone number can be used for registration. To this date, I do not know any reputable service that would offer this service and accept cash payments (by post for instance).
 
@@ -803,7 +826,7 @@ This part of the guide will help you in setting up TAILS if one of the following
 
 -   You decide to go with TAILS anyway
 
-TAILS[^134] stands for **The Amnesic Incognito Live System.** . It's a bootable Live Operating System running from a USB key that is designed for leaving no traces and forcing all connections through the Tor network.
+TAILS[^142] stands for **The Amnesic Incognito Live System.** . It's a bootable Live Operating System running from a USB key that is designed for leaving no traces and forcing all connections through the Tor network.
 
 You pretty much insert the Tails USB key into your laptop, boot from it and you have a full operating system running with privacy and anonymity in mind. As soon as you shut down the computer, everything will be gone unless you saved it somewhere.
 
@@ -835,7 +858,7 @@ When you're done and have a working Tails on your laptop, go to the "Creating yo
 
 ### Get a laptop for your anonymous activities:
 
-Ideally (but not mandatory[^135]), you should get a dedicated that won't be tied to you in any easy way laptop (paid with cash anonymously as previously mentioned for the phone and the SIM card).
+Ideally (but not mandatory[^143]), you should get a dedicated that won't be tied to you in any easy way laptop (paid with cash anonymously as previously mentioned for the phone and the SIM card).
 
 This laptop should be in all cases a clean freshly installed PC (Running Windows/Linux). This laptop should be clean of your normal day to day activities. In the case of a Windows laptop, and if you used it before, it should also not be activated (installed without a product key).
 
@@ -869,7 +892,7 @@ Once you're in there you'll need to apply a few recommended settings:
 
 -   Disable the Webcam and Microphone if you can.
 
--   Enable BIOS/UEFI password and use a long passphrase[^136] instead of a password if you can.
+-   Enable BIOS/UEFI password and use a long passphrase[^144] instead of a password if you can.
 
 -   Disable USB/HDMI or any other port (Ethernet, Firewire, SD card, ...) if you can.
 
@@ -881,7 +904,7 @@ At some point you'll inevitable leave this laptop alone somewhere. You won't sle
 
 It's important to know that it's trivially easy for some specialists to install a keylogger in your laptop, or to just make a clone copy of your hard drive that could later allow them to detect the presence of encrypted data in it using forensic techniques (more on that later).
 
-Here is a good cheap method to make your laptop tamper proof using Nail Polish (with glitter) <https://mullvad.net/en/help/how-tamper-protect-laptop/> [^137] (with pictures).
+Here is a good cheap method to make your laptop tamper proof using Nail Polish (with glitter) <https://mullvad.net/en/help/how-tamper-protect-laptop/> [^145] (with pictures).
 
 Check the laptop for tampering before using on a regular basis.
 
@@ -889,23 +912,23 @@ Check the laptop for tampering before using on a regular basis.
 
 ### Picking your Host OS (the OS installed on your laptop):
 
-This route will make extensive use of Virtual Machines[^138], they'll require a host OS to run the Virtualization software. You have two choices in this part of the guide:
+This route will make extensive use of Virtual Machines[^146], they'll require a host OS to run the Virtualization software. You have two choices in this part of the guide:
 
 -   Your Linux distribution of choice (excluding Qubes)
 
 -   Windows 10 Home edition
 
-Linux is not necessarily the better choice for privacy depending on your threat model. This is because using Windows will allow us to use a privacy feature called Plausible Deniability[^139].
+Linux is not necessarily the better choice for privacy depending on your threat model. This is because using Windows will allow us to use a privacy feature called Plausible Deniability[^147].
 
 So what is Plausible Deniability? Plausible deniability is the ability for you to cooperate with an adversary requesting access to your device/data without revealing your true secret.
 
-A (nice) adversary could ask for your encrypted laptop password. At first you could refuse to give out any password (using your "right to remain silent", "right not not incriminate yourself") but some countries are implementing laws[^140] to exempt this from such rights (because terrorists and "think of the children"). In that case you might have to reveal the password or maybe face jail time in contempt of court. This is where plausible deniability will comes into play.
+A (nice) adversary could ask for your encrypted laptop password. At first you could refuse to give out any password (using your "right to remain silent", "right not not incriminate yourself") but some countries are implementing laws[^148] to exempt this from such rights (because terrorists and "think of the children"). In that case you might have to reveal the password or maybe face jail time in contempt of court. This is where plausible deniability will comes into play.
 
 You could then reveal a password but that password will only give access to "plausible data" (a decoy OS). The forensics will be well aware that it's possible for you to have hidden data but should not be able to prove this **(if you do this right)** . You will have cooperated and the investigators will have access to something but not what you actually want to hide. Since the burden of proof should lie on their side, they will have no options but to believe you unless they have a proof that you have hidden data.
 
 **This feature is only (easily) available with Windows and is a reason why you might want to use Windows instead of Linux.**
 
-Plausible deniability is also the reason you should have Windows 10 Home (and not Pro) on your laptop. This is because Windows 10 Pro natively offers a full-disk encryption system (Bitlocker[^141]) where Windows 10 Home offers no full-disk encryption at all. We will later use a third-party open-source software for encryption that will allow full-disk encryption on Windows 10 Home. This will give you a good (plausible) excuse to use this software. While using this software on Windows 10 Pro would be suspicious.
+Plausible deniability is also the reason you should have Windows 10 Home (and not Pro) on your laptop. This is because Windows 10 Pro natively offers a full-disk encryption system (Bitlocker[^149]) where Windows 10 Home offers no full-disk encryption at all. We will later use a third-party open-source software for encryption that will allow full-disk encryption on Windows 10 Home. This will give you a good (plausible) excuse to use this software. While using this software on Windows 10 Pro would be suspicious.
 
 Also if you have zero knowledge of Linux, I would recommend you go for Windows instead for convenience. This guide will help you hardening it as much as possible to prevent any leaks.
 
@@ -927,7 +950,7 @@ You need to follow these steps to randomize your MAC address as explained earlie
 
 ### Setting up a safe Browser on your Host OS:
 
-This guide will recommend using Tor browser within the host OS because it has the best protections by default. The only other acceptable option in my opinion would be to use Brave Browser (with a Tor tab) but keep in mind that themselves recommend the use of Tor Browser if you feel your safety depends on being anonymous[^142]: " With Tor, Brave works hard to ensure that you're extremely difficult to track online while providing a delightful browsing experience. But if your personal safety depends on remaining anonymous you may wish to use the Tor Browser instead. ".
+This guide will recommend using Tor browser within the host OS because it has the best protections by default. The only other acceptable option in my opinion would be to use Brave Browser (with a Tor tab) but keep in mind that themselves recommend the use of Tor Browser if you feel your safety depends on being anonymous[^150]: " With Tor, Brave works hard to ensure that you're extremely difficult to track online while providing a delightful browsing experience. But if your personal safety depends on remaining anonymous you may wish to use the Tor Browser instead. ".
 
 This Browser on the host OS will only be used to download various utilities and will never be used for actual anonymous activities.
 
@@ -957,7 +980,7 @@ Skip this if you decided to go for a Linux Host OS instead.
 
 Go ahead and download and install Veracrypt from: <https://www.veracrypt.fr/en/Downloads.html>
 
-Veracrypt[^143] is the software we will use for full disk encryption, file encryption and plausible deniability. It is a fork of the well-known but deprecated and unmaintained TrueCrypt. It can be used for
+Veracrypt[^151] is the software we will use for full disk encryption, file encryption and plausible deniability. It is a fork of the well-known but deprecated and unmaintained TrueCrypt. It can be used for
 
 -   Full Disk simple encryption (your hard drive is encrypted with one passphrase).
 
@@ -967,13 +990,13 @@ Veracrypt[^143] is the software we will use for full disk encryption, file encry
 
 -   File container with plausible deniability (it's a same large file but depending on the passphrase you use when mounting it, you will either mount a "hidden volume" or the "decoy volume").
 
-It is to my knowledge the only (convenient and usable by anyone) free, open-source and openly audited[^144] encryption software that also provides plausible deniability for general use.
+It is to my knowledge the only (convenient and usable by anyone) free, open-source and openly audited[^152] encryption software that also provides plausible deniability for general use.
 
 But there are catches as there are with everything:
 
 #### Evil-Maid Attacks:
 
-The first catch is called the "Evil Maid Attack"[^145]. This is when someone tampers with your laptop while you're away. For install to clone your hard drive or to install a key logger. If they are able to clone your hard drive, they can compare one image of your hard drive at the time they took it while you were away with the hard drive when they seize it from you. If you used the laptop again in between, forensics examiners might be able to prove the existence of the hidden data by looking at the variations between the two images in what should be an empty/unused space. This could lead to strong evidence of the existence of a hidden data. If they install a keylogger within your laptop (software or hardware), they will be able to simply get the password from you for later use when they seize it. You can mitigate this attack by doing the following (as recommended earlier):
+The first catch is called the "Evil Maid Attack"[^153]. This is when someone tampers with your laptop while you're away. For install to clone your hard drive or to install a key logger. If they are able to clone your hard drive, they can compare one image of your hard drive at the time they took it while you were away with the hard drive when they seize it from you. If you used the laptop again in between, forensics examiners might be able to prove the existence of the hidden data by looking at the variations between the two images in what should be an empty/unused space. This could lead to strong evidence of the existence of a hidden data. If they install a keylogger within your laptop (software or hardware), they will be able to simply get the password from you for later use when they seize it. You can mitigate this attack by doing the following (as recommended earlier):
 
 -   Have a basic tamper protection (as explained previously) to prevent physical access to the internals of the laptop without your knowing. This will prevent them from cloning your disks and installing a physical keylogger without your knowledge.
 
@@ -983,19 +1006,19 @@ In addition, Veracrypt itself has a built-in protection against Evil Maid Attack
 
 #### Cold-Boot Attack:
 
-The second catch is the "Cold Boot attack"[^146] discussed briefly earlier in this guide. This is trickier than the Evil Maid Attack as it requires them to come into possession of your laptop while you're actively using the hidden OS/data or very shortly afterward.
+The second catch is the "Cold Boot attack"[^154] discussed briefly earlier in this guide. This is trickier than the Evil Maid Attack as it requires them to come into possession of your laptop while you're actively using the hidden OS/data or very shortly afterward.
 
-The principle is simple, as shown in this video[^147], they could theoretically quickly boot your laptop on a special USB key that would copy the content of the RAM (the memory) of the laptop after you shut it down. If the USB ports are disabled or if they feel like they need more time, they could open it and "cool down" the memory using a spray or other chemicals (liquid nitrogen for instance). The memory won't decay and they could be able to copy its content for analysis. This memory dump should contain the key to decrypt your hard drive/data. To mitigate this you have to apply a few principles:
+The principle is simple, as shown in this video[^155], they could theoretically quickly boot your laptop on a special USB key that would copy the content of the RAM (the memory) of the laptop after you shut it down. If the USB ports are disabled or if they feel like they need more time, they could open it and "cool down" the memory using a spray or other chemicals (liquid nitrogen for instance). The memory won't decay and they could be able to copy its content for analysis. This memory dump should contain the key to decrypt your hard drive/data. To mitigate this you have to apply a few principles:
 
--   Encrypt the memory with a Veracrypt option[^148] (settings \> performance/driver options \> encrypt RAM) at a cost of 5-15% performance. This will also disable hibernation.
+-   Encrypt the memory with a Veracrypt option[^156] (settings \> performance/driver options \> encrypt RAM) at a cost of 5-15% performance. This will also disable hibernation.
 
 -   Enable the Veracrypt option to wipe the keys from memory if a new device is inserted (system \> settings \> security \> clear keys from memory if a new device is inserted). This could help in case your system is seized while still on (but locked).
 
--   Enable the Veracrypt option to mount volumes as removable volumes (Settings \> Preferences \> Mount volume as removable media). This will prevent Windows from writing some logs about your mounts in the Eventlogs[^149].
+-   Enable the Veracrypt option to mount volumes as removable volumes (Settings \> Preferences \> Mount volume as removable media). This will prevent Windows from writing some logs about your mounts in the Eventlogs[^157].
 
 -   Be careful and have a good situational awareness when using your hidden system, if you sense something weird. Shut your laptop down as fast as possible.
 
-There have been some forensics studies[^150] about technically proving the presence of the hidden data with a simple forensic examination (without a Cold Boot/Evil Maid Attack) but these have been contested by other studies[^151] and by the maintainer of Veracrypt[^152].
+There have been some forensics studies[^158] about technically proving the presence of the hidden data with a simple forensic examination (without a Cold Boot/Evil Maid Attack) but these have been contested by other studies[^159] and by the maintainer of Veracrypt[^160].
 
 #### Local Data leaks (traces) and forensics examination:
 
@@ -1009,9 +1032,9 @@ In all cases, you'll (most likely) open these folders with Windows Explorer and 
 
 Well, all those Apps and your Operating System will keep logs and traces of that usage. This might include the full path of the folder/files/drives, the time those were accessed, temporary caches of those files, the "recent" lists in each apps, the Windows file indexing system that could index the drive, thumbnails that could be generated ...
 
-A very good example of this are the Windows "ShellBags" that are stored within the Windows Registry storing various histories of accessed files/folders[^153].
+A very good example of this are the Windows "ShellBags" that are stored within the Windows Registry storing various histories of accessed files/folders[^161].
 
-Forensics can [^151] and will[^153] use all those leaks[^149] to prove the existence of hidden data and defeat your attempts at using plausible deniability.
+Forensics can [^159] and will[^161] use all those leaks[^157] to prove the existence of hidden data and defeat your attempts at using plausible deniability.
 
 It will be therefore important to apply various steps to prevent forensics from doing this by preventing and cleaning these leaks/traces. This will be covered in the "Cover your Tracks" part of this guide at the very end.
 
@@ -1083,7 +1106,7 @@ Now you'll have to pick your next step between two options:
 
         -   Requires full wipe of your laptop
 
-        -   No use with an SSD drive due to requirement of disabling Trim[^154] Operations[^155]. This will severely degrade the performance/health of your SSD drive over time.
+        -   No use with an SSD drive due to requirement of disabling Trim[^162] Operations[^163]. This will severely degrade the performance/health of your SSD drive over time.
 
 **As you can see, Route C really only offers two privacy advantages over the others and it will only be of use against a "soft" (lawful and nice) adversary.**
 
@@ -1121,19 +1144,19 @@ This route is rather straightforward and will just encrypt your current Operatin
 
 -   Select SHA-512 as hash Algorithm (because why not)
 
--   Enter a strong passphrase (longer the better)[^136]
+-   Enter a strong passphrase (longer the better)[^144]
 
 -   Collect some entropy by randomly moving your cursor around until the bar is full
 
 -   Click Next as the Generated Keys screen
 
--   To rescue disk[^156] or not rescue disk, well that's up to you. I recommend making one (just in case), just make sure to store it outside your encrypted drive (USB key for instance, or wait and see the end of this guide for guidance on safe backups). This rescue disk will not store your passphrase and you'll still need it to use it.
+-   To rescue disk[^164] or not rescue disk, well that's up to you. I recommend making one (just in case), just make sure to store it outside your encrypted drive (USB key for instance, or wait and see the end of this guide for guidance on safe backups). This rescue disk will not store your passphrase and you'll still need it to use it.
 
 -   Wipe mode:
 
     -   If you have no sensitive data yet on this laptop, select None
 
-    -   If you have sensitive data on an SSD, Trim alone should take care of it[^157] but I would recommend 1 pass (random data) just to be sure.
+    -   If you have sensitive data on an SSD, Trim alone should take care of it[^165] but I would recommend 1 pass (random data) just to be sure.
 
     -   If you have sensitive data on an HDD, There is no Trim and I would recommend at least 1-pass.
 
@@ -1179,7 +1202,7 @@ This process will do the following:
 
 -   This means that your current Windows 10 will become the hidden Windows 10 and that you will need to reinstall a fresh decoy Windows 10 OS.
 
-**Mandatory if you have an SSD drive and you still want to do this against the recommendation: Disable SSD Trim in Windows**[^158] **(again this is NOT recommended at all as** **disabling Trim in itself is highly suspicious**).**Also** **as mentioned earlier, disabling Trim will reduce the lifetime of your SSD drive and will significantly impact its performance over time (your laptop will become slower and slower over several months of use until it becomes almost unusable, you will then have to clean the drive and re-install everything). But you have to do it to prevent data leaks**[^159] **that could allow forensics to defeat your plausible deniability**[^160][^161]**. The only way around this at the moment is to have a laptop with a classic HDD drive instead.**
+**Mandatory if you have an SSD drive and you still want to do this against the recommendation: Disable SSD Trim in Windows**[^166] **(again this is NOT recommended at all as** **disabling Trim in itself is highly suspicious**).**Also** **as mentioned earlier, disabling Trim will reduce the lifetime of your SSD drive and will significantly impact its performance over time (your laptop will become slower and slower over several months of use until it becomes almost unusable, you will then have to clean the drive and re-install everything). But you have to do it to prevent data leaks**[^167] **that could allow forensics to defeat your plausible deniability**[^168][^169]**. The only way around this at the moment is to have a laptop with a classic HDD drive instead.**
 
 ##### Step 1: Create a Windows 10 install USB key
 
@@ -1223,7 +1246,7 @@ Do not connect this OS to your known Wi-FI. You should download Veracrypt instal
 
 -   Use all the space available on the second partition for the Outer Volume
 
--   Use a strong passphrase[^136]
+-   Use a strong passphrase[^144]
 
 -   Select yes to Large Files
 
@@ -1237,7 +1260,7 @@ Do not connect this OS to your known Wi-FI. You should download Veracrypt instal
 
     -   I recommend you don't fill the outer volume too much or too little (about 40%). Remember you have to leave enough space for the Hidden OS (which will be same size as the first partition you created during installation).
 
--   Use a strong passphrase[^136] for the Hidden Volume (obviously a different one than the one for the Outer Volume).
+-   Use a strong passphrase[^144] for the Hidden Volume (obviously a different one than the one for the Outer Volume).
 
 -   Now you will create the Hidden Volume, select AES and SHA-512
 
@@ -1295,7 +1318,7 @@ Now we will encrypt the Decoy OS:
 
 -   Click Next as the Generated Keys screen
 
--   To rescue disk[^162] or not rescue disk, well that's up to you. I recommend making one (just in case), just make sure to store it outside your encrypted drive (USB key for instance, or wait and see the end of this guide for guidance on safe backups). This rescue disk will not store your passphrase and you'll still need it to use it.
+-   To rescue disk[^170] or not rescue disk, well that's up to you. I recommend making one (just in case), just make sure to store it outside your encrypted drive (USB key for instance, or wait and see the end of this guide for guidance on safe backups). This rescue disk will not store your passphrase and you'll still need it to use it.
 
 -   Wipe mode: Select 1-Pass just to be safe
 
@@ -1411,7 +1434,7 @@ You're done and can go to next step.
 
 Ths step and the following steps should be done from within the Host OS. This can either be your Host OS with simple encryption or your Hidden OS with plausible deniability.
 
-In the Whonix route, we will make extensive use of the free Oracle Virtualbox[^163] software. This is a virtualization software in which you can create Virtual Machines that emulate a computer running a specific OS (if you want to use something else like KVM in Linux, feel free to do so).
+In the Whonix route, we will make extensive use of the free Oracle Virtualbox[^171] software. This is a virtualization software in which you can create Virtual Machines that emulate a computer running a specific OS (if you want to use something else like KVM in Linux, feel free to do so).
 
 **All your hidden anonymous activities will be done from within a client Virtual Machine running Windows 10 Pro (not Home this time) or Linux.**
 
@@ -1451,7 +1474,7 @@ You might be wondering: Well what about using Tor over VPN instead of VPN over T
 
 -   This would result in you connecting to various services using the IP of a Tor Exit Node which are banned/flagged in many places.
 
-This route will use Virtualization and Whonix[^164] as part of the anonymization process. Whonix is a Linux distribution composed of two Virtual Machines:
+This route will use Virtualization and Whonix[^172] as part of the anonymization process. Whonix is a Linux distribution composed of two Virtual Machines:
 
 -   The Whonix Workstation (this is a VM where you can conduct anonymous activities)
 
@@ -1473,11 +1496,11 @@ Whonix is well maintained and has extensive documentation.
 
 #### A note on Virtualbox Snapshots:
 
-Later on you will create and run several Virtual Machines within Virtualbox for your anonymous activities. Virtualbox provides a feature called "Snapshots"[^165] that allow for saving the state of a VM at any point in time. If for any reason later you want to go back to that state, you can restore that snapshot at any moment.
+Later on you will create and run several Virtual Machines within Virtualbox for your anonymous activities. Virtualbox provides a feature called "Snapshots"[^173] that allow for saving the state of a VM at any point in time. If for any reason later you want to go back to that state, you can restore that snapshot at any moment.
 
 I recommend that you do make use of this feature by creating a snapshot after the initial installation / update of each VM. This snapshot should be done before their use for any sensitive/anonymous activity.
 
-This will allow you to turn your VMs into a kind of "Live Operating Systems" (like TAILS discussed earlier). Meaning that you will be able to erase all the traces of your activities within a VM by restoring a Snapshot to an earlier state. Of course this won't be "as good" as TAILS (where everything is stored in memory) as there might be traces of this activity left on your hard disk. Forensics studies have shown the ability to recover data from a reverted VM[^166]. Fortunately there will be ways to remove those traces after deletion or reverting to a previous snapshot. Such techniques will be discussed in the "Cover your tracks" section of this guide.
+This will allow you to turn your VMs into a kind of "Live Operating Systems" (like TAILS discussed earlier). Meaning that you will be able to erase all the traces of your activities within a VM by restoring a Snapshot to an earlier state. Of course this won't be "as good" as TAILS (where everything is stored in memory) as there might be traces of this activity left on your hard disk. Forensics studies have shown the ability to recover data from a reverted VM[^174]. Fortunately there will be ways to remove those traces after deletion or reverting to a previous snapshot. Such techniques will be discussed in the "Cover your tracks" section of this guide.
 
 You may now go ahead and download Virtualbox from <https://www.virtualbox.org/wiki/Downloads>
 
@@ -1675,9 +1698,9 @@ In both cases you should set the VPN to start from boot and enable the "kill swi
 
 ### KeePassXC:
 
-You will need something to store your data (logins/passwords, identities and TOTP[^167] information).
+You will need something to store your data (logins/passwords, identities and TOTP[^175] information).
 
-For this purpose I strongly recommend KeePassXC because of their TOTP feature. This is the ability to create entries for 2FA[^168] authentication with the authenticator feature.
+For this purpose I strongly recommend KeePassXC because of their TOTP feature. This is the ability to create entries for 2FA[^176] authentication with the authenticator feature.
 
 Here are the tutorials:
 
@@ -1699,7 +1722,7 @@ Coming Soon.
 
 ### Captchas:
 
-Captcha[^169] stands for "Completely Automated Public Turing test to tell Computers and Humans Apart" are Turing tests[^170] puzzles you need to complete before accessing a form/website. You'll mostly encounter those provided by Google (reCaptcha service[^171]) and Cloudflare (hCaptcha[^172]). hCaptcha is used on 15% of the internet by their own metrics[^173].
+Captcha[^177] stands for "Completely Automated Public Turing test to tell Computers and Humans Apart" are Turing tests[^178] puzzles you need to complete before accessing a form/website. You'll mostly encounter those provided by Google (reCaptcha service[^179]) and Cloudflare (hCaptcha[^180]). hCaptcha is used on 15% of the internet by their own metrics[^181].
 
 ![][13]
 
@@ -1707,13 +1730,13 @@ They're designed to separate bots from humans but in reality are also used to de
 
 If you frequently use VPNs , you'll quickly encounter many captchas everywhere. Quite often when using Tor, even if you succeed in solving all the puzzles, you'll still be denied after solving the puzzles.
 
-While most people think those puzzles are only about solving a little puzzle, it's important to understand that it's much more complex and that modern Captchas uses advanced machine learning and risk analysis algorithms to check if you're human[^174]:
+While most people think those puzzles are only about solving a little puzzle, it's important to understand that it's much more complex and that modern Captchas uses advanced machine learning and risk analysis algorithms to check if you're human[^182]:
 
--   They check your browser, cookies and browsing history using Browser fingerprinting[^175].
+-   They check your browser, cookies and browsing history using Browser fingerprinting[^183].
 
 -   They track your cursor movements (speed, accuracy) and use algorithms to determine if it's "human".
 
--   They track your behavior before/during/after the tests to ensure you're "human"[^176].
+-   They track your behavior before/during/after the tests to ensure you're "human"[^184].
 
 It's also very likely that those platforms could already reliably identify you based on the unique way you interact with those puzzles. This could work despite obfuscation of your IP address / Browser and clearing all cookies.
 
@@ -1721,7 +1744,7 @@ You will often experience several in a row and sometimes very difficult ones inv
 
 You'll also have (in my experience) more Captchas (reCaptcha) in Google if you don't use Chrome. But this can be mitigated by using Chromium based browsers such as Brave. There is also a Browser extension called Buster that could help you those <https://github.com/dessant/buster>.
 
-As for Cloudflare (hCaptcha), you could also use their Accessibility solution here (<https://www.hcaptcha.com/accessibility>) which would allow you to sign-up (with your anonymous identity created later) and set a cookie within your Browser that would allow you to bypass their captchas. Another solution to mitigate hCaptcha would be to use their own solution called "Privacy Pass"[^177] <https://privacypass.github.io/> in the form of a Browser extension you could install in your VM Browser.
+As for Cloudflare (hCaptcha), you could also use their Accessibility solution here (<https://www.hcaptcha.com/accessibility>) which would allow you to sign-up (with your anonymous identity created later) and set a cookie within your Browser that would allow you to bypass their captchas. Another solution to mitigate hCaptcha would be to use their own solution called "Privacy Pass"[^185] <https://privacypass.github.io/> in the form of a Browser extension you could install in your VM Browser.
 
 You should therefore deal with those carefully and force yourself to alter the way you're solving them (speed/movement/accuracy/...) as to prevent "Captcha Fingerprinting".
 
@@ -1731,7 +1754,7 @@ Fortunately as far as I'm aware, these are not yet officially/publicly used to d
 
 Phone verification is advertised by most platforms as a way to verify you're human. But don't be fooled, the main reason for phone verification is not only to check if you're human but also to be able to de-anonymize you if needed.
 
-Most platforms (including the privacy oriented ones such as Signal/Telegram/ProtonMail will require a phone number to register and most countries now make it mandatory to submit a proof of ID to register[^178].
+Most platforms (including the privacy oriented ones such as Signal/Telegram/ProtonMail will require a phone number to register and most countries now make it mandatory to submit a proof of ID to register[^186].
 
 ### E-Mail verification:
 
@@ -1793,9 +1816,9 @@ For this reason, this guide recommends the use of VPN over Tor (and not Tor over
 
 ### Browser and Device Fingerprinting:
 
-Browser and Device[^179] Fingerprinting are usually integrated into the Captcha services but also in other various services.
+Browser and Device[^187] Fingerprinting are usually integrated into the Captcha services but also in other various services.
 
-Many platforms (like Google[^180]) will check your browser for various capabilities and settings and block Browsers they don't like. This is one of the reasons I recommend using Brave Browser over Tor Browser within your VM.
+Many platforms (like Google[^188]) will check your browser for various capabilities and settings and block Browsers they don't like. This is one of the reasons I recommend using Brave Browser over Tor Browser within your VM.
 
 Here are some of the things they check within recent browsers:
 
@@ -1871,7 +1894,7 @@ Why do this user verification ourselves when we can just ask others to deal with
 
 You'll notice this and you probably already encountered this. Some apps/platforms will ask/require you to sign-in with a well-known and well-used reputable platform instead of their own system (Sign-in with Google/Facebook/Apple/Twitter).
 
-This option is often presented as the "default one", hiding away the "Sign-in with e-mail and password" with clever Dark Patterns[^181] and unfortunately sometimes required.
+This option is often presented as the "default one", hiding away the "Sign-in with e-mail and password" with clever Dark Patterns[^189] and unfortunately sometimes required.
 
 This method will delegate the verification process on those platforms instead assuming that you won't be able to create an anonymous Google/Facebook/Apple/Twitter account with ease.
 
@@ -1883,7 +1906,7 @@ This is a common method used on some Crypto trading platforms and some dating Ap
 
 Some platforms/apps will require you to take a live picture of yourself either doing something (a wink, holding an arm up, ...) or showing a custom piece of information (a hand written text, a passport or ID) within the picture. Sometimes the platform/app will require several pictures to increase their certainty.![][14]
 
-This guide won't cover this one (yet) as it's mainly used on financial platforms (that will be able to identify you with other means anyway) and some dating apps like Tinder[^182].
+This guide won't cover this one (yet) as it's mainly used on financial platforms (that will be able to identify you with other means anyway) and some dating apps like Tinder[^190].
 
 In some cases these verifications have to be done from your Smartphone and with an "in-app" camera to prevent you from sending a previously saved (edited) image.
 
@@ -1969,7 +1992,7 @@ I will help you bit by listing a few tips I learned while doing research over th
 
 -   Origin IP geolocation (your IP/location when you go to "whatsmyipaddress.com") should match your identity location as much as possible (You can pick this in the VPN client if you use the 3 layers approach or just create a new identity in Tor Browser or Brave Tor Tab until you get the appropriate Exit node). You should exclude any exit IP that is not located in Western Europe/North America/Japan/South Korea/Australia (excluding Mexico) as you will have less issues with those. Ideally, you should get an European Union IP to get additional GDPR protection and if possible a German exit IP due to their legal stance on using anonymous accounts on online platforms.
 
--   Brave Browser (Chromium based) with a Private Tor Tab has (IMHO) a better acceptance level than Tor Browser (Firefox based). You will have less issues with captchas and online platforms[^180] if you use Brave than if you use Tor Browser (feel free to try this yourself).
+-   Brave Browser (Chromium based) with a Private Tor Tab has (IMHO) a better acceptance level than Tor Browser (Firefox based). You will have less issues with captchas and online platforms[^188] if you use Brave than if you use Tor Browser (feel free to try this yourself).
 
 -   Every identity you should have a matching profile picture associated to it. For this purpose I recommend you just go to <https://thispersondoesnotexist.com/> and generate a computer generated profile picture. Just refresh the page until you find a picture that matches your identity in all aspects (age, sex, ethnicity) and save that picture. It would be even better to have several pictures associated to that identity but I don't have an "easy way" of doing that yet.
 
@@ -2007,9 +2030,9 @@ I will help you bit by listing a few tips I learned while doing research over th
 
 Note: If you're having trouble finding an Exit node in the country of your choice you can force using specific countries for Exit Nodes (and therefore exit countries) on Tor by editing the torrc file on the Whonix Gateway or even the Tor Browser:
 
--   Whonix/Tails: Create/Edit a file /usr/local/etc/torrc.d/50_user.conf[^183].
+-   Whonix/Tails: Create/Edit a file /usr/local/etc/torrc.d/50_user.conf[^191].
 
--   On Tor Browser: Edit the torrc file located at Browser/TorBrowser/Data/Tor[^184].
+-   On Tor Browser: Edit the torrc file located at Browser/TorBrowser/Data/Tor[^192].
 
 Once you're in the file, you can do the following:
 
@@ -2533,9 +2556,9 @@ You obviously need an e-mail for your online identity and disposable e-mails are
 
 ProtonMail is a free e-mail provider based in Switzerland that advocates security and privacy.
 
-They're recommended by privacytools.io[^185]. Their only apparent issue is that they do require (in most cases) a phone number or another e-mail address for registration (when you try to register from a VPN or Tor at least).
+They're recommended by privacytools.io[^193]. Their only apparent issue is that they do require (in most cases) a phone number or another e-mail address for registration (when you try to register from a VPN or Tor at least).
 
-They claim they do not store/link the phone/e-mail associated with the registration but only store a hash that is not linked to the account[^186]. As long as their claim is true and the hash is not linked to your account, and that you followed my guide regarding the Burner phone and the pre-paid SIM card, you should be safe from tracking.
+They claim they do not store/link the phone/e-mail associated with the registration but only store a hash that is not linked to the account[^194]. As long as their claim is true and the hash is not linked to your account, and that you followed my guide regarding the Burner phone and the pre-paid SIM card, you should be safe from tracking.
 
 Create this e-mail account first using the burner phone as verification if necessary.
 
@@ -2553,7 +2576,7 @@ This e-mail account will be used in the next step for creating a Google/Gmail ac
 
 ProtonMail is good ... but to appear less suspicious, it's just better to also have a Google Mail account.
 
-As ProtonMail, Google will also most likely require a phone number during sign-up as part of their verification process. However contrary to ProtonMail, Google will store that phone number during the sign-up process and will also limit the amount of accounts that can be created during the sign-up[^187],[^188].
+As ProtonMail, Google will also most likely require a phone number during sign-up as part of their verification process. However contrary to ProtonMail, Google will store that phone number during the sign-up process and will also limit the amount of accounts that can be created during the sign-up[^195],[^196].
 
 From my experience during my research, this count is limited to 3 accounts / phone number. If you are unlucky with your number (if it was previously used by another mobile user), it might be less.
 
@@ -2583,7 +2606,7 @@ Do not use that account for "sign-up with Google" anywhere unless necessary.
 
 Be extremely careful if you decide to use the account for Google activities (such as Google Maps reviews or Youtube Comments) as those can easily trigger some checks (Negative reviews, Comments breaking Community Guidelines on Youtube).
 
-If your account gets suspended [^189] (this can happen on sign-up, after signing-up or after using it in some Google services), you can still get it unsuspended by submitting[^190] an appeal/verification (which will again require your Phone number and possibly an e-mail contact with Google support with the reason). Suspension of the account does not disable the e-mail forwarding but suspended account will be deleted after a while.
+If your account gets suspended [^197] (this can happen on sign-up, after signing-up or after using it in some Google services), you can still get it unsuspended by submitting[^198] an appeal/verification (which will again require your Phone number and possibly an e-mail contact with Google support with the reason). Suspension of the account does not disable the e-mail forwarding but suspended account will be deleted after a while.
 
 After suspension, if your Google account is restored, you should be fine.
 
@@ -2629,7 +2652,7 @@ Once the account is restored, you should take some time to do the following:
 
 After about a week, you should check the twitter again and the chances are quite high that it will be suspended again for "suspicious activity" or "violating community guidelines" despite you not using it at all (not even a single tweet/follow/like/retweet or DM) but this time by another system. I call this the "Double tap".
 
-This time you will need to submit an appeal using a form [^191] , provide a good reason and wait for the appeal to be processed by Twitter. During that process, it's possible that you will receive an e-mail (on ProtonMail) asking you to reply to a customer service ticket to prove that you do have access to your e-mail and that it's you. This will be directed toward your Gmail address but will arrive on your ProtonMail.
+This time you will need to submit an appeal using a form [^199] , provide a good reason and wait for the appeal to be processed by Twitter. During that process, it's possible that you will receive an e-mail (on ProtonMail) asking you to reply to a customer service ticket to prove that you do have access to your e-mail and that it's you. This will be directed toward your Gmail address but will arrive on your ProtonMail.
 
 Obviously do not reply from ProtonMail as this will raise suspicions, you have to sign-in into Gmail (unfortunately) and compose a new mail from there copy pasting the E-Mail , Subject and Content from ProtonMail. As well as a reply confirming you have access to that e-mail.
 
@@ -2651,7 +2674,7 @@ Linkedin is far less aggressive than twitter but will nonetheless require a vali
 
 Linkedin however is relying a lot on reports and user/customer moderation. You should not create a profile with an occupation inside a private corporations or a small startup company. The company employees are monitoring Linkedin activity and receive notifications when new people join. They can then report your profile as fake and your profile will then be suspensed or banned pending appeal.
 
-Linkedin will then require you go through a verification process that will unfortunately require you to send an ID proof (identity card, passport, driver license). This ID verification is processed by a company called Jumio[^192] that specializes in ID proofind. This is most likely a dead end as this would force you to develop some strong photoshop skills.
+Linkedin will then require you go through a verification process that will unfortunately require you to send an ID proof (identity card, passport, driver license). This ID verification is processed by a company called Jumio[^200] that specializes in ID proofind. This is most likely a dead end as this would force you to develop some strong photoshop skills.
 
 Instead you are far less likely to be reported if you just stay vague (say you're a student/intern/freelance) or pretend you work for a large public institution that is too large for anyone to care of check.
 
@@ -2724,7 +2747,7 @@ When people stand behind their opinions and actions, our community is safer and 
 ```
 -   Will they require a phone number? Yes and probably more later
 
--   Can you create accounts through Tor? Yes but it's very difficult and their onion address[^193] won't help. In most cases you'll just have a random error at sign-up and your account suspended after sign-in.
+-   Can you create accounts through Tor? Yes but it's very difficult and their onion address[^201] won't help. In most cases you'll just have a random error at sign-up and your account suspended after sign-in.
 
 Facebook is one of the most aggressive platforms in identity verification and is pushing hard their "real name policy". It is why this guide is only advised to German residents.
 
@@ -2852,7 +2875,7 @@ Ideally, you should find a way to buy/sell crypto with cash from an unknown pers
 
 There are only three ways of securely using those anonymously (that I would recommend). Using a VPN on your phone is not among those ways. All of those are unfortunately "tedious" to say the least.
 
--   Use an Android Emulator (Youwave[^194], Bluestacks[^195] or if you have a powerful PC, Android Studio) within the Windows VM and run the App through your multi-layer of Tor/VPN. Drawback is that such emulators are usually quite resource hungry and will slow down your VM and use more battery. Here is also an (outdated) guide on this matter: <https://www.bellingcat.com/resources/how-tos/2018/08/23/creating-android-open-source-research-device-pc/>
+-   Use an Android Emulator (Youwave[^202], Bluestacks[^203] or if you have a powerful PC, Android Studio) within the Windows VM and run the App through your multi-layer of Tor/VPN. Drawback is that such emulators are usually quite resource hungry and will slow down your VM and use more battery. Here is also an (outdated) guide on this matter: <https://www.bellingcat.com/resources/how-tos/2018/08/23/creating-android-open-source-research-device-pc/>
 
 -   Use a non-official app (such as Wassapp for Whatsapp) to connect from the Windows VM to the app. But at your own risk as you could get banned for violating the terms of services by using a non-official App.
 
@@ -2908,7 +2931,7 @@ Then let's re-randomize the MAC addresses of your Virtual Machines and the Bluet
 
 ### Eventlogs:
 
-Windows Eventlogs will keep many various informations that could contain traces of your activities such as the devices that were mounted (including Veracrytpt NTFS volumes for instance[^149]), your network connections, app crash informations and various errors. It's always best to clean those up regularly. Do not do this on the Decoy OS.
+Windows Eventlogs will keep many various informations that could contain traces of your activities such as the devices that were mounted (including Veracrytpt NTFS volumes for instance[^157]), your network connections, app crash informations and various errors. It's always best to clean those up regularly. Do not do this on the Decoy OS.
 
 -   Start , search for Event Viewer and launch Event Viewer:
 
@@ -2952,13 +2975,13 @@ Then we will download a convenient utility called PrivaZer that will allow you d
 
 This will be used for cleaning many things such as:
 
--   The Windows USN journal which stores plenty of information[^196].
+-   The Windows USN journal which stores plenty of information[^204].
 
--   The Windows System Resource Usage Monitor (SRUM)[^197].
+-   The Windows System Resource Usage Monitor (SRUM)[^205].
 
 -   Various histories of various programs (such as the recent lists).
 
--   The free (unallocated) space of your hard drive[^198].
+-   The free (unallocated) space of your hard drive[^206].
 
 Here are the steps:
 
@@ -3006,13 +3029,13 @@ Here are the steps:
 
         -   Select Clean Options **(Be careful with this option as it will erase all the free space on the selected partition, especially if you are running the decoy OS. Do not erase the free space or anything else on the second partition as you risk destroying your Hidden OS)**
 
-            -   If you have an SSD drive, Select SSD with Trim[^154] + 1 pass zero (just to be sure as mentioned earlier, Trim itself should be enough[^157])
+            -   If you have an SSD drive, Select SSD with Trim[^162] + 1 pass zero (just to be sure as mentioned earlier, Trim itself should be enough[^165])
 
             -   If you have an HDD drive, Select HDD with at least 1 pass.
 
 ### Shellbags:
 
-As explained earlier, Shellbags are basically histories of accessed volumes/files on your computer. Remember that shellbags are very good sources of informations for forensics[^153] and you need to clean those. Especially if you mounted any "hidden volume" anywhere. Again you shouldn't do this on the Decoy OS.
+As explained earlier, Shellbags are basically histories of accessed volumes/files on your computer. Remember that shellbags are very good sources of informations for forensics[^161] and you need to clean those. Especially if you mounted any "hidden volume" anywhere. Again you shouldn't do this on the Decoy OS.
 
 -   Download Shellbag Analayzer & Cleaner from <https://privazer.com/en/download-shellbag-analyzer-shellbag-cleaner.php>
 
@@ -3062,7 +3085,7 @@ Unfortunately you won't be able to wipe your Host OS using the built-in tools wi
 
 So you'll have to wipe it using bootable USB key again. But this time not Windows.
 
-There are several utilities that are recommend (like the old unmaintained DBAN[^199]) for this but personally, I will recommend the use of ShredOS.
+There are several utilities that are recommend (like the old unmaintained DBAN[^207]) for this but personally, I will recommend the use of ShredOS.
 
 Feel free do go with DBAN instead if you want, the process is basically the same but might not work out of the box with UEFI laptops.
 
@@ -3270,7 +3293,7 @@ This is the Windows 10 installation process that should be valid for any Windows
 
 # Appendix B: (Windows Additional Privacy Settings)
 
-As written earlier in this guide and as noted by Privacytools.io[^200], Windows 10 is a privacy nightmare. And disabling everything during and after the installation using the settings available to you is not enough. The amount of telemetry data collected by Microsoft is staggering and could defeat your attempts at keeping secrets. You will need to download and use a couple utilities to (hopefully) force Windows 10 into not sending data back to Microsoft.
+As written earlier in this guide and as noted by Privacytools.io[^208], Windows 10 is a privacy nightmare. And disabling everything during and after the installation using the settings available to you is not enough. The amount of telemetry data collected by Microsoft is staggering and could defeat your attempts at keeping secrets. You will need to download and use a couple utilities to (hopefully) force Windows 10 into not sending data back to Microsoft.
 
 Here are the steps in details:
 
@@ -3598,147 +3621,163 @@ These are the steps to create a Windows 10 (20H2) Installation Media using this 
 
 [^131]: Grayshirt, <https://www.grayshift.com/>
 
-[^132]: Wired, Mind the Gap: This Researcher Steals Data With Noise, Light, and Magnets <https://www.wired.com/story/air-gap-researcher-mordechai-guri/>
+[^132]: Wikipedia, Gag Order, <https://en.wikipedia.org/wiki/Gag_order>
 
-[^133]: Privacy International, Timeline of SIM Card Registration Laws <https://privacyinternational.org/long-read/3018/timeline-sim-card-registration-laws>
+[^133]: Wikipedia, National Security Letter <https://en.wikipedia.org/wiki/National_security_letter>
 
-[^134]: Wikipedia, TAILS, <https://en.wikipedia.org/wiki/Tails_(operating_system)>
+[^134]: Heise Online (German), <https://www.heise.de/news/Gericht-zwingt-Mailprovider-Tutanota-zu-Ueberwachungsfunktion-4972460.html>
 
-[^135]: It's not mandatory because this guide will help you harden your laptop as much as possible to prevent online leaks through various means. There will be several lines of defense standing between your online identities and yourself that should prevent most adversaries from de-anonymizing you besides state/global actors with considerable resources.
+[^135]: Pcmag, Did PureVPN Cross a Line When It Disclosed User Information? <https://www.pcmag.com/opinions/did-purevpn-cross-a-line-when-it-disclosed-user-information>
 
-[^136]: XKCD, Password Strength <https://xkcd.com/936/>
+[^136]: Internet Archive, Wipeyourdata, "No logs" EarthVPN user arrested after police finds logs <https://archive.is/XNuVw#selection-230.0-230.1>
 
-[^137]: Wired <https://www.wired.com/2013/12/better-data-security-nail-polish/>
+[^137]: Internet Archive, Invisibler, What Everybody Ought to Know About HideMyAss <https://archive.is/ag9w4#selection-136.0-136.1>
 
-[^138]: Wikipedia, Virtual Machine <https://en.wikipedia.org/wiki/Virtual_machine>
+[^138]: Wikipedia, Lavabit Suspension and Gag order, <https://en.wikipedia.org/wiki/Lavabit#Suspension_and_gag_order>
 
-[^139]: Wikipedia, Plausible Deniability <https://en.wikipedia.org/wiki/Plausible_deniability>
+[^139]: Wikipedia, Warrant Canary <https://en.wikipedia.org/wiki/Warrant_canary>
 
-[^140]: Wikipedia, Key Disclosure Laws <https://en.wikipedia.org/wiki/Key_disclosure_law>
+[^140]: Wired, Mind the Gap: This Researcher Steals Data With Noise, Light, and Magnets <https://www.wired.com/story/air-gap-researcher-mordechai-guri/>
 
-[^141]: Wikipedia, Bitlocker <https://en.wikipedia.org/wiki/BitLocker>
+[^141]: Privacy International, Timeline of SIM Card Registration Laws <https://privacyinternational.org/long-read/3018/timeline-sim-card-registration-laws>
 
-[^142]: Brave Support, What is a Private Window with Tor? <https://support.brave.com/hc/en-us/articles/360018121491-What-is-a-Private-Window-with-Tor->
+[^142]: Wikipedia, TAILS, <https://en.wikipedia.org/wiki/Tails_(operating_system)>
 
-[^143]: Wikipedia Veracrypt <https://en.wikipedia.org/wiki/VeraCrypt>
+[^143]: It's not mandatory because this guide will help you harden your laptop as much as possible to prevent online leaks through various means. There will be several lines of defense standing between your online identities and yourself that should prevent most adversaries from de-anonymizing you besides state/global actors with considerable resources.
 
-[^144]: OSTIF Veracrypt Audit, 2016, <https://ostif.org/the-veracrypt-audit-results/>
+[^144]: XKCD, Password Strength <https://xkcd.com/936/>
 
-[^145]: Wikipedia, Evil Maid Attack <https://en.wikipedia.org/wiki/Evil_maid_attack>
+[^145]: Wired <https://www.wired.com/2013/12/better-data-security-nail-polish/>
 
-[^146]: Wikipedia, Cold Boot Attack <https://en.wikipedia.org/wiki/Cold_boot_attack>
+[^146]: Wikipedia, Virtual Machine <https://en.wikipedia.org/wiki/Virtual_machine>
 
-[^147]: CITP 2008 (<https://www.youtube.com/watch?v=JDaicPIgn9U>)
+[^147]: Wikipedia, Plausible Deniability <https://en.wikipedia.org/wiki/Plausible_deniability>
 
-[^148]: Veracrypt Documentation, Unencrypted Data in RAM <https://www.veracrypt.fr/en/Unencrypted%20Data%20in%20RAM.html>
+[^148]: Wikipedia, Key Disclosure Laws <https://en.wikipedia.org/wiki/Key_disclosure_law>
 
-[^149]: Veracrypt Documentation, Data Leaks <https://www.veracrypt.fr/code/VeraCrypt/plain/doc/html/Data%20Leaks.html>
+[^149]: Wikipedia, Bitlocker <https://en.wikipedia.org/wiki/BitLocker>
 
-[^150]: ResearchGate, Defeating Plausible Deniability of VeraCrypt Hidden Operating Systems <https://www.researchgate.net/publication/318155607_Defeating_Plausible_Deniability_of_VeraCrypt_Hidden_Operating_Systems>
+[^150]: Brave Support, What is a Private Window with Tor? <https://support.brave.com/hc/en-us/articles/360018121491-What-is-a-Private-Window-with-Tor->
 
-[^151]: SANS.org, Mission Implausible:Defeating PlausibleDeniability with DigitalForensics <https://www.sans.org/reading-room/whitepapers/forensics/mission-implausible-defeating-plausible-deniability-digital-forensics-39500>
+[^151]: Wikipedia Veracrypt <https://en.wikipedia.org/wiki/VeraCrypt>
 
-[^152]: SourceForge, Veracrypt Forum <https://sourceforge.net/p/veracrypt/discussion/technical/thread/53f33faf/>
+[^152]: OSTIF Veracrypt Audit, 2016, <https://ostif.org/the-veracrypt-audit-results/>
 
-[^153]: SANS, Windows ShellBag Forensics inDepth <https://www.sans.org/reading-room/whitepapers/forensics/windows-shellbag-forensics-in-depth-34545>
+[^153]: Wikipedia, Evil Maid Attack <https://en.wikipedia.org/wiki/Evil_maid_attack>
 
-[^154]: Wikipedia, Trim <https://en.wikipedia.org/wiki/Trim_(computing)>
+[^154]: Wikipedia, Cold Boot Attack <https://en.wikipedia.org/wiki/Cold_boot_attack>
 
-[^155]: Veracrypt Documentation, Trim Operations <https://www.veracrypt.fr/en/Trim%20Operation.html>
+[^155]: CITP 2008 (<https://www.youtube.com/watch?v=JDaicPIgn9U>)
 
-[^156]: Veracrypt Documentation, Rescue Disk <https://www.veracrypt.fr/en/VeraCrypt%20Rescue%20Disk.html>
+[^156]: Veracrypt Documentation, Unencrypted Data in RAM <https://www.veracrypt.fr/en/Unencrypted%20Data%20in%20RAM.html>
 
-[^157]: St Cloud State University, Forensic Research on Solid State Drives using Trim Analysis <https://repository.stcloudstate.edu/cgi/viewcontent.cgi?article=1141&context=msia_etds>
+[^157]: Veracrypt Documentation, Data Leaks <https://www.veracrypt.fr/code/VeraCrypt/plain/doc/html/Data%20Leaks.html>
 
-[^158]: WindowsCentrel, Trim Tutorial <https://www.windowscentral.com/how-ensure-trim-enabled-windows-10-speed-ssd-performance>
+[^158]: ResearchGate, Defeating Plausible Deniability of VeraCrypt Hidden Operating Systems <https://www.researchgate.net/publication/318155607_Defeating_Plausible_Deniability_of_VeraCrypt_Hidden_Operating_Systems>
 
-[^159]: Veracrypt Documentation, Trim Operation <https://veracrypt.eu/en/docs/trim-operation/>
+[^159]: SANS.org, Mission Implausible:Defeating PlausibleDeniability with DigitalForensics <https://www.sans.org/reading-room/whitepapers/forensics/mission-implausible-defeating-plausible-deniability-digital-forensics-39500>
 
-[^160]: Black Hat 2018, Perfectly Deniable Steganographic Disk Encryption <https://i.blackhat.com/eu-18/Thu-Dec-6/eu-18-Schaub-Perfectly-Deniable-Steganographic-Disk-Encryption.pdf>
+[^160]: SourceForge, Veracrypt Forum <https://sourceforge.net/p/veracrypt/discussion/technical/thread/53f33faf/>
 
-[^161]: Milan Broz's Blog, TRIM & dm-crypt \... problems? <http://asalor.blogspot.com/2011/08/trim-dm-crypt-problems.html>
+[^161]: SANS, Windows ShellBag Forensics inDepth <https://www.sans.org/reading-room/whitepapers/forensics/windows-shellbag-forensics-in-depth-34545>
 
-[^162]: Veracrypt Documentation, Rescue Disk <https://www.veracrypt.fr/en/VeraCrypt%20Rescue%20Disk.html>
+[^162]: Wikipedia, Trim <https://en.wikipedia.org/wiki/Trim_(computing)>
 
-[^163]: Wikipedia, Virtualbox <https://en.wikipedia.org/wiki/VirtualBox>
+[^163]: Veracrypt Documentation, Trim Operations <https://www.veracrypt.fr/en/Trim%20Operation.html>
 
-[^164]: Wikipedia, Whonix <https://en.wikipedia.org/wiki/Whonix>
+[^164]: Veracrypt Documentation, Rescue Disk <https://www.veracrypt.fr/en/VeraCrypt%20Rescue%20Disk.html>
 
-[^165]: Oracle Virtualbox Manual, Snapshots <https://docs.oracle.com/en/virtualization/virtualbox/6.0/user/snapshots.html>
+[^165]: St Cloud State University, Forensic Research on Solid State Drives using Trim Analysis <https://repository.stcloudstate.edu/cgi/viewcontent.cgi?article=1141&context=msia_etds>
 
-[^166]: Utica College, FORENSIC RECOVERY OF EVIDENCE FROM DELETED ORACLE VIRTUALBOX VIRTUAL MACHINES <https://programs.online.utica.edu/sites/default/files/Neal_6_Gonnella_Forensic_Recovery_of_Evidence_from_Deleted_Oracle_VirtualBox_Virtual_Machine.pdf>
+[^166]: WindowsCentrel, Trim Tutorial <https://www.windowscentral.com/how-ensure-trim-enabled-windows-10-speed-ssd-performance>
 
-[^167]: Wikipedia, TOTP <https://en.wikipedia.org/wiki/Time-based_One-time_Password_algorithm>
+[^167]: Veracrypt Documentation, Trim Operation <https://veracrypt.eu/en/docs/trim-operation/>
 
-[^168]: Wikipedia, Multi-Factor Authentication <https://en.wikipedia.org/wiki/Multi-factor_authentication>
+[^168]: Black Hat 2018, Perfectly Deniable Steganographic Disk Encryption <https://i.blackhat.com/eu-18/Thu-Dec-6/eu-18-Schaub-Perfectly-Deniable-Steganographic-Disk-Encryption.pdf>
 
-[^169]: Wikipedia, Captcha <https://en.wikipedia.org/wiki/CAPTCHA>
+[^169]: Milan Broz's Blog, TRIM & dm-crypt \... problems? <http://asalor.blogspot.com/2011/08/trim-dm-crypt-problems.html>
 
-[^170]: Wikipedia, Turing Test <https://en.wikipedia.org/wiki/Turing_test>
+[^170]: Veracrypt Documentation, Rescue Disk <https://www.veracrypt.fr/en/VeraCrypt%20Rescue%20Disk.html>
 
-[^171]: Google reCaptcha <https://www.google.com/recaptcha/about/>
+[^171]: Wikipedia, Virtualbox <https://en.wikipedia.org/wiki/VirtualBox>
 
-[^172]: hCaptcha <https://www.hcaptcha.com/>
+[^172]: Wikipedia, Whonix <https://en.wikipedia.org/wiki/Whonix>
 
-[^173]: hCaptcha hCaptcha Is Now the Largest Independent CAPTCHA Service, Runs on 15% Of The Internet <https://www.hcaptcha.com/post/hcaptcha-now-the-largest-independent-captcha-service>
+[^173]: Oracle Virtualbox Manual, Snapshots <https://docs.oracle.com/en/virtualization/virtualbox/6.0/user/snapshots.html>
 
-[^174]: ArsTechnica, "Google's reCAPTCHA turns "invisible," will separate bots from people without challenges" <https://arstechnica.com/gadgets/2017/03/googles-recaptcha-announces-invisible-background-captchas/>
+[^174]: Utica College, FORENSIC RECOVERY OF EVIDENCE FROM DELETED ORACLE VIRTUALBOX VIRTUAL MACHINES <https://programs.online.utica.edu/sites/default/files/Neal_6_Gonnella_Forensic_Recovery_of_Evidence_from_Deleted_Oracle_VirtualBox_Virtual_Machine.pdf>
 
-[^175]: BlackHat Asia 2016, "I'm not a human: Breaking the Google reCAPTCHA", <https://www.blackhat.com/docs/asia-16/materials/asia-16-Sivakorn-Im-Not-a-Human-Breaking-the-Google-reCAPTCHA-wp.pdf>
+[^175]: Wikipedia, TOTP <https://en.wikipedia.org/wiki/Time-based_One-time_Password_algorithm>
 
-[^176]: Google Blog <https://security.googleblog.com/2014/12/are-you-robot-introducing-no-captcha.html>
+[^176]: Wikipedia, Multi-Factor Authentication <https://en.wikipedia.org/wiki/Multi-factor_authentication>
 
-[^177]: Cloudflare Blog, Cloudflare supports Privacy Pass <https://blog.cloudflare.com/cloudflare-supports-privacy-pass/>
+[^177]: Wikipedia, Captcha <https://en.wikipedia.org/wiki/CAPTCHA>
 
-[^178]: Privacy International,
+[^178]: Wikipedia, Turing Test <https://en.wikipedia.org/wiki/Turing_test>
+
+[^179]: Google reCaptcha <https://www.google.com/recaptcha/about/>
+
+[^180]: hCaptcha <https://www.hcaptcha.com/>
+
+[^181]: hCaptcha hCaptcha Is Now the Largest Independent CAPTCHA Service, Runs on 15% Of The Internet <https://www.hcaptcha.com/post/hcaptcha-now-the-largest-independent-captcha-service>
+
+[^182]: ArsTechnica, "Google's reCAPTCHA turns "invisible," will separate bots from people without challenges" <https://arstechnica.com/gadgets/2017/03/googles-recaptcha-announces-invisible-background-captchas/>
+
+[^183]: BlackHat Asia 2016, "I'm not a human: Breaking the Google reCAPTCHA", <https://www.blackhat.com/docs/asia-16/materials/asia-16-Sivakorn-Im-Not-a-Human-Breaking-the-Google-reCAPTCHA-wp.pdf>
+
+[^184]: Google Blog <https://security.googleblog.com/2014/12/are-you-robot-introducing-no-captcha.html>
+
+[^185]: Cloudflare Blog, Cloudflare supports Privacy Pass <https://blog.cloudflare.com/cloudflare-supports-privacy-pass/>
+
+[^186]: Privacy International,
 
     Timeline of SIM Card Registration Laws <https://privacyinternational.org/long-read/3018/timeline-sim-card-registration-laws>
 
-[^179]: Wikipedia, Device Fingerprinting <https://en.wikipedia.org/wiki/Device_fingerprint>
+[^187]: Wikipedia, Device Fingerprinting <https://en.wikipedia.org/wiki/Device_fingerprint>
 
-[^180]: Developers Google Blog,
+[^188]: Developers Google Blog,
 
     Guidance to developers affected by our effort to block less secure browsers and applications <https://developers.googleblog.com/2020/08/guidance-for-our-effort-to-block-less-secure-browser-and-apps.html>
 
-[^181]: Wikipedia, Dark Pattern <https://en.wikipedia.org/wiki/Dark_pattern>
+[^189]: Wikipedia, Dark Pattern <https://en.wikipedia.org/wiki/Dark_pattern>
 
-[^182]: The Verge, Tinder will give you a verified blue check mark if you pass its catfishing test <https://www.theverge.com/2020/1/23/21077423/tinder-photo-verification-blue-checkmark-safety-center-launch-noonlight>
+[^190]: The Verge, Tinder will give you a verified blue check mark if you pass its catfishing test <https://www.theverge.com/2020/1/23/21077423/tinder-photo-verification-blue-checkmark-safety-center-launch-noonlight>
 
-[^183]: Whonix Documentation, <https://www.whonix.org/wiki/Tor#Edit_Tor_Configuration>
+[^191]: Whonix Documentation, <https://www.whonix.org/wiki/Tor#Edit_Tor_Configuration>
 
-[^184]: Tor Browser Documentation, <https://support.torproject.org/tbb/tbb-editing-torrc/>
+[^192]: Tor Browser Documentation, <https://support.torproject.org/tbb/tbb-editing-torrc/>
 
-[^185]: Privacytools.io Recommended E-mail Providers <https://privacytools.io/providers/email/>
+[^193]: Privacytools.io Recommended E-mail Providers <https://privacytools.io/providers/email/>
 
-[^186]: ProtonMail Human Verification System [https://ProtonMail.com/support/knowledge-base/human-verification/]
+[^194]: ProtonMail Human Verification System [https://ProtonMail.com/support/knowledge-base/human-verification/]
 
-[^187]: Google Help <https://support.google.com/accounts/answer/114129?hl=en>
+[^195]: Google Help <https://support.google.com/accounts/answer/114129?hl=en>
 
-[^188]: Google Help <https://support.google.com/google-ads/answer/7474263?hl=en>
+[^196]: Google Help <https://support.google.com/google-ads/answer/7474263?hl=en>
 
-[^189]: Google, Your account is disabled <https://support.google.com/accounts/answer/40695>
+[^197]: Google, Your account is disabled <https://support.google.com/accounts/answer/40695>
 
-[^190]: Google, Request to restore the account <https://support.google.com/accounts/contact/disabled2>
+[^198]: Google, Request to restore the account <https://support.google.com/accounts/contact/disabled2>
 
-[^191]: Twitter Appeal Form <https://help.twitter.com/forms/general>
+[^199]: Twitter Appeal Form <https://help.twitter.com/forms/general>
 
-[^192]: Jumio, ID verification features <https://www.jumio.com/features/>
+[^200]: Jumio, ID verification features <https://www.jumio.com/features/>
 
-[^193]: Facebook Onion Website <http://facebookcorewwwi.onion>
+[^201]: Facebook Onion Website <http://facebookcorewwwi.onion>
 
-[^194]: Youwave, <https://youwave.com/>
+[^202]: Youwave, <https://youwave.com/>
 
-[^195]: Bluestacks, <https://www.bluestacks.com/>
+[^203]: Bluestacks, <https://www.bluestacks.com/>
 
-[^196]: Medium.com, The Windows USN Journal <https://medium.com/velociraptor-ir/the-windows-usn-journal-f0c55c9010e>
+[^204]: Medium.com, The Windows USN Journal <https://medium.com/velociraptor-ir/the-windows-usn-journal-f0c55c9010e>
 
-[^197]: Medium.com, Digging into the System Resource Usage Monitor (SRUM) <https://medium.com/velociraptor-ir/digging-into-the-system-resource-usage-monitor-srum-afbadb1a375>
+[^205]: Medium.com, Digging into the System Resource Usage Monitor (SRUM) <https://medium.com/velociraptor-ir/digging-into-the-system-resource-usage-monitor-srum-afbadb1a375>
 
-[^198]: SANS, Timestamped Registry & NTFS Artifacts from Unallocated Space <https://www.sans.org/blog/timestamped-registry-ntfs-artifacts-from-unallocated-space/>
+[^206]: SANS, Timestamped Registry & NTFS Artifacts from Unallocated Space <https://www.sans.org/blog/timestamped-registry-ntfs-artifacts-from-unallocated-space/>
 
-[^199]: DBAN, <https://dban.org/>
+[^207]: DBAN, <https://dban.org/>
 
-[^200]: Privacytools.io, Operating Systems <https://privacytools.io/operating-systems/>
+[^208]: Privacytools.io, Operating Systems <https://privacytools.io/operating-systems/>
 
   [Introduction:]: #introduction
   [Requirements:]: #requirements
@@ -3765,6 +3804,7 @@ These are the steps to create a Windows 10 (20H2) Installation Media using this 
   [Your Face and other Biometrics:]: #your-face-and-other-biometrics
   [Phishing:]: #phishing
   [Forensics:]: #forensics
+  [No logging but logging anyway policies:]: #no-logging-but-logging-anyway-policies
   [Advanced targeted techniques:]: #advanced-targeted-techniques
   [Notes:]: #notes
   [General Preparations:]: #general-preparations
