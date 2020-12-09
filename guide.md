@@ -115,11 +115,12 @@
 -   [Appendix B: (Windows Additional Privacy Settings)]
 -   [Appendix C: (Windows Installation Media Creation)]
 
-Version 0.1.1 (draft), December 2020 (work in progress, some parts are incomplete) by AnonymousPlanet
+Version 0.1.2 (draft), December 2020 (work in progress, some parts are incomplete) by AnonymousPlanet
 
 This guide is open-source, licensed under Creative Commons Attribution 4.0 International (cc-by-4.0).
 
-Feel free to submit issues/recommendations/ideas using Github Issues at: <https://github.com/AnonymousPlanet/thgtoa/issues>
+Feel free to submit issues using Github Issues at: <https://github.com/AnonymousPlanet/thgtoa/issues>
+Feel free to discuss ideas using Github Discussions at: <https://github.com/AnonymousPlanet/thgtoa/discussions>
 
 PDF version of this guide at: <https://github.com/AnonymousPlanet/thgtoa/raw/main/guide.pdf>
 
