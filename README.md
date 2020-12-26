@@ -15,7 +15,7 @@ Both current versions (0.3.6) of the guide have an SHA256 checksum:
 
 Both current versions (0.3.6) of the guide are also signed using PGP (see the guide.md.sig and guide.pdf.sig files).
 
-If you don't know how to do this, you should fist install gpg on your system:
+If you don't know how to do this, you should first install gpg on your system:
 - Windows: Install gpg4win from https://www.gpg4win.org/download.html
 - MacOS: Install GPG Tools from https://gpgtools.org/
 - Linux: gpg should be installed by default
