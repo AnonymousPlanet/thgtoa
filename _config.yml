@@ -1,0 +1,12 @@
+markdown: kramdown
+kramdown: 
+  hard_wrap: false
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - guide.md
+
+theme: jekyll-theme-cayman
