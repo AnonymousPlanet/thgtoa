@@ -1186,6 +1186,8 @@ If you are willing to take that route, you might consider:
 
 -   <https://www.sms77.io>
 
+-   <http://onlinesim.ru/>
+
 There are some others listed here <https://cryptwerk.com/companies/sms/xmr/>.
 
 **I cannot vouch for any of these providers and therefore I will still recommend doing it yourself physically. In this case you will have to rely on the anonymity of Monero.**
