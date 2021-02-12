@@ -1,0 +1,42 @@
+markdown: kramdown
+kramdown: 
+  hard_wrap: false
+plugins:
+  - jekyll-relative-links
+  - jekyll-sitemap
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - guide.md
+  - donations.md
+  - CHANGELOG.md
+  - LICENSE.md
+theme: jekyll-theme-hacker
+title: The Hitchhiker's Guide to Online Anonymity
+description: How I learned to start worrying and love privacy
+show_downloads: true
+github:
+  home_url: index.html
+  pdf_url: guide.pdf
+  pdf_dark_url: guide-dark.pdf
+  protected_pdf_url: guide-p.pdf
+  guide_url: guide.html
+  donations_url: donations.html
+  changelog_url: CHANGELOG.html
+  twitter_url: https://twitter.com/AnonyPla
+  keybase_url: https://keybase.io/anonymousplanet
+defaults:
+  -
+    scope:
+      path: "" 
+    values:
+      layout: default
+  -
+    scope:
+      path:            "guide-p.pdf"
+    values:
+      sitemap:         true
+locale                   : "en-US"
+twitter:
+  username               : AnonyPla
