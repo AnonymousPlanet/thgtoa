@@ -1,4 +1,4 @@
-# he Hitchhiker's Guide to Online Anonymity
+# The Hitchhiker's Guide to Online Anonymity
 
 (Or "How I learned to start worrying and love privacy")
 
