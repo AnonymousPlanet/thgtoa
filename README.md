@@ -30,7 +30,7 @@ Note that this guide does not endorse VirusTotal at all and it should be used wi
 - A Dark Themed PDF version of this guide is available at <https://anonymousplanet.github.io/thgtoa/guide-dark.pdf> ([VirusTotal guide-dark.pdf])
 - A weak password protected PDF version of this guide is available at <https://anonymousplanet.github.io/thgtoa/guide-p.pdf> and password is **thgtoa** ([VirusTotal guide-p.pdf])
 
-SHA56 Checksums of all the files are available within <https://github.com/AnonymousPlanet/thgtoa/raw/main/sha256sum.txt>
+SHA256 Checksums of all the files are available within <https://github.com/AnonymousPlanet/thgtoa/raw/main/sha256sum.txt>
 
 All the files of this project are also signed using GPG (see the .sig files in the repository).
 
