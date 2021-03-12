@@ -8,9 +8,9 @@ The latest version is **0.8.1**, See the CHANGELOG at <https://anonymousplanet.o
 
 - Online versions of the guide are available at:
 	- GitHub: <https://https://anonymousplanet.org/guide.html>
-	- Archive.org: <https://web.archive.org/web/https://anonymousplanet.github.io/thgtoa/guide.html>
-	- Archive.today: <https://archive.fo/anonymousplanet.github.io/thgtoa/guide.html>
-	- Archive.today over Tor: <http://archivecaslytosk.onion/anonymousplanet.github.io/thgtoa/guide.html>
+	- Archive.org: <https://web.archive.org/web/https://anonymousplanet.org/guide.html>
+	- Archive.today: <https://archive.fo/anonymousplanet.org/guide.html>
+	- Archive.today over Tor: <http://archivecaslytosk.onion/anonymousplanet.org/guide.html>
 
 - PDF versions of the guide are available at:
 	- (Light) <https://anonymousplanet.org/guide.pdf> ([VirusTotal guide.pdf])
