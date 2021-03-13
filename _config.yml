@@ -35,10 +35,10 @@ defaults:
       layout: default
   -
     scope:
-      path:            "guide-p.pdf"
+      path: "guide-p.pdf"
     values:
-      sitemap:         true
-locale                   : "en-US"
+      sitemap: true
+locale: "en-US"
 twitter:
   username: AnonyPla
   card: summary
