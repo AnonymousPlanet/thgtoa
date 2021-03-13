@@ -40,4 +40,15 @@ defaults:
       sitemap:         true
 locale                   : "en-US"
 twitter:
-  username               : AnonyPla
+  username: AnonyPla
+  card: summary
+author:
+  name: AnonymousPlanet
+  twitter: AnonyPla
+social:
+  name: AnonymousPlanet
+  links:
+    - https://twitter.com/anonypla
+    - https://keybase.io/anonymousplanet
+    - https://github.com/anonymousplanet
+    - https://social.privacytools.io/@anonypla
