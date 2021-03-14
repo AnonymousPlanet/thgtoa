@@ -7,7 +7,7 @@ This guide is an open-source non-profit initiative, [licensed] under Creative Co
 The latest version is **0.8.1**, See the CHANGELOG at <https://anonymousplanet.org/CHANGELOG.html>
 
 - Online versions of the guide are available at:
-	- GitHub: <https://anonymousplanet.org/guide.html>
+	- Online: <https://anonymousplanet.org/guide.html>
 	- Archive.org: <https://web.archive.org/web/https://anonymousplanet.org/guide.html>
 	- Archive.today: <https://archive.fo/anonymousplanet.org/guide.html>
 	- Archive.today over Tor: <http://archivecaslytosk.onion/anonymousplanet.org/guide.html>
