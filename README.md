@@ -52,7 +52,7 @@ MacOS:
 - Compare the result with the hash in the checksum files.
 
 Linux: 
-- From a terminal, ```run sha256sum /full/path/to/your/file```
+- From a terminal, run ```sha256sum /full/path/to/your/file```
 - Compare the result with the hash in the checksum files.
 
 All commits and releases on this repository are signed and verified using the same key. Check for the "Verified" tags.
