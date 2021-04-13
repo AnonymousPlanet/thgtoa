@@ -1,3 +1,6 @@
+Unpublished
+- Added tor mirror into HTML header for discoverability
+
 v0.9.0
 - Various layout, spelling, and grammar fixes
 - Added new discussion channel on matrix ```#online-anonymity:matrix.org```

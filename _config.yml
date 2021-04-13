@@ -22,6 +22,7 @@ github:
   twitter_url: https://twitter.com/AnonyPla
   keybase_url: https://keybase.io/anonymousplanet
   mastodon_url: https://mastodon.online/@anonypla
+  tor_mirror_url: http://thgtoa7imksbg7rit4grgijl2ef6kc7b56bp56pmtta4g354lydlzkqd.onion
 defaults:
   -
     scope:
