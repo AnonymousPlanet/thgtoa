@@ -50,7 +50,7 @@ Follow me on:
 
 There are several ways you could read this guide:
 
--   You want to understand the current state of online privacy and anonymity not necessarily get too technical about it: Just read the [Introduction:][Requirements:], [Requirements:][Understanding some basics of how some information can lead back to you and how to mitigate some:], [Understanding some basics of how some information can lead back to you and how to mitigate those:][Understanding some basics of how some information can lead back to you and how to mitigate some:] and [A final editorial note:][A small final editorial note:] sections.
+-   You want to understand the current state of online privacy and anonymity not necessarily get too technical about it: Just read the [Introduction:][Introduction:], [Requirements:][Requirements:], [Understanding some basics of how some information can lead back to you and how to mitigate those:][Understanding some basics of how some information can lead back to you and how to mitigate some:] and [A final editorial note:][A small final editorial note:] sections.
 
 -   You want to do the above but also learn how to remove some online information about you: Just read the above and add the [Removing some traces of your identities on search engines and various platforms:]
 
