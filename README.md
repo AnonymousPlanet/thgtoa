@@ -6,10 +6,8 @@ This guide is an open-source non-profit initiative, [licensed](LICENSE.html) und
 
 The latest version is **0.9.9e**, See the [changelog](CHANGELOG.html).
 
-This project is also supporting the Tor Project by currently running two Tor Exit nodes to help others: 
-
-- Tor-Exit-01: <https://metrics.torproject.org/rs.html#details/970814F267BF3DE9DFF2A0F8D4019F80C68AEE26>
-- Tor-Exit-02: <https://metrics.torproject.org/rs.html#details/F535BA067A776457083141688C7FE781B6DFB24E>
+This project is also supporting the Tor Project by currently running two Tor Exit nodes to help others. 
+See the nodes here: <https://metrics.torproject.org/rs.html#search/family:970814F267BF3DE9DFF2A0F8D4019F80C68AEE26>
 
 **If you'd like to make a donation to help this project, you can do so from [here](donations.html).
 All the donations will be strictly used within the context of this project. All donations are logged on the Donate page (inbound and spendings).**
@@ -45,7 +43,7 @@ Feel free to submit issues using Github Issues.
 Follow or contact me on: 
 - Twitter: <https://twitter.com/AnonyPla>
 - Mastodon: <https://mastodon.social/@anonypla>
-- Element/Matrix.org: ```@anonypla:matrix.org```
+- Element/Matrix.org: ```@anonypla:envs.net``` (@anonypla:matrix.org is temporarily out of order)
 - Reddit: <https://old.reddit.com/message/compose/?to=AnonyPla>
 - E-Mail: <contact@anonymousplanet.org>
 
